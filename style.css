@@ -1,0 +1,38 @@
+/* navbar */
+#nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+    padding-right: 30px;
+    padding-left: 30px;
+}
+
+#logo{
+    width: 300px;
+    height: 200px;
+    align-items: center;
+    justify-content: center;
+    margin-right: 100px;
+    padding-left: 100px;
+    margin-left: 50px;
+}  
+.navbar-brand{
+    font-size: 24px;
+    color: #333;
+    text-decoration: none;
+}
+
+#search{
+    background :none;
+    border:none;
+}
+#menu{
+    background :none;
+    border:none;
+}
+
+/* offcanvas */
+#offcanvas-logo{
+    padding-left: 50px ;
+}
