@@ -21,7 +21,7 @@
       <div>
        <button id="menu" type="menu" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions"><i class="fa-solid fa-bars">  Menu</i></button>
       </div>
-      <div>
+      <div id="brand-logo">
        <img src="NEXTAGt.png" alt="">
       </div>
       <div>
@@ -43,11 +43,22 @@
         <li class="nav-item">
           <a class="nav-link" href="#">New Arrival</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Men</a>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" role="button"  data-bs-toggle="dropdown" href="#" aria-expanded="false">Men      </a>
+          <!-- dropdown menu -->
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Handbags</a></li>
+            <li><a class="dropdown-item" href="#">Backpacks</a></li>
+            <li><a class="dropdown-item" href="#"></a></li>
+          </ul>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Women</a>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" role="button"  data-bs-toggle="dropdown" href="#" aria-expanded="false">Women</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Dresses</a></li>
+            <li><a class="dropdown-item" href="#">Shirts</a></li>
+            <li><a class="dropdown-item" href="#"></a></li>
+          </ul>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#">Services</a>
