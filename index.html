@@ -19,8 +19,8 @@
     <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
 
 </head>
-<body>
-  <nav>
+<body id="body">
+  <nav style="background-color: #ffffff;" class="navbar navbar-expand-md fixed-top"> 
     <div id="nav">
       <div>
        <button id="menu" type="menu" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions"><i class="fa-solid fa-bars">  Menu</i></button>
@@ -28,14 +28,17 @@
       <div id="brand-logo">
        <img src="NEXTAGt.png" alt="">
       </div>
-      <div>
-       <button type="button" id="search"><i class="fa-solid fa-magnifying-glass"></i></button>
+      <div id="search-profile">
+        <div id="search_"></div>
+       <button type="button" id="search" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop" aria-controls="offcanvasTop"><i class="fa-solid fa-magnifying-glass"></i></button>
        <i class="fa-solid fa-user"></i>
       </div>
     </div>
   </nav>
   
   <!-- off canvas -->
+
+  <!-- off-canvas for menu -->
   <div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
     <div class="offcanvas-header">
       <h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel"><img id="offcanvas-logo" src="NEXTAGt.png" alt=""></h5>
@@ -43,53 +46,235 @@
     </div>
     <div id="offcanvas-body" class="offcanvas-body">
       <!-- your content here -->
-       <ul class="list-unstyled">
+      <ul id="main-list">
         <li class="nav-item">
-          <a class="nav-link" href="#">New Arrival</a>
+          <a class="nav-link" href="#">New Arrivals</a>
         </li>
-        <li class="nav-item dropdown">
-          <a id="men" class="nav-link dropdown-toggle" role="button"  data-bs-toggle="dropdown" href="#" aria-expanded="false">Men      </a>
-          <ul id="men-list">
-            <li><a href="">Handbags</a></li>
-            <li><a href="">Handbags</a></li>
-            <li><a href="">Handbags</a></li>
-            <li><a href="">Handbags</a></li>
-            <li><a href="">Handbags</a></li>
-            <li><a href="">Handbags</a></li>
-            <li><a href="">Handbags</a></li>
+        <!-- women -->
+        <li class="nav-item">
+          <a class="nav-link" href="#">Women</a>
+
+        </li>
+        <!-- men -->
+        <li id="men" class="nav-item">
+          <a class="nav-link" href="#">Men</a>
+          <div id="men-list">
+            <!-- bags  -->
+          <ul style="list-style: none;">
+            <li class="nav-item" id="bag"><a class="nav-link" href="#">Bags</a>
+              <!-- handbag list -->
+              <ul id="bag-list" style="list-style: none;">
+                <li class="nav-item" id="handbag"><a class="nav-link" href="#">Handbags</a>
+                <div id="handbag-list">
+                  <ul style="list-style: none;">
+                    <li class="nav-item"><a class="nav-link" href="#">Tote Bags</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Duffel Bags</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Crossbody Bags</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Clutch/Pouch</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Briefcases</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Messenger Bags</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Sling Bags</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Laptop Bags</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Belt Bags (Fanny Pack)</a></li>
+                  </ul>
+                </div>
+                </li>
+                <!-- backpack list -->
+                <li class="nav-item" id="backpack"><a class="nav-link" href="#">Backpacks</a>
+                  <div id="backpack-list">
+                  <ul style="list-style: none;">
+                    <li class="nav-item"><a class="nav-link" href="#">Classic Leather Backpack</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Laptop Backpack</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Everyday Backpack</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Travel Backpack</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Hiking Backpack</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Tactical/Military Backpack</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Anti-Theft Backpack</a></li>
+                    <li class="nav-item"><a class="nav-link"href="#">Gym Backpack</a></li>
+                    <li class="nav-item"><a class="nav-link"href="#">Roll-Top Backpack</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Convertible Backpack</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Camera Backpack</a></li>
+                  </ul>
+                  </div>
+                </li>
+              </ul>
+            </li>
+            <!-- wallet list -->
+            <li class="nav-item" id="wallet"><a class="nav-link" href="#">Walllets</a>
+              <div id="wallet-list">
+              <ul style="list-style: none;">
+                <li class="nav-item"><a class="nav-link" href="#">Bi-Fold Wallets</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Tri-Fold Wallets</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Money Clips</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Card Holders</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Passport Holders</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Coin Purses</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Phone Wallets</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Travel Wallets</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Checkbook Wallets</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">RFID Wallets</a></li>
+              </ul>
+              </div>
+            </li>
           </ul>
-          <!-- dropdown menu -->
-          <!-- <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">Handbags</a></li>
-            <li><a class="dropdown-item" href="#">Backpacks</a></li>
-            <li><a class="dropdown-item" href="#"></a></li>
-          </ul> -->
+          </div>
         </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" role="button"  data-bs-toggle="dropdown" href="#" aria-expanded="false">Women</a>
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">Dresses</a></li>
-            <li><a class="dropdown-item" href="#">Shirts</a></li>
-            <li><a class="dropdown-item" href="#"></a></li>
-          </ul>
-        </li>
+        <!-- services -->
         <li class="nav-item">
           <a class="nav-link" href="#">Services</a>
         </li>
-       </ul>
+        <!-- contact -->
+        <li class="nav-item">
+          <a class="nav-link" href="#">Contact</a>
+        </li>
+        <!-- about us -->
+        <li class="nav-item">
+          <a class="nav-link" href="#">About Us</a>
+        </li>
+      </ul>
     </div>
   </div>
+
+  <!-- search bar -->
+  <div class="offcanvas offcanvas-top" tabindex="-1" id="offcanvasTop" aria-labelledby="offcanvasTopLabel">
+    <div class="offcanvas-header">
+        <h5 class="offcanvas-title align-item-center" id="offcanvasTopLabel">Search</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+        <form class="d-flex">
+            <input class="form-control me-2" type="search" placeholder="Search..." aria-label="Search">
+            <button class="btn btn-dark btn-gradient" type="submit">Search</button>
+        </form>
+    </div>
+  </div>
+
+  <!--main-->
+  <main>
+    <div class="carousel slide">
+      <div class="carousel-inner"> 
+        <div id="carousel-banner" class="carousel-item active">
+          <img id="banner" src="banner.jpg" class="d-block w-100" alt="">
+          <div class="carousel-caption d-none d-md-block">
+            <a href="" class="nav-link"><p>Women</p></a>
+            <a href="" class="nav-link"><h3>Spring-Summer 2025</h3></a>
+          </div>
+      </div>
+    </div>
+    <section class="featured-products">
+      <h2>Featured Products</h2>
+      <div class="product-grid">
+        <div class="product-card">
+          <img src="img/pic1.webp" alt="Product 1">
+          <h3>Product 1</h3>
+          <p>$99.99</p>
+          <button class="buy-btn">Add to Cart</button>
+        </div>
+        <div class="product-card">
+          <img src="img/pic2.jpeg" alt="Product 2">
+          <h3>Product 2</h3>
+          <p>$149.99</p>
+          <button class="buy-btn">Add to Cart</button>
+        </div>
+        <div class="product-card">
+          <img src="img/pic6.webp" alt="Product 3">
+          <h3>Product 3</h3>
+          <p>$89.99</p>
+          <button class="buy-btn">Add to Cart</button>
+        </div>
+        <div class="product-card">
+          <img src="img/pic7.webp" alt="Product 3">
+          <h3>Product 3</h3>
+          <p>$89.99</p>
+          <button class="buy-btn">Add to Cart</button>
+        </div>
+        <div class="product-card">
+          <img src="img/pic7.webp" alt="Product 3">
+          <h3>Product 3</h3>
+          <p>$89.99</p>
+          <button class="buy-btn">Add to Cart</button>
+        </div>
+        <div class="product-card">
+          <img src="img/pic7.webp" alt="Product 3">
+          <h3>Product 3</h3>
+          <p>$89.99</p>
+          <button class="buy-btn">Add to Cart</button>
+        </div>
+          
+      </div>
+    </section>
+  
+  </main>
 </body>
 </html>
 
 <script>
-  // menu toggle
   $('#men-list').hide();
-  $('#men').click(function(){
-    $('#men-list').hide();
-  });
+  $('#bag-list').hide();
+  $('#backpack-list').hide();
+  $('#handbag-list').hide();
+  $('#wallet-list').hide();
   $('#men').click(function(){
     $('#men-list').show();
+    $('#men-list,#men').mouseleave(function(){
+        $('#men-list').hide();
+      });
   });
- 
+  // bag
+  $('#bag').click(function(){
+    $('#bag-list').show();
+    $('#bag-list,#bag').mouseleave(function(){
+        $('#bag-list').hide();
+      });
+  });
+  // backpack
+  $('#backpack').click(function(){
+    $('#backpack-list').toggle();
+    $('#backpack-list,#backpack').mouseleave(function(){
+        $('#backpack-list').hide();
+      });
+  });
+  // handbag
+  $('#handbag').click(function(){
+    $('#handbag-list').toggle();
+    $('#handbag-list,#handbag').mouseleave(function(){
+        $('#handbag-list').hide();
+      });
+  });
+  // wallet
+  $('#wallet').click(function(){
+    $('#wallet-list').toggle();
+    $('#wallet-list,#wallet').mouseleave(function(){
+        $('#wallet-list').hide();
+      });
+  });
+
+  // for search
+  // $('#search').click(function(){
+  //   $('#search_').html('<input type="text" placeholder="Search">');
+  //   $('#search_ input').keyup(function(){
+  //     var search = $(this).val();
+  //     if(search != ''){
+  //       $.ajax({
+  //         url: 'search.php',
+  //         method: 'post',
+  //         data: {search:search},
+  //         success: function(data){
+  //           $('#search_').html(data);
+  //         }
+  //       });
+  //     }
+  //   });
+  //   $('#search_').on('click', '.product-card', function(){
+  //     var id = $(this).attr('id');
+  //     window.location.href = 'product_detail.php?id='+id;
+  //   });
+  //   $('#search_ input').blur(function(){
+  //     $('#search_').html('');
+  //   });
+  //   $('#search_ input').focus(function(){
+  //     $('#search_').html('<input type="text" placeholder="Search">');
+  //   });
+  // });
 </script>
+

@@ -3,6 +3,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    width: 100%;
     margin-top: 10px;
     padding-right: 30px;
     padding-left: 30px;
@@ -24,19 +25,22 @@
 }
 
 #search{
-    background :none;
-    border:none;
+  background :none;
+  border:none;
 }
 #menu{
-    background :none;
-    border:none;
-    cursor: pointer;
-    letter-spacing: 1px;
+  background :none;
+  border:none;
+  cursor: pointer;
+  letter-spacing: 1px;
 }
 #brand-logo{
-    font-size: 25px;
-    cursor: pointer;
+  font-size: 25px;
+  cursor: pointer;
     
+}
+#search-profile{
+  word-spacing: 7px;
 }
 
 /* offcanvas */
@@ -47,3 +51,91 @@
 #offcanvas-body{
     font-size: 19px;
 }
+
+#main-list{
+  list-style: none;
+}
+#backpack-list,#handbag-list,#wallet-list{
+  position: absolute;
+  top: 290px;
+  width: 100%;
+  background-color: #f8f9fa;
+  padding: 10px;
+  display: none;
+  z-index: 1;
+  border-radius: 10px;
+  scroll-behavior: smooth;
+  overflow-block: hidden;
+}
+#handbag-list{
+  top: 220px;
+  left: 220px;
+}
+#wallet-list{
+  top: 230px;
+  left: 150px;
+}
+#backpack-list{
+  top: 250px;
+  left: 220px;
+}
+#backpack-list li,#handbag-list li,#wallet-list li{
+  border-bottom: 1px solid #e9ecef;
+}
+
+
+/* banner image */
+ #banner{
+    width: 100%;
+    top: 0;
+  }
+  
+
+   /* Featured Products */
+   .featured-products {
+    text-align: center;
+  }
+  
+  .featured-products h2 {
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+  }
+  
+  .product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 3fr));
+    gap: 2rem;
+  }
+  
+  .product-card {
+    background: #fff;
+    padding: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .product-card img {
+    
+    width: 250px;
+    height: 350px;
+    border-radius: 10px;
+  }
+  
+  .product-card h3 {
+    margin: 1rem 0;
+    font-size: 1.4rem;
+  }
+  
+  .product-card p {
+    font-size: 1.2rem;
+  }
+  
+  .buy-btn {
+    padding: 0.8rem 1.5rem;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
