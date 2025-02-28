@@ -1,0 +1,122 @@
+
+.a{
+    text-align: center;
+    background-color: rgb(0, 0, 0);
+    color: #ffffff;
+    font-size: 25px;
+  
+    
+  }
+#nav{
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+    padding-right: 30px;
+    padding-left: 30px;
+}
+
+#logo{
+    
+    width: 200px;
+    height: 150px;
+    align-items: center;
+    justify-content: center;
+    margin-right: 100px;
+    padding-left: 100px;
+    margin-left: 50px;
+}  
+.navbar-brand{
+    font-size: 24px;
+    color: #333;
+    text-decoration: none;
+}
+
+#search{
+    background :none;
+    border:none;
+}
+#menu{
+    background :none;
+    border:none;
+    cursor: pointer;
+    letter-spacing: 1px;
+}
+#brand-logo{
+    font-size: 25px;
+    cursor: pointer;
+    
+}
+
+/* offcanvas */
+#offcanvas-logo{
+    padding-left: 50px ;
+}
+
+#offcanvas-body{
+    font-size: 19px;
+}
+
+/* Main Content Styling */
+main {
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: white;
+}
+
+#h2 {
+    text-decoration: underline;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 800;
+    font-size: 45px;
+    margin-bottom: 30px;
+}
+
+.team {
+    text-align: center;
+}
+
+.team-member {
+    
+    display: inline-block;
+    text-align: center;
+    width: 45%;
+    margin: 10px;
+    background-color: #000000;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.team-member h3 {
+    color: #ffffff;
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+}
+
+.team-member p {
+    color: #ffffff;
+    font-size: 1rem;
+    color: #050505;
+}
+#p{
+    border-radius: 5px;
+    text-shadow: #cbf7ff 5px 5px 14px;
+    background-color: #000000;
+    color: #ffffff;
+}
+.p{
+margin-bottom: 40px;
+}
+
+/* Footer Styling */
+footer {
+    background-color: #000000;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
