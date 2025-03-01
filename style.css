@@ -49,7 +49,7 @@
     padding-left: 50px ;
 }
 
-#offcanvas-body{
+#offcanvass-body{
     font-size: 19px;
 }
 
@@ -71,14 +71,17 @@
 #handbag-list{
   top: 220px;
   left: 220px;
+  width: 200px;
 }
 #wallet-list{
   top: 230px;
   left: 150px;
+  width: 200px;
 }
 #backpack-list{
   top: 250px;
   left: 220px;
+  width: 200px;
 }
 #backpack-list li,#handbag-list li,#wallet-list li{
   border-bottom: 1px solid #e9ecef;
