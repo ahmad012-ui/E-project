@@ -104,5 +104,21 @@
 #women-products img{
   height: 430px;
 }
-  
+
+/* footer */
+#footer{
+  margin-top: 50px;
+  border-top: 1px solid #5e5f5f62;
+}
+#footer-logo{
+  font-size: 1.9rem;
+}
+#footer-copyright{
+  text-decoration: none;
+  color: #6c6969;
+}
+#footer-rights{
+  text-align: center;
+  justify-content: center;
+}
   

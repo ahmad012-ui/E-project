@@ -111,12 +111,4 @@ margin-bottom: 40px;
 }
 
 /* Footer Styling */
-footer {
-    background-color: #000000;
-    color: white;
-    text-align: center;
-    padding: 10px 0;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
-}
+
