@@ -6,7 +6,7 @@
     font-size: 25px;
   
     
-  }
+}
 #nav{
 
     display: flex;
@@ -16,7 +16,6 @@
     padding-right: 30px;
     padding-left: 30px;
 }
-
 #logo{
     
     width: 200px;
@@ -65,7 +64,6 @@ main {
     margin: 0 auto;
     background-color: white;
 }
-
 #h2 {
     text-decoration: underline;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -73,11 +71,9 @@ main {
     font-size: 45px;
     margin-bottom: 30px;
 }
-
 .team {
     text-align: center;
 }
-
 .team-member {
     
     display: inline-block;
@@ -88,13 +84,11 @@ main {
     padding: 20px;
     border-radius: 8px;
 }
-
 .team-member h3 {
     color: #ffffff;
     font-size: 1.5rem;
     margin-bottom: 5px;
 }
-
 .team-member p {
     color: #ffffff;
     font-size: 1rem;
@@ -109,6 +103,3 @@ main {
 .p{
 margin-bottom: 40px;
 }
-
-/* Footer Styling */
-
