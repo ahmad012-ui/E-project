@@ -68,6 +68,26 @@
   scroll-behavior: smooth;
   overflow-block: hidden;
 }
+#men-tag:hover,#women-tag:hover,#men-list:hover,#women-bag:hover,.nav-item:hover{
+  cursor: pointer;
+  width: 150px;
+  border-bottom: 1px solid #5e5f5f62;
+  transition: all 0.5s ease-in-out;
+  display: block;
+}
+#men-tag::after,#women-tag::after{
+  font-size: 20px;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  content: ;
+}
+#women-bag,#men-list{
+  position: relative;
+  width: 200px;
+  right: 35px;
+  display: block;
+}
 #handbag-list{
   top: 220px;
   left: 220px;
