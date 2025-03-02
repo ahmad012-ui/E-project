@@ -60,7 +60,6 @@
   position: absolute;
   top: 290px;
   width: 100%;
-  background-color: #f8f9fa;
   padding: 10px;
   display: none;
   z-index: 1;
@@ -68,19 +67,22 @@
   scroll-behavior: smooth;
   overflow-block: hidden;
 }
+/* menu list hovers */
 #men-tag:hover,#women-tag:hover,#men-list:hover,#women-bag:hover,.nav-item:hover{
   cursor: pointer;
-  width: 150px;
+  width: 160px;
   border-bottom: 1px solid #5e5f5f62;
   transition: all 0.5s ease-in-out;
   display: block;
+  background-color: #d9dddd62;
+  border-radius: 10px;
+  padding: 5px;
 }
-#men-tag::after,#women-tag::after{
+#men-tag:hover:after,#women-tag:hover:after{
   font-size: 20px;
   position: absolute;
-  right: 10px;
-  top: 10px;
-  content: ;
+  right: 165px ;
+  content: "▽";
 }
 #women-bag,#men-list{
   position: relative;
