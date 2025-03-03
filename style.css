@@ -81,6 +81,9 @@
   border-radius: 10px;
   padding: 5px;
 }
+#men:hover:after, #women:hover:after{
+  right: 200px;
+}
 #men-tag:hover:after, #women-tag:hover:after,#men-product:hover:after,
 #men-handbag-tag:hover:after,
 #men-wallet-tag:hover:after,
@@ -122,7 +125,7 @@
   transition: all 0.5s ease-in-out;
   display: block;
   background-color: #dbd8d8;
-  border-radius: 10px;
+  border-radius: 8px;
   padding: 5px;
 }
 #women-bag-list li, #men-list li, #men-handbag-tag, #men-backpack-tag {
