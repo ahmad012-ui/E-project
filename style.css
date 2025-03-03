@@ -56,54 +56,96 @@
 #main-list{
   list-style: none;
 }
-#backpack-list,#handbag-list,#wallet-list{
+/* #backpack-list,#handbag-list,#wallet-list{
   position: absolute;
   top: 290px;
   width: 100%;
+  background-color: #f8f9fa;
   padding: 10px;
   display: none;
   z-index: 1;
   border-radius: 10px;
   scroll-behavior: smooth;
   overflow-block: hidden;
-}
+} */
+ 
 /* menu list hovers */
-#men-tag:hover,#women-tag:hover,#men-list:hover,#women-bag:hover,.nav-item:hover{
+#men-tag:hover, #women-tag:hover, #men-list:hover, #women-bag:hover, .nav-item:hover{
   cursor: pointer;
-  width: 160px;
+  width: 200px;
   border-bottom: 1px solid #5e5f5f62;
-  transition: all 0.5s ease-in-out;
+  box-shadow: 1px 1px 5px #5e5f5f62;
+  transition: all 0.5s ease-out;
   display: block;
-  background-color: #d9dddd62;
+  background-color: #dbd8d8;
   border-radius: 10px;
   padding: 5px;
 }
-#men-tag:hover:after,#women-tag:hover:after{
-  font-size: 20px;
+#men-tag:hover:after, #women-tag:hover:after,#men-product:hover:after,
+#men-handbag-tag:hover:after,
+#men-wallet-tag:hover:after,
+#men-backpack-tag:hover:after,
+#women-product:hover:after,
+#women-handbag-tag:hover:after,
+#women-wallet-tag:hover:after,
+#women-backpack-tag:hover:after{
+  font-size: 15px;
   position: absolute;
-  right: 165px ;
   content: "▽";
+  transform: rotate(content"▽", 180deg);
+  right: 190px;
 }
-#women-bag,#men-list{
+#handbag:hover:after{
+  right: 100px;
+} 
+#wallet:hover:after{
+  right: 100px;
+} 
+#backpack:hover:after{
+  right: 100px;
+}
+#men-product:hover:after,
+#men-handbag-tag:hover:after,
+#men-wallet-tag:hover:after,
+#men-backpack-tag:hover:after,
+#women-product:hover:after,
+#women-handbag-tag:hover:after,
+#women-wallet-tag:hover:after,
+#women-backpack-tag:hover:after{
+  right: 0px;
+}
+#handbag:hover, #wallet:hover, #backpack:hover{
+  cursor: pointer;
+  width: 180px;
+  border-bottom: 1px solid #5e5f5f62;
+  box-shadow: 1px 1px 5px #5e5f5f62;
+  transition: all 0.5s ease-in-out;
+  display: block;
+  background-color: #dbd8d8;
+  border-radius: 10px;
+  padding: 5px;
+}
+#women-bag-list li, #men-list li, #men-handbag-tag, #men-backpack-tag {
+  width: 180px;
+}
+#women-bag, #men-list{
   position: relative;
-  width: 200px;
-  right: 35px;
   display: block;
 }
 #handbag-list{
-  top: 220px;
-  left: 220px;
-  width: 200px;
+  top: 0;
+  left: 0;
+  width: 180px;
 }
 #wallet-list{
-  top: 230px;
-  left: 150px;
-  width: 200px;
+  top: 0;
+  left: 0;
+  width: 190px;
 }
 #backpack-list{
-  top: 250px;
-  left: 220px;
-  width: 200px;
+  top: 0;
+  left: 0;
+  width: 180px;
 }
 #backpack-list li,#handbag-list li,#wallet-list li{
   border-bottom: 1px solid #e9ecef;

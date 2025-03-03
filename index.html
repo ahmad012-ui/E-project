@@ -62,11 +62,11 @@
               <!-- bags and wallets list -->
               <ul style="list-style: none;">
                 <div id="women-bag">
-                  <li class="nav-item"><a class="nav-link" href="#">Bags</a>
+                  <li class="nav-item"><a id="women-product" class="nav-link" href="#">Bags</a>
                      <div id="women-bag-list">
                       <ul style="list-style: none;">
                         <!-- handbag  -->
-                        <li class="nav-item" id="women-handbag"><a class="nav-link" href="#">Handbags</a>
+                        <li class="nav-item" id="women-handbag"><a id="women-handbag-tag" class="nav-link" href="#">Handbags</a>
                           <!-- handbag list -->
                           <div id="women-handbag-list">
                             <ul style="list-style: none;">
@@ -81,7 +81,7 @@
                           </div> 
                         </li>
                         <!-- backpack -->
-                        <li class="nav-item" id="women-backpack"><a class="nav-link" href="#">Backpacks</a>
+                        <li class="nav-item" id="women-backpack"><a id="women-backpack-tag" class="nav-link" href="#">Backpacks</a>
                           <!-- backpack list -->
                           <div id="women-backpack-list"> 
                             <ul style="list-style: none;">
@@ -97,7 +97,7 @@
                      </div>
                   </li>
                   <!-- wallet -->
-                  <li class="nav-item" id="women-wallet"><a class="nav-link" href="#">Wallets</a>
+                  <li class="nav-item" id="women-wallet"><a id="women-wallet-tag" class="nav-link" href="#">Wallets</a>
                     <!-- wallet list -->
                      <div id="women-wallet-list">
                       <ul style="list-style: none;">
@@ -125,10 +125,10 @@
           <div id="men-list">
             <!-- bags  -->
           <ul style="list-style: none;">
-            <li class="nav-item" id="bag"><a class="nav-link" href="#">Bags</a>
+            <li class="nav-item" id="bag"><a id="men-product" class="nav-link" href="#">Bags</a>
               <!-- handbag list -->
               <ul id="bag-list" style="list-style: none;">
-                <li class="nav-item" id="handbag"><a class="nav-link" href="#">Handbags</a>
+                <li class="nav-item" id="handbag"><a id="men-handbag-tag" class="nav-link" href="#">Handbags</a>
                 <div id="handbag-list">
                   <ul style="list-style: none;">
                     <li class="nav-item"><a class="nav-link" href="#">Tote Bags</a></li>
@@ -144,7 +144,7 @@
                 </div>
                 </li>
                 <!-- backpack list -->
-                <li class="nav-item" id="backpack"><a class="nav-link" href="#">Backpacks</a>
+                <li class="nav-item" id="backpack"><a id="men-backpack-tag" class="nav-link" href="#">Backpacks</a>
                   <div id="backpack-list">
                   <ul style="list-style: none;">
                     <li class="nav-item"><a class="nav-link" href="#">Classic Leather Backpack</a></li>
@@ -164,7 +164,7 @@
               </ul>
             </li>
             <!-- wallet list -->
-            <li class="nav-item" id="wallet"><a class="nav-link" href="#">Walllets</a>
+            <li class="nav-item" id="wallet"><a id="men-wallet-tag" class="nav-link" href="#">Walllets</a>
               <div id="wallet-list">
               <ul style="list-style: none;">
                 <li class="nav-item"><a class="nav-link" href="#">Bi-Fold Wallets</a></li>
@@ -404,11 +404,9 @@
   // women's wallet
   $('#women-wallet').click(function(){
     $('#women-wallet-list').show();
-    $('#women-wallet-list,#women-wallet').mouseleave(function(){
+    $('#women-wallet-list').mouseleave(function(){
       $('#women-wallet-list').hide();
       });
   });
-
-
 </script>
 
