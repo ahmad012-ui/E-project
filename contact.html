@@ -5,19 +5,215 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us - NEXTAG</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- font awesome cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-icons/4.0.0/font/MaterialIcons-Regular.ttf">
+    <!-- css styling -->
+     <link rel="stylesheet" href="style.css">
+     <link rel="stylesheet" href="contact.css">
+    
+    <!-- bootstrap cdn -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    
+    <!-- tailwind cdn -->
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+
+    <!-- jquery cdn -->
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
 </head>
 <body class="bg-white text-black">
     
     <!-- Navbar -->
-    <nav class="bg-gray-900 p-4 shadow-lg">
-        <div class="container mx-auto flex justify-between items-center">
-            <img src="img/NEXTAGt.png" alt="NEXTAG Logo" class="h-12">
-            <div class="flex space-x-6 text-lg text-white">
-                <a href="index.html" class="hover:text-gray-400 transition duration-300">Home</a>
-                <a href="about.html" class="hover:text-gray-400 transition duration-300">About</a>
-            </div>
+    <nav style="background-color: #ffffff;" class="navbar navbar-expand-md fixed-top"> 
+        <div id="nav">
+          <div>
+           <button id="menu" type="menu" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions"><i class="fa-solid fa-bars">  Menu</i></button>
+          </div>
+          <div id="brand-logo">
+            <a href="index.html"><img src="img/NEXTAGt.png" alt=""></a>
+          </div>
+          <div id="search-profile">
+            <div id="search_"></div>
+           <button type="button" id="search" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop" aria-controls="offcanvasTop"><i class="fa-solid fa-magnifying-glass"></i></button>
+           <!-- <i class="fa-solid fa-user"></i> -->
+          </div>
         </div>
-    </nav>
+      </nav>
+      
+      <!-- off canvas -->
+    
+      <!-- off-canvas for menu -->
+      <div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel"><img id="offcanvas-logo" src="img/NEXTAGt.png" alt=""></h5>
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div id="offcanvass-body" class="offcanvas-body">
+          <!-- your content here -->
+          <ul id="main-list">
+            <li class="nav-item">
+              <a class="nav-link" href="new-arrival.html">New Arrivals</a>
+            </li>
+            <!-- women -->
+            <li id="women" class="nav-item ">
+              <a id="women-tag" class="nav-link" href="#">Women</a>
+              <div id="women-list">
+                <!-- women bags  -->
+                <div id="bag-and-backpack-list dropdown">
+                  <!-- bags and wallets list -->
+                  <ul style="list-style: none;">
+                    <div id="women-bag">
+                      <li class="nav-item"><a id="women-product" class="nav-link" href="#">Bags</a>
+                         <div>
+                          <ul id="women-bag-list" style="list-style: none;">
+                            <!-- handbag  -->
+                            <li class="nav-item" id="women-handbag"><a id="women-handbag-tag" class="nav-link" href="#">Handbags</a>
+                              <!-- handbag list -->
+                              <div id="women-handbag-list">
+                                <ul style="list-style: none;">
+                                  <li class="nav-item"><a class="nav-link" href="#">Tote Bags</a></li>
+                                  <li class="nav-item"><a class="nav-link" href="#">Duffel Bags</a></li>
+                                  <li class="nav-item"><a class="nav-link" href="#">Crossbody Bags</a></li>
+                                  <li class="nav-item"><a class="nav-link" href="#">Clutch/Pouch</a></li>
+                                  <li class="nav-item"><a class="nav-link" href="#">Briefcases</a></li>
+                                  <li class="nav-item"><a class="nav-link" href="#">Messenger Bags</a></li>
+                                  <li class="nav-item"><a class="nav-link" href="#">Sling Bags</a></li>
+                                </ul>
+                              </div> 
+                            </li>
+                            <!-- backpack -->
+                            <li class="nav-item" id="women-backpack"><a id="women-backpack-tag" class="nav-link" href="#">Backpacks</a>
+                              <!-- backpack list -->
+                              <div id="women-backpack-list"> 
+                                <ul style="list-style: none;">
+                                  <li class="nav-item"><a class="nav-link" href="#">Backpacks</a></li>
+                                  <li class="nav-item"><a class="nav-link" href="#">Travel Bags</a></li>
+                                  <li class="nav-item"><a class="nav-link" href="#">Backpack Accessories</a></li>
+                                  <li class="nav-item"><a class="nav-link" href="#">School Bags</a></li>
+                                  <li class="nav-item"><a class="nav-link" href="#">Backpack Cases</a></li>
+                                </ul>
+                                </div>
+                            </li>
+                          </ul>
+                         </div>
+                      </li>
+                      <!-- wallet -->
+                      <li class="nav-item" id="women-wallet"><a id="women-wallet-tag" class="nav-link" href="#">Wallets</a>
+                        <!-- wallet list -->
+                         <div>
+                          <ul id="women-wallet-list" style="list-style: none;">
+                            <li class="nav-item"><a class="nav-link" href="#">Bi-Fold Wallets</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#">Tri-Fold Wallets</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#">Money Clips</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#">Card Holders</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#">Passport Holders</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#">Coin Purses</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#">Phone Wallets</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#">Travel Wallets</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#">Checkbook Wallets</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#">RFID Wallets</a></li>
+                          </ul>
+                         </div>
+                        </li>
+                    </div>
+                  </ul>
+                </div>
+              </div>
+            </li>
+            <!-- men -->
+            <li id="men" class="nav-item">
+              <a id="men-tag" class="nav-link" href="#">Men</a>
+              <div>
+                <!-- bags  -->
+              <ul id="men-list" style="list-style: none;">
+                <li class="nav-item" id="bag"><a id="men-product" class="nav-link" href="#">Bags</a>
+                  <!-- handbag list -->
+                  <ul id="bag-list" style="list-style: none;">
+                    <li class="nav-item" id="handbag"><a id="men-handbag-tag" class="nav-link" href="#">Handbags</a>
+                    <div id="handbag-list">
+                      <ul style="list-style: none;">
+                        <li class="nav-item"><a class="nav-link" href="#">Tote Bags</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Duffel Bags</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Crossbody Bags</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Clutch/Pouch</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Briefcases</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Messenger Bags</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Sling Bags</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Laptop Bags</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Belt Bags (Fanny Pack)</a></li>
+                      </ul>
+                    </div>
+                    </li>
+                    <!-- backpack list -->
+                    <li class="nav-item" id="backpack"><a id="men-backpack-tag" class="nav-link" href="#">Backpacks</a>
+                      <div id="backpack-list">
+                      <ul style="list-style: none;">
+                        <li class="nav-item"><a class="nav-link" href="#">Classic Leather Backpack</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Laptop Backpack</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Everyday Backpack</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Travel Backpack</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Hiking Backpack</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Tactical/Military Backpack</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Anti-Theft Backpack</a></li>
+                        <li class="nav-item"><a class="nav-link"href="#">Gym Backpack</a></li>
+                        <li class="nav-item"><a class="nav-link"href="#">Roll-Top Backpack</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Convertible Backpack</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Camera Backpack</a></li>
+                      </ul>
+                      </div>
+                    </li>
+                  </ul>
+                </li>
+                <!-- wallet list -->
+                <li class="nav-item" id="wallet"><a id="men-wallet-tag" class="nav-link" href="#">Walllets</a>
+                  <div id="wallet-list">
+                  <ul style="list-style: none;">
+                    <li class="nav-item"><a class="nav-link" href="#">Bi-Fold Wallets</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Tri-Fold Wallets</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Money Clips</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Card Holders</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Passport Holders</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Coin Purses</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Phone Wallets</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Travel Wallets</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Checkbook Wallets</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">RFID Wallets</a></li>
+                  </ul>
+                  </div>
+                </li>
+              </ul>
+              </div>
+            </li>
+            <!-- services -->
+            <li class="nav-item">
+              <a class="nav-link" href="#">Services</a>
+            </li>
+            <!-- contact -->
+            <li class="nav-item">
+              <a class="nav-link" href="#">Contact</a>
+            </li>
+            <!-- about us -->
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">About Us</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    
+      <!-- search bar -->
+      <div class="offcanvas offcanvas-top" tabindex="-1" id="offcanvasTop" aria-labelledby="offcanvasTopLabel">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title align-item-center" id="offcanvasTopLabel">Search</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <form class="d-flex">
+                <input class="form-control me-2" type="search" placeholder="Search..." aria-label="Search">
+                <button class="btn btn-dark btn-gradient" type="submit">Search</button>
+            </form>
+        </div>
+      </div>
 
     <!-- Contact Section -->
     <section id="contact" class="container mx-auto my-16 px-8">
@@ -35,7 +231,7 @@
             
             <!-- Get in Touch Form -->
             <div>
-                <h2 class="text-4xl font-bold mb-6">Contant Us</h2>
+                <h2 class="text-4xl font-bold mb-6">Your Feedback</h2>
                 <form class="bg-gray-100 p-6 rounded-lg shadow-lg">
                     <div class="mb-4">
                         <label class="block text-lg font-medium" for="name">Name</label>
@@ -49,7 +245,7 @@
                         <label class="block text-lg font-medium" for="message">Message</label>
                         <textarea id="message" class="w-full p-3 border border-gray-300 rounded-lg" rows="4" placeholder="Your Message"></textarea>
                     </div>
-                    <button type="submit" class="bg-gray-900 text-white px-6 py-3 rounded-lg hover:bg-gray-700 transition duration-300">Send Message</button>
+                    <button type="submit" class="bg-dark text-white px-6 py-3 rounded-lg hover:bg-gray-700 transition duration-300">Send Message</button>
                 </form>
             </div>
         </div>
@@ -62,3 +258,89 @@
     
 </body>
 </html>
+
+<script>
+    // for men's menu
+    $('#men-list').hide();
+    $('#bag-list').hide();
+    $('#backpack-list').hide();
+    $('#handbag-list').hide();
+    $('#wallet-list').hide();
+    $('#men').click(function(){
+      $('#men-list').show();
+      $('#men-list,#men').mouseleave(function(){
+          $('#men-list').hide();
+        });
+    });
+    // bag
+    $('#bag').click(function(){
+      $('#bag-list').show();
+      $('#bag-list,#bag').mouseleave(function(){
+          $('#bag-list').hide();
+        });
+    });
+    // backpack
+    $('#backpack').click(function(){
+      $('#backpack-list').toggle();
+      $('#backpack-list,#backpack').mouseleave(function(){
+          $('#backpack-list').hide();
+        });
+    });
+    // handbag
+    $('#handbag').click(function(){
+      $('#handbag-list').toggle();
+      $('#handbag-list,#handbag').mouseleave(function(){
+          $('#handbag-list').hide();
+        });
+    });
+    // wallet
+    $('#wallet').click(function(){
+      $('#wallet-list').toggle();
+      $('#wallet-list,#wallet').mouseleave(function(){
+          $('#wallet-list').hide();
+        });
+    });
+    
+    // for women's menu
+    $('#women-list').hide();
+    $('#women-bag-list').hide();
+    $('#women-backpack-list').hide();
+    $('#women-handbag-list').hide();
+    $('#women-wallet-list').hide();
+    // for main women's menu
+    $('#women').click(function(){
+      $('#women-list').show();
+    });
+    // women's menu leave event
+    $('#women-list,#women').mouseleave(function(){
+      $('#women-list').hide();
+    });
+    // women's bag
+    $('#women-bag').click(function(){
+      $('#women-bag-list').show();
+      $('#women-bag-list,#women-bag').mouseleave(function(){
+        $('#women-bag-list').hide();
+        });
+    });
+    // women's backpack
+    $('#women-backpack').click(function(){
+      $('#women-backpack-list').show();
+      $('#women-backpack-list,#women-backpack').mouseleave(function(){
+        $('#women-backpack-list').hide();
+        });
+    });
+    // women's handbag
+    $('#women-handbag').click(function(){
+      $('#women-handbag-list').show();
+      $('#women-handbag-list,#women-handbag').mouseleave(function(){
+        $('#women-handbag-list').hide();
+        });
+    });
+    // women's wallet
+    $('#women-wallet').click(function(){
+      $('#women-wallet-list').show();
+      $('#women-wallet-list').mouseleave(function(){
+        $('#women-wallet-list').hide();
+        });
+    });
+  </script>

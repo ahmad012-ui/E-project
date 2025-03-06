@@ -34,7 +34,7 @@
       <div id="search-profile">
         <div id="search_"></div>
        <button type="button" id="search" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop" aria-controls="offcanvasTop"><i class="fa-solid fa-magnifying-glass"></i></button>
-       <i class="fa-solid fa-user"></i>
+       <!-- <i class="fa-solid fa-user"></i> -->
       </div>
     </div>
   </nav>
@@ -51,7 +51,7 @@
       <!-- your content here -->
       <ul id="main-list">
         <li class="nav-item">
-          <a class="nav-link" href="#">New Arrivals</a>
+          <a class="nav-link" href="new-arrival.html">New Arrivals</a>
         </li>
         <!-- women -->
         <li id="women" class="nav-item ">
@@ -63,8 +63,8 @@
               <ul style="list-style: none;">
                 <div id="women-bag">
                   <li class="nav-item"><a id="women-product" class="nav-link" href="#">Bags</a>
-                     <div id="women-bag-list">
-                      <ul style="list-style: none;">
+                     <div>
+                      <ul id="women-bag-list" style="list-style: none;">
                         <!-- handbag  -->
                         <li class="nav-item" id="women-handbag"><a id="women-handbag-tag" class="nav-link" href="#">Handbags</a>
                           <!-- handbag list -->
@@ -99,8 +99,8 @@
                   <!-- wallet -->
                   <li class="nav-item" id="women-wallet"><a id="women-wallet-tag" class="nav-link" href="#">Wallets</a>
                     <!-- wallet list -->
-                     <div id="women-wallet-list">
-                      <ul style="list-style: none;">
+                     <div>
+                      <ul id="women-wallet-list" style="list-style: none;">
                         <li class="nav-item"><a class="nav-link" href="#">Bi-Fold Wallets</a></li>
                         <li class="nav-item"><a class="nav-link" href="#">Tri-Fold Wallets</a></li>
                         <li class="nav-item"><a class="nav-link" href="#">Money Clips</a></li>
@@ -122,9 +122,9 @@
         <!-- men -->
         <li id="men" class="nav-item">
           <a id="men-tag" class="nav-link" href="#">Men</a>
-          <div id="men-list">
+          <div>
             <!-- bags  -->
-          <ul style="list-style: none;">
+          <ul id="men-list" style="list-style: none;">
             <li class="nav-item" id="bag"><a id="men-product" class="nav-link" href="#">Bags</a>
               <!-- handbag list -->
               <ul id="bag-list" style="list-style: none;">
@@ -189,7 +189,7 @@
         </li>
         <!-- contact -->
         <li class="nav-item">
-          <a class="nav-link" href="#">Contact</a>
+          <a class="nav-link" href="contact.html">Contact</a>
         </li>
         <!-- about us -->
         <li class="nav-item">
@@ -226,11 +226,23 @@
         </div>  
       </div>
     </div>
+    <!-- image gallery -->
+    <div class="row" id="image-gallery">
+      <div class="col-lg-4 col-md-3 col-sm-2">
+       <img src="img/gallery 1.jpeg" alt="Handbag">
+      </div>
+      <div class="col-lg-4 col-md-3 col-sm-2">
+       <img src="img/gallery 2.jpeg" alt="backpack">
+      </div>
+       <div class="col-lg-4 col-md-3 col-sm-2"> 
+      <img src="img/gallery 3.jpeg" alt="phonecase holders">
+      </div>  
+    </div>
     <section>
-    <h2 id="feat-products" class="font-weight-bold mt-4">Explore a Selection of the Maison's Creations</h2>
+    <h2 id="feat-products" class="font-weight-bold mt-4">Discover Our Featured Products</h2>
     <div class="container mt-4">
         <div class="row">
-            <div class="col-12 col-sm-6 col-lg-3 text-center mb-4">
+            <div id="women-products" class="col-12 col-sm-6 col-lg-3 text-center mb-4">
                 <img src="img/women handbags.jpg" alt="Women's Handbag" class="img-fluid" />
                 <p class="mt-2">Women's Handbags</p>
             </div>
@@ -242,7 +254,7 @@
                 <img src="img/travel.jpeg" alt="Travel" class="img-fluid" />
                 <p class="mt-2">Travel</p>
             </div>
-            <div  id="women-products" class="col-12 col-sm-6 col-lg-3 text-center mb-4">
+            <div id="women-products" class="col-12 col-sm-6 col-lg-3 text-center mb-4">
                 <img src="img/card holders.jpeg" alt="Phone case card holders" class="img-fluid" />
                 <p class="mt-2">Phone Case Card Holders</p>
             </div>
@@ -250,7 +262,74 @@
     </div>
     </section>
     
-  
+    <section id="featured-products">
+      <h2 id="feat-products" class="font-weight-bold mt-4">Discover Our Featured Products</h2>
+      <div class="container mt-4">
+        <div class="row">
+          <div>
+          <div id="featured-products" class="col-12 col-sm-6 col-lg-3 text-center mb-4">
+            <img src="img/pic1.jpg" alt="" >
+          </div>
+          <div id="featured-products" class="col-12 col-sm-6 col-lg-3 text-center mb-4">
+            <img src="img/pic2.jpg" alt="" >
+          </div>
+          <div id="featured-products" class="col-12 col-sm-6 col-lg-3 text-center mb-4">
+            <img src="img/pic3.jpg" alt="" >
+          </div>
+          <div id="featured-products" class="col-12 col-sm-6 col-lg-3 text-center mb-4">
+            <img src="img/pic4.jpg" alt="" >
+          </div>  
+        </div>
+      <h2 id="new-arrivals" class="font-weight-bold mt-4">New Arrivals</h2>
+      <div class="container mt-4">
+        <div class="row">
+          <div id="new-arrivals" class="col-12 col-sm-6 col-lg-3 text-center mb-4">
+            <img src="img/pic1.webp" alt="" >
+          </div>
+          <div id="new-arrivals" class="col-12 col-sm-6 col-lg-3 text-center mb-4">
+            <img src="img/pic10.jpg" alt="" >
+          </div>
+          <div id="new-arrivals" class="col-12 col-sm-6 col-lg-3 text-center mb-4">
+            <img src="img/pic12.jpg" alt="" >
+          </div>
+          <div id="new-arrivals" class="col-12 col-sm-6 col-lg-3 text-center mb-4">
+            <img src="img/pic13.jpg" alt="" >
+          </div>
+        </div>
+        <!-- Pagination -->
+        <!-- <nav aria-label="Page navigation example">
+          <ul class="pagination">
+          <li class="page-item disabled">
+            <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
+          </li>
+          <li class="page-item"><a class="page-link" href="#">1</a></li>
+          <li class="page-item"><a class="page-link" href="#">2</a></li>
+          <li class="page-item"><a class="page-link" href="#">3</a></li>
+          <li class="page-item">
+            <a class="page-link" href="#">Next</a>
+          </li>
+        </ul> -->
+      </div>
+    </section>
+
+    <section id="sunscribe">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 col-md-6">
+            <h2 id="subscribe" class="font-weight-bold">Subscribe to our Newsletter</h2>
+            <p>Subscribe to our newsletter to receive updates on new arrivals, special offers and other discount information.</p>
+          </div>
+          <div class="col-12 col-md-6">
+            <form action="">
+              <div class="form-group">
+                <input type="email" class="form-control" id="email" placeholder="Enter your email address"><br>
+                <button id="subscribe-btn" type="submit" class="btn btn-dark btn-gradient align-item-center">Subscribe</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
   
   
@@ -259,12 +338,54 @@
 
 <footer id="footer" class="bg-white dark:bg-gray-900">
   <div class="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
+    <section class="">
+      <form action="">
+        <!--Grid row-->
+        <div class="row d-flex justify-content-center">
+          <!--Grid column-->
+          <div class="col-auto">
+            <p class="pt-2">
+              <strong>Sign up for our newsletter</strong>
+            </p>
+          </div>
+          <!--Grid column-->
+
+          <!--Grid column-->
+          <div class="col-md-5 col-12">
+            <!-- Email input -->
+            <div data-mdb-input-init class="form-outline mb-5">
+              <input type="email" id="form5Example24" class="form-control" placeholder="Email Address" />
+            </div>
+          </div>
+          <!--Grid column-->
+
+          <!--Grid column-->
+          <div class="col-auto">
+            <!-- Submit button -->
+            <button data-mdb-ripple-init type="submit" class="btn btn-outline mb-4">
+              Subscribe
+            </button>
+          </div>
+          <!--Grid column-->
+        </div>
+        <!--Grid row-->
+      </form>
+    </section>
       <div class="md:flex md:justify-between">
         <div class="mb-6 md:mb-0">
             <a href="index.html" class="flex items-center">
-                <img src="NEXTAG brand logo.png" class="h-8 me-3" alt="FlowBite Logo" />
-                <span id="footer-logo" class="self-center text-2xl font-semibold whitespace-nowrap dark:text-black">NEXTAG</span>
+                <img src="NEXTAG brand logo.png" class="h-8 me-3" alt="Nextag Logo" />
+                <span id="footer-logo" class="self-center text-2xl font-semibold whitespace-nowrap text-black">NEXTAG</span>
             </a>
+            <div id="nextag-footer-info">
+            <p>
+                <span class="text-gray-500 dark:text-dark">
+                NEXTAG offers a curated collection of premium purses 
+                and wallets from top brands. With detailed product 
+                insights, comparisons, and a seamless shopping experience,
+                we make finding the perfect accessory effortless.</span>
+            </p>
+            </div>
         </div>
         <div class="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
              <!-- resources -->
@@ -319,6 +440,189 @@
     </div>
   </div>
 </footer>
+
+<!-- Footer -->
+<footer class="bg-body-tertiary text-center">
+  <!-- Grid container -->
+  <div class="container p-4">
+    <!-- Section: Social media -->
+    <section class="mb-4">
+      <!-- Facebook -->
+      <a data-mdb-ripple-init class="btn btn-outline btn-floating m-1" href="#!" role="button"
+        ><i class="fab fa-facebook-f"></i
+      ></a>
+
+      <!-- Twitter -->
+      <a data-mdb-ripple-init class="btn btn-outline btn-floating m-1" href="#!" role="button"
+        ><i class="fab fa-twitter"></i
+      ></a>
+
+      <!-- Google -->
+      <a data-mdb-ripple-init class="btn btn-outline btn-floating m-1" href="#!" role="button"
+        ><i class="fab fa-google"></i
+      ></a>
+
+      <!-- Instagram -->
+      <a data-mdb-ripple-init class="btn btn-outline btn-floating m-1" href="#!" role="button"
+        ><i class="fab fa-instagram"></i
+      ></a>
+
+      <!-- Linkedin -->
+      <a data-mdb-ripple-init class="btn btn-outline btn-floating m-1" href="#!" role="button"
+        ><i class="fab fa-linkedin-in"></i
+      ></a>
+
+      <!-- Github -->
+      <a data-mdb-ripple-init class="btn btn-outline btn-floating m-1" href="#!" role="button"
+        ><i class="fab fa-github"></i
+      ></a>
+    </section>
+    <!-- Section: Social media -->
+
+    <!-- Section: Form -->
+    <section class="">
+      <form action="">
+        <!--Grid row-->
+        <div class="row d-flex justify-content-center">
+          <!--Grid column-->
+          <div class="col-auto">
+            <p class="pt-2">
+              <strong>Sign up for our newsletter</strong>
+            </p>
+          </div>
+          <!--Grid column-->
+
+          <!--Grid column-->
+          <div class="col-md-5 col-12">
+            <!-- Email input -->
+            <div data-mdb-input-init class="form-outline mb-4">
+              <input type="email" id="form5Example24" class="form-control" placeholder="Email Address" />
+            </div>
+          </div>
+          <!--Grid column-->
+
+          <!--Grid column-->
+          <div class="col-auto">
+            <!-- Submit button -->
+            <button data-mdb-ripple-init type="submit" class="btn btn-outline mb-4">
+              Subscribe
+            </button>
+          </div>
+          <!--Grid column-->
+        </div>
+        <!--Grid row-->
+      </form>
+    </section>
+    <!-- Section: Form -->
+
+    <!-- Section: Text -->
+    <!-- <section class="mb-4">
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt distinctio earum
+        repellat quaerat voluptatibus placeat nam, commodi optio pariatur est quia magnam eum
+        harum corrupti dicta, aliquam sequi voluptate quas.
+      </p>
+    </section> -->
+    <!-- Section: Text -->
+
+    <!-- Section: Links -->
+    <section class="">
+      <!--Grid row-->
+      <div class="row">
+        <!--Grid column-->
+        <div class="col-lg-3 col-md-4  mb-4 mb-md-2">
+          <div class="flex items-center"><a href="index.html" style="text-decoration: none;" class="flex items-center">
+            <img src="NEXTAG brand logo.png" class="h-8 me-3" alt="Nextag Logo" />
+            <span id="footer-logo" class="self-center text-2xl font-semibold whitespace-nowrap text-black">NEXTAG</span></a>
+          </div>
+        <div id="nextag-footer-info">
+        <p class="text-gray-500 dark:text-dark text-sm">
+            NEXTAG offers a curated collection of premium purses 
+            and wallets from top brands. With detailed product 
+            insights, comparisons, and a seamless shopping experience,
+            we make finding the perfect accessory effortless.
+        </p>
+        </div>
+        </div>
+        <!--Grid column-->
+
+        <!--Grid column-->
+        <div class="col-lg-3 col-md-6 mb-4 mb-md-2">
+          <h5 class="text-uppercase">Links</h5>
+
+          <ul class="list-unstyled mb-0">
+            <li>
+              <a class="text-body" href="#!">Link 1</a>
+            </li>
+            <li>
+              <a class="text-body" href="#!">Link 2</a>
+            </li>
+            <li>
+              <a class="text-body" href="#!">Link 3</a>
+            </li>
+            <li>
+              <a class="text-body" href="#!">Link 4</a>
+            </li>
+          </ul>
+        </div>
+        <!--Grid column-->
+
+        <!--Grid column-->
+        <div class="col-lg-3 col-md-6 mb-4 mb-md-2">
+          <h5 class="text-uppercase">Links</h5>
+
+          <ul class="list-unstyled mb-0">
+            <li>
+              <a class="text-body" href="#!">Link 1</a>
+            </li>
+            <li>
+              <a class="text-body" href="#!">Link 2</a>
+            </li>
+            <li>
+              <a class="text-body" href="#!">Link 3</a>
+            </li>
+            <li>
+              <a class="text-body" href="#!">Link 4</a>
+            </li>
+          </ul>
+        </div>
+        <!--Grid column-->
+
+        <!--Grid column-->
+        <div class="col-lg-3 col-md-6 mb-4 mb-md-2">
+          <h5 class="text-uppercase">Links</h5>
+
+          <ul class="list-unstyled mb-0">
+            <li>
+              <a class="text-body" href="#!">Link 1</a>
+            </li>
+            <li>
+              <a class="text-body" href="#!">Link 2</a>
+            </li>
+            <li>
+              <a class="text-body" href="#!">Link 3</a>
+            </li>
+            <li>
+              <a class="text-body" href="#!">Link 4</a>
+            </li>
+          </ul>
+        </div>
+        <!--Grid column-->
+      </div>
+      <!--Grid row-->
+    </section>
+    <!-- Section: Links -->
+  </div>
+  <!-- Grid container -->
+
+  <!-- Copyright -->
+  <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.05);">
+    © 2020 Copyright:
+    <a class="text-reset fw-bold" href="https://mdbootstrap.com/">MDBootstrap.com</a>
+  </div>
+  <!-- Copyright -->
+</footer>
+<!-- Footer -->
 
 
 </body>

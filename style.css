@@ -73,85 +73,32 @@
 #men-tag:hover, #women-tag:hover, #men-list:hover, #women-bag:hover, .nav-item:hover{
   cursor: pointer;
   width: 200px;
-  border-bottom: 1px solid #5e5f5f62;
-  box-shadow: 1px 1px 5px #5e5f5f62;
+  border-bottom: 1px solid #dde0e062;
+  box-shadow: 1px 1px 5px #e0e2e262;
   transition: all 0.5s ease-out;
   display: block;
-  background-color: #dbd8d8;
+  /* background-color: #f0ecec; */
   border-radius: 10px;
-  padding: 5px;
 }
-#men:hover:after, #women:hover:after{
-  right: 200px;
-}
-#men-tag:hover:after, #women-tag:hover:after,#men-product:hover:after,
-#men-handbag-tag:hover:after,
-#men-wallet-tag:hover:after,
-#men-backpack-tag:hover:after,
-#women-product:hover:after,
-#women-handbag-tag:hover:after,
-#women-wallet-tag:hover:after,
-#women-backpack-tag:hover:after{
-  font-size: 15px;
-  position: absolute;
-  content: "▽";
-  transform: rotate(content"▽", 180deg);
-  right: 190px;
-}
-#handbag:hover:after{
-  right: 100px;
-} 
-#wallet:hover:after{
-  right: 100px;
-} 
-#backpack:hover:after{
-  right: 100px;
-}
-#men-product:hover:after,
-#men-handbag-tag:hover:after,
-#men-wallet-tag:hover:after,
-#men-backpack-tag:hover:after,
-#women-product:hover:after,
-#women-handbag-tag:hover:after,
-#women-wallet-tag:hover:after,
-#women-backpack-tag:hover:after{
-  right: 0px;
-}
-#handbag:hover, #wallet:hover, #backpack:hover{
-  cursor: pointer;
-  width: 180px;
-  border-bottom: 1px solid #5e5f5f62;
-  box-shadow: 1px 1px 5px #5e5f5f62;
-  transition: all 0.5s ease-in-out;
-  display: block;
-  background-color: #dbd8d8;
-  border-radius: 8px;
-  padding: 5px;
-}
-#women-bag-list li, #men-list li, #men-handbag-tag, #men-backpack-tag {
-  width: 180px;
-}
-#women-bag, #men-list{
-  position: relative;
-  display: block;
-}
+
 #handbag-list{
   top: 0;
   left: 0;
-  width: 180px;
+  width: 200px;
 }
 #wallet-list{
   top: 0;
   left: 0;
-  width: 190px;
+  width: 200px;
 }
 #backpack-list{
   top: 0;
   left: 0;
-  width: 180px;
+  width: 200px;
 }
 #backpack-list li,#handbag-list li,#wallet-list li{
-  border-bottom: 1px solid #e9ecef;
+  width: 180px;
+  padding: 5px;
 }
 
 
@@ -159,6 +106,29 @@
 #banner{
   width: 100%;
   top: 0;
+}
+
+/* image gallery */
+#image-gallery{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+}
+#image-gallery img{
+  width: 100%;
+  height: 600px;
+  object-fit: cover; 
+}
+
+
+/* news-letter subscription */
+#subscribe-btn{
+  background-color: black;
+  color: white;
+  border: none;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
 /* product details */
@@ -172,7 +142,8 @@
 }
 
 #women-products img{
-  height: 430px;
+  height: 400px;
+  width: 300px;
 }
 
 /* footer */
@@ -182,6 +153,8 @@
 }
 #footer-logo{
   font-size: 1.9rem;
+  text-decoration: none; 
+  border-bottom: none;
 }
 #footer-copyright{
   text-decoration: none;
@@ -190,4 +163,152 @@
 #footer-rights{
   text-align: center;
   justify-content: center;
+}
+#nextag-footer-info{
+  width: 300px;
+  color: #555454;
+}
+
+/* responsive */
+@media screen and (max-width: 768px){
+  
+  #brand-logo{
+    font-size: 20px;
+  }
+  #search-profile{
+    display: none;
+  }
+  #offcanvas-logo{
+    padding-left: 20px ;
+  }
+  #offcanvass-body{
+    font-size: 30px;
+  }
+  #women-products img{
+    padding: left 0px; ;
+    padding-right: 0px;
+    width: 400px;
+  }
+  #feat-products{
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  #men-tag:hover, #women-tag:hover
+  {
+    width: 150px;
+  }
+  #men-tag:hover:after, #women-tag:hover
+  {
+    right: 150px;
+  }
+  #men-tag:hover:after, #women-tag:hover
+  {
+    right: 0px;
+  }
+  #men-product:hover:after,
+  #men-handbag-tag:hover:after,
+  #men-wallet-tag:hover:after,
+  #men-backpack-tag:hover:after,
+  #women-product:hover:after,
+  #women-handbag-tag:hover:after,
+  #women-wallet-tag:hover:after,
+  #women-backpack-tag:hover:after
+  {
+    font-size: 12px;
+  }
+  #women-bag, #men-list{
+    position: relative;
+  }
+  #handbag-list{
+    top: 0;
+    left: 0;
+    width: 150px;
+  }
+  #wallet-list{
+    top: 0;
+    left: 0;
+    width: 150px;
+  }
+  #backpack-list{
+    top: 0;
+    left: 0;
+    width: 150px;
+  }
+  #backpack-list li,#handbag-list li,#wallet-list li{
+    width: 150px;
+    padding: 5px;
+  }
+  #banner{
+    height: 200px;
+  }
+  #feat-products{
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  #women-products img{
+    height: 300px;
+  }
+  #footer{
+    margin-top: 20px;
+  }
+  #footer-logo{
+    font-size: 1.5rem;
+  }
+  #footer-copyright{
+    font-size: 12px;
+  }
+  #nextag-footer-info{
+    width: 200px;
+    font-size: 12px;
+  }
+  #footer-rights{
+    font-size: 12px;
+  }
+  #search{
+    display: block;
+    margin-top: 10px;
+  }
+  #menu{
+    display: block;
+    margin-top: 10px;
+  }
+  #search-profile{
+    display: block;
+    margin-top: 10px;
+  }
+  #offcanvas-logo{
+    padding-left: 10px ;
+  }
+  #offcanvass-body{
+    font-size: 12px;
+  }
+  #men-tag:hover, #women-tag:hover
+  {
+    width: 150px;
+  }
+  #carousel-banner{
+    margin-top: 100px;
+  }
+  /* image gallery */
+  #image-gallery{
+    display: grid;
+    grid-template-columns: 300px 300px 300px;
+
+  }
+  #image-gallery img{
+    width: 300px;
+    height: 300px;
+  }
+  #feat-products{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  #women-products img{
+    height: 300px;
+    width: 200px;
+  }
 }

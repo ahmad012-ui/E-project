@@ -3,29 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us</title>
-
-    <!-- css styling -->
-    <link rel="stylesheet" href="about.css">
-    <link rel="stylesheet" href="style.css">
+    <title>NEXTAG</title>
 
     <!-- font awesome cdn -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-icons/4.0.0/font/MaterialIcons-Regular.ttf">
+    <!-- css styling -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="new-arrival.css">
+    
+    <!-- bootstrap cdn -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     
     <!-- tailwind cdn -->
     <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
 
     <!-- jquery cdn -->
     <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
-    
-    <!-- bootstrap cdn -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-
 
 </head>
-<body>
+<body id="body">
   <nav style="background-color: #ffffff;" class="navbar navbar-expand-md fixed-top"> 
     <div id="nav">
       <div>
@@ -37,7 +35,6 @@
       <div id="search-profile">
         <div id="search_"></div>
        <button type="button" id="search" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop" aria-controls="offcanvasTop"><i class="fa-solid fa-magnifying-glass"></i></button>
-       <i class="fa-solid fa-user"></i>
       </div>
     </div>
   </nav>
@@ -50,26 +47,26 @@
       <h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel"><img id="offcanvas-logo" src="img/NEXTAGt.png" alt=""></h5>
       <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
     </div>
-    <div id="offcanvas-body" class="offcanvas-body">
+    <div id="offcanvass-body" class="offcanvas-body">
       <!-- your content here -->
       <ul id="main-list">
         <li class="nav-item">
-          <a class="nav-link" href="#">New Arrivals</a>
+          <a class="nav-link" href="new-arrival.html">New Arrivals</a>
         </li>
         <!-- women -->
-        <li id="women" class="nav-item">
+        <li id="women" class="nav-item ">
           <a id="women-tag" class="nav-link" href="#">Women</a>
           <div id="women-list">
             <!-- women bags  -->
-            <div id="bag-and-backpack-list">
+            <div id="bag-and-backpack-list dropdown">
               <!-- bags and wallets list -->
               <ul style="list-style: none;">
                 <div id="women-bag">
-                  <li class="nav-item"><a class="nav-link" href="#">Bags</a>
-                     <div id="women-bag-list">
-                      <ul style="list-style: none;">
+                  <li class="nav-item"><a id="women-product" class="nav-link" href="#">Bags</a>
+                     <div>
+                      <ul id="women-bag-list" style="list-style: none;">
                         <!-- handbag  -->
-                        <li class="nav-item" id="women-handbag"><a class="nav-link" href="#">Handbags</a>
+                        <li class="nav-item" id="women-handbag"><a id="women-handbag-tag" class="nav-link" href="#">Handbags</a>
                           <!-- handbag list -->
                           <div id="women-handbag-list">
                             <ul style="list-style: none;">
@@ -84,7 +81,7 @@
                           </div> 
                         </li>
                         <!-- backpack -->
-                        <li class="nav-item" id="women-backpack"><a class="nav-link" href="#">Backpacks</a>
+                        <li class="nav-item" id="women-backpack"><a id="women-backpack-tag" class="nav-link" href="#">Backpacks</a>
                           <!-- backpack list -->
                           <div id="women-backpack-list"> 
                             <ul style="list-style: none;">
@@ -100,10 +97,10 @@
                      </div>
                   </li>
                   <!-- wallet -->
-                  <li class="nav-item" id="women-wallet"><a class="nav-link" href="#">Wallets</a>
+                  <li class="nav-item" id="women-wallet"><a id="women-wallet-tag" class="nav-link" href="#">Wallets</a>
                     <!-- wallet list -->
-                     <div id="women-wallet-list">
-                      <ul style="list-style: none;">
+                     <div>
+                      <ul id="women-wallet-list" style="list-style: none;">
                         <li class="nav-item"><a class="nav-link" href="#">Bi-Fold Wallets</a></li>
                         <li class="nav-item"><a class="nav-link" href="#">Tri-Fold Wallets</a></li>
                         <li class="nav-item"><a class="nav-link" href="#">Money Clips</a></li>
@@ -125,13 +122,13 @@
         <!-- men -->
         <li id="men" class="nav-item">
           <a id="men-tag" class="nav-link" href="#">Men</a>
-          <div id="men-list">
+          <div>
             <!-- bags  -->
-          <ul style="list-style: none;">
-            <li class="nav-item" id="bag"><a class="nav-link" href="#">Bags</a>
+          <ul id="men-list" style="list-style: none;">
+            <li class="nav-item" id="bag"><a id="men-product" class="nav-link" href="#">Bags</a>
               <!-- handbag list -->
               <ul id="bag-list" style="list-style: none;">
-                <li class="nav-item" id="handbag"><a class="nav-link" href="#">Handbags</a>
+                <li class="nav-item" id="handbag"><a id="men-handbag-tag" class="nav-link" href="#">Handbags</a>
                 <div id="handbag-list">
                   <ul style="list-style: none;">
                     <li class="nav-item"><a class="nav-link" href="#">Tote Bags</a></li>
@@ -147,7 +144,7 @@
                 </div>
                 </li>
                 <!-- backpack list -->
-                <li class="nav-item" id="backpack"><a class="nav-link" href="#">Backpacks</a>
+                <li class="nav-item" id="backpack"><a id="men-backpack-tag" class="nav-link" href="#">Backpacks</a>
                   <div id="backpack-list">
                   <ul style="list-style: none;">
                     <li class="nav-item"><a class="nav-link" href="#">Classic Leather Backpack</a></li>
@@ -167,7 +164,7 @@
               </ul>
             </li>
             <!-- wallet list -->
-            <li class="nav-item" id="wallet"><a class="nav-link" href="#">Walllets</a>
+            <li class="nav-item" id="wallet"><a id="men-wallet-tag" class="nav-link" href="#">Walllets</a>
               <div id="wallet-list">
               <ul style="list-style: none;">
                 <li class="nav-item"><a class="nav-link" href="#">Bi-Fold Wallets</a></li>
@@ -215,193 +212,104 @@
         </form>
     </div>
   </div>
+    <!-- end of off canvas -->
 
-    <main>
-        <section class="intro">
-            <h2 id="h2">About </h2>
-            <p class="p">Nextag is a luxary brand dedicated to crafting high-end bags and wallets that seamlessly blend and practicality.
-              Our goal is to redefin fashion accessories with unparalleled quality and sophistication. </p>
-        </section>
-       <h3 id="h2">Our core Values</h3>
-         <div class="container">
-           <div class="card">
-              <h3>Exellence</h3>
-        <p>Every product is crafted with meticulous attention to detail and superior materials</p>
-             
+    <!-- new arrival -->
+    <div id="new-arrival">
+      <div id="new-arrival-header">
+        <h1>New Arrivals</h1>
+      </div>
+      <div id="new-arrival-body">
+        <h3>🚀 Launching Soon...</h3>
+      </div>
     </div>
-    <div class="card">
-    <h3>Innovation</h3>
-    <p>We stay ahead of trends curating designs that set new standards in fashion.</p>
-    
-   </div>
-   <div class="card">
-    <h3>Luxury & Comfort</h3>
-    <p>Nextag ensures that elegance never compromises comfort and functionality.</p>
-        </div>
-           </div>
-          <h2 id="h2">Our Journey</h2>
-          <p class="p">Nextag was founded with a vision to redefine luxury accessories.since our inception,we have expanded globally,becoming a brand synonymous with sophistication and craftsmanship. </p>
-
-    </main>
-   
-    <!-- footer -->
 
 
-    <!-- <footer>
-        <p>&copy; 2025 Our Company | All Rights Reserved</p>
-    </footer> -->
-     
-  <footer id="footer" class="bg-white dark:bg-gray-900">
-  <div class="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
-      <div class="md:flex md:justify-between">
-        <div class="mb-6 md:mb-0">
-            <a href="index.html" class="flex items-center">
-                <img src="NEXTAG brand logo.png" class="h-8 me-3" alt="FlowBite Logo" />
-                <span id="footer-logo" class="self-center text-2xl font-semibold whitespace-nowrap dark:text-black">NEXTAG</span>
-            </a>
-        </div>
-        <div class="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
-            <div>
-                <h3 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Resources</h3>
-                <ul class="text-gray-500 dark:text-gray-400 font-medium">
-                    <li class="mb-4">
-                        <a href="https://flowbite.com/" class="nav-link hover:underline text-black">Flowbite</a>
-                    </li>
-                    <li>
-                        <a href="https://tailwindcss.com/" class="nav-link hover:underline text-black">Tailwind CSS</a>
-                    </li>
-                </ul>
-            </div>
-            <div>
-                <h3 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Follow us</h3>
-                <ul class="text-gray-500 dark:text-gray-400 font-medium">
-                   <!-- insta -->
-                    <li class="mb-4">
-                        <a href="https://www.instagram.com/" class="nav-link hover:underline text-black"><i class="fa-brands fa-instagram"></i>   Instagram</a>
-                    </li>
-                    <!-- facebook -->
-                    <li  class="mb-4">
-                        <a href="https://www.facebook.com/" class="nav-link hover:underline text-black"><i class="fa-brands fa-facebook"></i>   Facebook</a>
-                    </li>
-                    <!-- twitter -->
-                    <li>
-                       <a href="https://www.twitter.com/" class="nav-link hover:underline text-black"><i class="fa-brands fa-twitter"></i>   Twitter</a>
-                    </li>
-                </ul>
-            </div>
-            <div>
-                <h3 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Legal</h3>
-                <ul class="text-gray-500 dark:text-gray-400 font-medium">
-                    <li class="mb-4">
-                        <a href="#" class="nav-link hover:underline text-black">Privacy Policy</a>
-                    </li>
-                    <li>
-                        <a href="#" class="nav-link hover:underline text-black">Terms &amp; Conditions</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </div>
-    <hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
-    <div id="footer-rights" class="sm:flex sm:items-center">
-        <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2023 <a href="https://flowbite.com/" id="footer-copyright" class="hover:underline">NEXTAG™</a>. All Rights Reserved.
-        </span>
-        
-    </div>
-  </div>
-</footer>
-
-
-
-   
-      
 </body>
-</html>
+</html>  
 
 <script>
-  // for men's menu
-  $('#men-list').hide();
-  $('#bag-list').hide();
-  $('#backpack-list').hide();
-  $('#handbag-list').hide();
-  $('#wallet-list').hide();
-  $('#men').click(function(){
-    $('#men-list').show();
-    $('#men-list,#men').mouseleave(function(){
-        $('#men-list').hide();
-      });
-  });
-  // bag
-  $('#bag').click(function(){
-    $('#bag-list').show();
-    $('#bag-list,#bag').mouseleave(function(){
-        $('#bag-list').hide();
-      });
-  });
-  // backpack
-  $('#backpack').click(function(){
-    $('#backpack-list').toggle();
-    $('#backpack-list,#backpack').mouseleave(function(){
-        $('#backpack-list').hide();
-      });
-  });
-  // handbag
-  $('#handbag').click(function(){
-    $('#handbag-list').toggle();
-    $('#handbag-list,#handbag').mouseleave(function(){
-        $('#handbag-list').hide();
-      });
-  });
-  // wallet
-  $('#wallet').click(function(){
-    $('#wallet-list').toggle();
-    $('#wallet-list,#wallet').mouseleave(function(){
-        $('#wallet-list').hide();
-      });
-  });
-  
-  // for women's menu
-  $('#women-list').hide();
-  $('#women-bag-list').hide();
-  $('#women-backpack-list').hide();
-  $('#women-handbag-list').hide();
-  $('#women-wallet-list').hide();
-  // for main women's menu
-  $('#women').click(function(){
-    $('#women-list').show();
-  });
-  // women's menu leave event
-  $('#women-list,#women').mouseleave(function(){
+    // for men's menu
+    $('#men-list').hide();
+    $('#bag-list').hide();
+    $('#backpack-list').hide();
+    $('#handbag-list').hide();
+    $('#wallet-list').hide();
+    $('#men').click(function(){
+      $('#men-list').show();
+      $('#men-list,#men').mouseleave(function(){
+          $('#men-list').hide();
+        });
+    });
+    // bag
+    $('#bag').click(function(){
+      $('#bag-list').show();
+      $('#bag-list,#bag').mouseleave(function(){
+          $('#bag-list').hide();
+        });
+    });
+    // backpack
+    $('#backpack').click(function(){
+      $('#backpack-list').toggle();
+      $('#backpack-list,#backpack').mouseleave(function(){
+          $('#backpack-list').hide();
+        });
+    });
+    // handbag
+    $('#handbag').click(function(){
+      $('#handbag-list').toggle();
+      $('#handbag-list,#handbag').mouseleave(function(){
+          $('#handbag-list').hide();
+        });
+    });
+    // wallet
+    $('#wallet').click(function(){
+      $('#wallet-list').toggle();
+      $('#wallet-list,#wallet').mouseleave(function(){
+          $('#wallet-list').hide();
+        });
+    });
+    
+    // for women's menu
     $('#women-list').hide();
-  });
-  // women's bag
-  $('#women-bag').click(function(){
-    $('#women-bag-list').show();
-    $('#women-bag-list,#women-bag').mouseleave(function(){
-      $('#women-bag-list').hide();
-      });
-  });
-  // women's backpack
-  $('#women-backpack').click(function(){
-    $('#women-backpack-list').show();
-    $('#women-backpack-list,#women-backpack').mouseleave(function(){
-      $('#women-backpack-list').hide();
-      });
-  });
-  // women's handbag
-  $('#women-handbag').click(function(){
-    $('#women-handbag-list').show();
-    $('#women-handbag-list,#women-handbag').mouseleave(function(){
-      $('#women-handbag-list').hide();
-      });
-  });
-  // women's wallet
-  $('#women-wallet').click(function(){
-    $('#women-wallet-list').show();
-    $('#women-wallet-list,#women-wallet').mouseleave(function(){
-      $('#women-wallet-list').hide();
-      });
-  });
-
-
-</script>
+    $('#women-bag-list').hide();
+    $('#women-backpack-list').hide();
+    $('#women-handbag-list').hide();
+    $('#women-wallet-list').hide();
+    // for main women's menu
+    $('#women').click(function(){
+      $('#women-list').show();
+    });
+    // women's menu leave event
+    $('#women-list,#women').mouseleave(function(){
+      $('#women-list').hide();
+    });
+    // women's bag
+    $('#women-bag').click(function(){
+      $('#women-bag-list').show();
+      $('#women-bag-list,#women-bag').mouseleave(function(){
+        $('#women-bag-list').hide();
+        });
+    });
+    // women's backpack
+    $('#women-backpack').click(function(){
+      $('#women-backpack-list').show();
+      $('#women-backpack-list,#women-backpack').mouseleave(function(){
+        $('#women-backpack-list').hide();
+        });
+    });
+    // women's handbag
+    $('#women-handbag').click(function(){
+      $('#women-handbag-list').show();
+      $('#women-handbag-list,#women-handbag').mouseleave(function(){
+        $('#women-handbag-list').hide();
+        });
+    });
+    // women's wallet
+    $('#women-wallet').click(function(){
+      $('#women-wallet-list').show();
+      $('#women-wallet-list').mouseleave(function(){
+        $('#women-wallet-list').hide();
+        });
+    });
+  </script>
