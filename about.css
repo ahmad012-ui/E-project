@@ -1,60 +1,15 @@
 
-#nav{
-
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 10px;
-    padding-right: 30px;
-    padding-left: 30px;
-}
-#logo{
-    
-    width: 200px;
-    height: 150px;
-    align-items: center;
-    justify-content: center;
-    margin-right: 100px;
-    padding-left: 100px;
-    margin-left: 50px;
-}  
-.navbar-brand{
-    font-size: 24px;
-    color: #000000;
-    text-decoration: none;
-}
-
-#search{
-    background :none;
-    border:none;
-}
-#menu{
-    background :none;
-    border:none;
-    cursor: pointer;
-    letter-spacing: 1px;
-}
-#brand-logo{
-    font-size: 25px;
-    cursor: pointer;
-    
-}
-
-/* offcanvas */
-#offcanvas-logo{
-    padding-left: 50px ;
-}
-
-#offcanvas-body{
-    font-size: 19px;
-}
 
 /* Main Content Styling */
 main {
     padding: 40px 20px;
     max-width: 1200px;
     margin: 0 auto;
-    background-color: rgb(250, 249, 249);
+}
+#about-background{
+  background-image: url('https://images.unsplash.com/photo-1522202176988-66273c2f20f0');
+  background-size: cover;
+  background-position: center;
 }
 
 .container {
