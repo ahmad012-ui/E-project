@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NEXTAG</title>
+    <title>NEXTAG/Homepage</title>
 
     <!-- font awesome cdn -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -42,6 +42,7 @@
   <!-- off canvas -->
 
   <!-- off-canvas for menu -->
+<offcanvas>
   <div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
     <div class="offcanvas-header">
       <h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel"><img id="offcanvas-logo" src="img/NEXTAGt.png" alt=""></h5>
@@ -198,6 +199,7 @@
       </ul>
     </div>
   </div>
+</offcanvas>
 
   <!-- search bar -->
   <div class="offcanvas offcanvas-top" tabindex="-1" id="offcanvasTop" aria-labelledby="offcanvasTopLabel">
@@ -227,17 +229,21 @@
       </div>
     </div>
     <!-- image gallery -->
-    <div class="row" id="image-gallery">
-      <div class="col-lg-4 col-md-3 col-sm-2">
-       <img src="img/gallery 1.jpeg" alt="Handbag">
-      </div>
-      <div class="col-lg-4 col-md-3 col-sm-2">
-       <img src="img/gallery 2.jpeg" alt="backpack">
-      </div>
-       <div class="col-lg-4 col-md-3 col-sm-2"> 
-      <img src="img/gallery 3.jpeg" alt="phonecase holders">
+    <div class="" id="image-gallery">
+      <div class="row">
+        <div id="gallery-img" class="col-lg-4 col-md-3 col-sm-2">
+         <img src="img/gallery 1.jpeg" alt="Handbag">
+        </div>
+        <div id="gallery-img" class="col-lg-4 col-md-3 col-sm-2">
+         <img src="img/gallery 2.jpeg" alt="backpack">
+        </div>
+        <div id="gallery-img" class="col-lg-4 col-md-3 col-sm-2"> 
+         <img src="img/gallery 3.jpeg" alt="phonecase holders">
+        </div> 
       </div>  
     </div>
+
+    <!-- featured products -->
     <section>
     <h2 id="feat-products" class="font-weight-bold mt-4">Discover Our Featured Products</h2>
     <div class="container mt-4">
@@ -262,24 +268,7 @@
     </div>
     </section>
     
-    <section id="featured-products">
-      <h2 id="feat-products" class="font-weight-bold mt-4">Discover Our Featured Products</h2>
-      <div class="container mt-4">
-        <div class="row">
-          <div>
-          <div id="featured-products" class="col-12 col-sm-6 col-lg-3 text-center mb-4">
-            <img src="img/pic1.jpg" alt="" >
-          </div>
-          <div id="featured-products" class="col-12 col-sm-6 col-lg-3 text-center mb-4">
-            <img src="img/pic2.jpg" alt="" >
-          </div>
-          <div id="featured-products" class="col-12 col-sm-6 col-lg-3 text-center mb-4">
-            <img src="img/pic3.jpg" alt="" >
-          </div>
-          <div id="featured-products" class="col-12 col-sm-6 col-lg-3 text-center mb-4">
-            <img src="img/pic4.jpg" alt="" >
-          </div>  
-        </div>
+    <section id="new-arrivals">
       <h2 id="new-arrivals" class="font-weight-bold mt-4">New Arrivals</h2>
       <div class="container mt-4">
         <div class="row">
@@ -312,134 +301,8 @@
       </div>
     </section>
 
-    <section id="sunscribe">
-      <div class="container">
-        <div class="row">
-          <div class="col-12 col-md-6">
-            <h2 id="subscribe" class="font-weight-bold">Subscribe to our Newsletter</h2>
-            <p>Subscribe to our newsletter to receive updates on new arrivals, special offers and other discount information.</p>
-          </div>
-          <div class="col-12 col-md-6">
-            <form action="">
-              <div class="form-group">
-                <input type="email" class="form-control" id="email" placeholder="Enter your email address"><br>
-                <button id="subscribe-btn" type="submit" class="btn btn-dark btn-gradient align-item-center">Subscribe</button>
-              </div>
-            </form>
-          </div>
-        </div>
-      </div>
-    </section>
+
   </main>
-  
-  
-  <!-- footer -->
-   
-
-<footer id="footer" class="bg-white dark:bg-gray-900">
-  <div class="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
-    <section class="">
-      <form action="">
-        <!--Grid row-->
-        <div class="row d-flex justify-content-center">
-          <!--Grid column-->
-          <div class="col-auto">
-            <p class="pt-2">
-              <strong>Sign up for our newsletter</strong>
-            </p>
-          </div>
-          <!--Grid column-->
-
-          <!--Grid column-->
-          <div class="col-md-5 col-12">
-            <!-- Email input -->
-            <div data-mdb-input-init class="form-outline mb-5">
-              <input type="email" id="form5Example24" class="form-control" placeholder="Email Address" />
-            </div>
-          </div>
-          <!--Grid column-->
-
-          <!--Grid column-->
-          <div class="col-auto">
-            <!-- Submit button -->
-            <button data-mdb-ripple-init type="submit" class="btn btn-outline mb-4">
-              Subscribe
-            </button>
-          </div>
-          <!--Grid column-->
-        </div>
-        <!--Grid row-->
-      </form>
-    </section>
-      <div class="md:flex md:justify-between">
-        <div class="mb-6 md:mb-0">
-            <a href="index.html" class="flex items-center">
-                <img src="NEXTAG brand logo.png" class="h-8 me-3" alt="Nextag Logo" />
-                <span id="footer-logo" class="self-center text-2xl font-semibold whitespace-nowrap text-black">NEXTAG</span>
-            </a>
-            <div id="nextag-footer-info">
-            <p>
-                <span class="text-gray-500 dark:text-dark">
-                NEXTAG offers a curated collection of premium purses 
-                and wallets from top brands. With detailed product 
-                insights, comparisons, and a seamless shopping experience,
-                we make finding the perfect accessory effortless.</span>
-            </p>
-            </div>
-        </div>
-        <div class="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
-             <!-- resources -->
-            <div>
-                <h3 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Resources</h3>
-                <ul class="text-gray-500 dark:text-gray-400 font-medium">
-                    <li class="mb-4">
-                        <a href="https://flowbite.com/" class="nav-link hover:underline text-black">Flowbite</a>
-                    </li>
-                    <li>
-                        <a href="https://tailwindcss.com/" class="nav-link hover:underline text-black">Tailwind CSS</a>
-                    </li>
-                </ul>
-            </div>
-            <!-- follow us -->
-            <div>
-                <h3 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Follow us</h3>
-                <ul class="text-gray-500 dark:text-gray-400 font-medium">
-                   <!-- instagram -->
-                    <li class="mb-4">
-                        <a href="https://www.instagram.com/" class="nav-link hover:underline text-black"><i class="fa-brands fa-instagram"></i>   Instagram</a>
-                    </li>
-                    <!-- facebook -->
-                    <li  class="mb-4">
-                        <a href="https://www.facebook.com/" class="nav-link hover:underline text-black"><i class="fa-brands fa-facebook"></i>   Facebook</a>
-                    </li>
-                    <!-- twitter -->
-                    <li>
-                       <a href="https://www.twitter.com/" class="nav-link hover:underline text-black"><i class="fa-brands fa-twitter"></i>   Twitter</a>
-                    </li>
-                </ul>
-            </div>
-            <!-- legal -->
-            <div>
-                <h3 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Legal</h3>
-                <ul class="text-gray-500 dark:text-gray-400 font-medium">
-                    <li class="mb-4">
-                        <a href="#" class="nav-link hover:underline text-black">Privacy Policy</a>
-                    </li>
-                    <li>
-                        <a href="#" class="nav-link hover:underline text-black">Terms &amp; Conditions</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </div>
-    <hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
-    <div id="footer-rights" class="sm:flex sm:items-center">
-        <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2023 <a href="https://flowbite.com/" id="footer-copyright" class="hover:underline">NEXTAG™</a>. All Rights Reserved.
-        </span>
-        
-    </div>
-  </div>
-</footer>
 
 <!-- Footer -->
 <footer class="bg-body-tertiary text-center">
@@ -448,33 +311,18 @@
     <!-- Section: Social media -->
     <section class="mb-4">
       <!-- Facebook -->
-      <a data-mdb-ripple-init class="btn btn-outline btn-floating m-1" href="#!" role="button"
+      <a data-mdb-ripple-init class="btn btn-outline btn-floating m-1" href="https://www.facebook.com/" role="button"
         ><i class="fab fa-facebook-f"></i
       ></a>
 
       <!-- Twitter -->
-      <a data-mdb-ripple-init class="btn btn-outline btn-floating m-1" href="#!" role="button"
+      <a data-mdb-ripple-init class="btn btn-outline btn-floating m-1" target="_blank" href="https://www.x.com/" role="button"
         ><i class="fab fa-twitter"></i
       ></a>
 
-      <!-- Google -->
-      <a data-mdb-ripple-init class="btn btn-outline btn-floating m-1" href="#!" role="button"
-        ><i class="fab fa-google"></i
-      ></a>
-
       <!-- Instagram -->
-      <a data-mdb-ripple-init class="btn btn-outline btn-floating m-1" href="#!" role="button"
+      <a data-mdb-ripple-init class="btn btn-outline btn-floating m-1" target="_blank" href="https://www.instagram.com/" role="button"
         ><i class="fab fa-instagram"></i
-      ></a>
-
-      <!-- Linkedin -->
-      <a data-mdb-ripple-init class="btn btn-outline btn-floating m-1" href="#!" role="button"
-        ><i class="fab fa-linkedin-in"></i
-      ></a>
-
-      <!-- Github -->
-      <a data-mdb-ripple-init class="btn btn-outline btn-floating m-1" href="#!" role="button"
-        ><i class="fab fa-github"></i
       ></a>
     </section>
     <!-- Section: Social media -->
@@ -504,7 +352,7 @@
           <!--Grid column-->
           <div class="col-auto">
             <!-- Submit button -->
-            <button data-mdb-ripple-init type="submit" class="btn btn-outline mb-4">
+            <button data-mdb-ripple-init type="submit" class="btn btn-outline btn-dark mb-4">
               Subscribe
             </button>
           </div>
@@ -513,14 +361,10 @@
         <!--Grid row-->
       </form>
     </section>
-    <!-- Section: Form -->
-
     <!-- Section: Text -->
     <!-- <section class="mb-4">
       <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt distinctio earum
-        repellat quaerat voluptatibus placeat nam, commodi optio pariatur est quia magnam eum
-        harum corrupti dicta, aliquam sequi voluptate quas.
+        Sign up for our newsletter to receive updates on new arrivals, special offers and other discount information.
       </p>
     </section> -->
     <!-- Section: Text -->
@@ -531,79 +375,82 @@
       <div class="row">
         <!--Grid column-->
         <div class="col-lg-3 col-md-4  mb-4 mb-md-2">
+          <article>
           <div class="flex items-center"><a href="index.html" style="text-decoration: none;" class="flex items-center">
             <img src="NEXTAG brand logo.png" class="h-8 me-3" alt="Nextag Logo" />
             <span id="footer-logo" class="self-center text-2xl font-semibold whitespace-nowrap text-black">NEXTAG</span></a>
           </div>
-        <div id="nextag-footer-info">
-        <p class="text-gray-500 dark:text-dark text-sm">
+          <div id="nextag-footer-info">
+            <p class="text-gray-500 dark:text-dark text-sm">
             NEXTAG offers a curated collection of premium purses 
             and wallets from top brands. With detailed product 
             insights, comparisons, and a seamless shopping experience,
             we make finding the perfect accessory effortless.
-        </p>
-        </div>
+            </p>
+          </div>
+         </article>
         </div>
         <!--Grid column-->
 
         <!--Grid column-->
-        <div class="col-lg-3 col-md-6 mb-4 mb-md-2">
-          <h5 class="text-uppercase">Links</h5>
+        <div class="col-lg-3 col-md-4 mb-4 mb-md-2">
+          <h5 class="text-uppercase">Quick Links</h5>
 
           <ul class="list-unstyled mb-0">
             <li>
-              <a class="text-body" href="#!">Link 1</a>
+              <a class="text-body nav-link" href="index.html">Home</a>
             </li>
             <li>
-              <a class="text-body" href="#!">Link 2</a>
+              <a class="text-body nav-link" href="about.html">About Us</a>
             </li>
             <li>
-              <a class="text-body" href="#!">Link 3</a>
+              <a class="text-body nav-link" href="contact.html">Contact</a>
             </li>
             <li>
-              <a class="text-body" href="#!">Link 4</a>
+              <a class="text-body nav-link" href="services.html">Services</a>
             </li>
           </ul>
         </div>
         <!--Grid column-->
 
         <!--Grid column-->
-        <div class="col-lg-3 col-md-6 mb-4 mb-md-2">
-          <h5 class="text-uppercase">Links</h5>
-
+        <div class="col-lg-3 col-md-4 mb-4 mb-md-2">
+          <article>
+          <h5 class="text-uppercase">Products</h5>
+          </article>
           <ul class="list-unstyled mb-0">
             <li>
-              <a class="text-body" href="#!">Link 1</a>
+              <a class="text-body nav-link" href="#!">Handbag</a>
             </li>
             <li>
-              <a class="text-body" href="#!">Link 2</a>
+              <a class="text-body nav-link" href="#!">Wallet</a>
             </li>
             <li>
-              <a class="text-body" href="#!">Link 3</a>
+              <a class="text-body nav-link" href="#!">Backpacks</a>
             </li>
             <li>
-              <a class="text-body" href="#!">Link 4</a>
+              <a class="text-body nav-link" href="#!">Accessories</a>
             </li>
           </ul>
         </div>
         <!--Grid column-->
 
         <!--Grid column-->
-        <div class="col-lg-3 col-md-6 mb-4 mb-md-2">
-          <h5 class="text-uppercase">Links</h5>
+        <div class="col-lg-3 col-md-4 mb-4 mb-md-2">
+          <h5 class="text-uppercase">Info</h5>
 
           <ul class="list-unstyled mb-0">
             <li>
-              <a class="text-body" href="#!">Link 1</a>
+              <a class="text-body nav-link" href="#!">FAQ's</a>
             </li>
             <li>
-              <a class="text-body" href="#!">Link 2</a>
+              <a class="text-body nav-link" href="#!">Blog</a>
             </li>
             <li>
-              <a class="text-body" href="#!">Link 3</a>
+              <a class="text-body nav-link" href="#!">Privacy Policy</a>
             </li>
             <li>
-              <a class="text-body" href="#!">Link 4</a>
+              <a class="text-body nav-link" href="#!">Term's & Conditions</a>
             </li>
           </ul>
         </div>
@@ -618,7 +465,7 @@
   <!-- Copyright -->
   <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.05);">
     © 2020 Copyright:
-    <a class="text-reset fw-bold" href="https://mdbootstrap.com/">MDBootstrap.com</a>
+    <a class="text-reset text-semi-bold" href="index.html">NEXTAG.COM</a>
   </div>
   <!-- Copyright -->
 </footer>
