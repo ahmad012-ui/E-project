@@ -22,7 +22,7 @@
     <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
 
 </head>
-<body id="body">
+<body>
   <nav style="background-color: #ffffff;" class="navbar navbar-expand-md fixed-top"> 
     <div id="nav">
       <div>
@@ -230,7 +230,7 @@
     </div>
     <!-- image gallery -->
     <div class="" id="image-gallery">
-      <div class="row">
+      <div class="row" style="padding: 0;">
         <div id="gallery-img" class="col-lg-4 col-md-4 col-sm-2">
          <img src="img/gallery 1.jpeg" alt="Handbag">
         </div>
@@ -239,9 +239,6 @@
         </div>
         <div id="gallery-img" class="col-lg-4 col-md-4 col-sm-2"> 
          <img src="img/gallery 3.jpeg" alt="phonecase holders">
-        </div>
-        <div id="gallery-img" class="col-lg-4 col-md-4 col-sm-2"> 
-          <img src="img/gallery 3.jpeg" alt="phonecase holders">
         </div> 
       </div>  
     </div>
@@ -252,16 +249,16 @@
     <div class="container mt-4">
         <div class="row">
             <div id="women-products" class="col-12 col-sm-6 col-lg-3 text-center mb-4">
-                <img src="img/travel.jpg" alt="Women's Handbag" class="img-fluid" />
-                <p class="mt-2">Women's Handbags</p>
+                <img src="img/travel.jpg" alt="Travel bags" class="img-fluid" />
+                <p class="mt-2">Travel (Classic Leather)</p>
             </div>
             <div id="women-products" class="col-12 col-sm-6 col-lg-3 text-center mb-4">
-                <img src="img/travel hobo.jpeg" alt="Women's Wallets" class="img-fluid" />
-                <p class="mt-2">Women's Wallets</p>
+                <img src="img/travel hobo.jpeg" alt="Hobo" class="img-fluid" />
+                <p class="mt-2">HOBO</p>
             </div>
             <div id="women-products" class="col-12 col-sm-6 col-lg-3 text-center mb-4">
-                <img src="img/Commuter Backpack I Harber London.jpeg" alt="Travel" class="img-fluid" />
-                <p class="mt-2">Travel</p>
+                <img src="img/Commuter Backpack I Harber London.jpeg" alt="Backpack" class="img-fluid" />
+                <p class="mt-2">Backpack</p>
             </div>
             <div id="women-products" class="col-12 col-sm-6 col-lg-3 text-center mb-4">
                 <img src="img/card-holder.jpeg" alt="Phone case card holders" class="img-fluid" />
@@ -271,6 +268,8 @@
     </div>
     </section>
     
+    <!-- New-arrival products -->
+
     <section id="new-arrivals">
       <h2 id="new-arrivals" class="font-weight-bold mt-4">New Arrivals</h2>
       <div class="container mt-4">
@@ -365,22 +364,15 @@
         <!--Grid row-->
       </form>
     </section>
-    <!-- Section: Text -->
-    <!-- <section class="mb-4">
-      <p>
-        Sign up for our newsletter to receive updates on new arrivals, special offers and other discount information.
-      </p>
-    </section> -->
-    <!-- Section: Text -->
 
     <!-- Section: Links -->
     <section class="">
       <!--Grid row-->
       <div class="row">
         <!--Grid column-->
-        <div class="col-lg-3 col-md-4  mb-4 mb-md-2">
+        <div class="col-lg-3 col-md-4  mb-4 mb-md-2 mt-md-2">
           <article>
-          <div class="flex items-center"><a href="index.html" style="text-decoration: none;" class="flex items-center">
+          <div id="nextag-info-div" class="flex items-center"><a href="index.html" style="text-decoration: none;" class="flex items-center">
             <img src="NEXTAG brand logo.png" class="h-8 me-3" alt="Nextag Logo" />
             <span id="footer-logo" class="self-center text-2xl font-semibold whitespace-nowrap text-black">NEXTAG</span></a>
           </div>
@@ -433,7 +425,7 @@
               <a class="text-body nav-link" href="#!">Backpacks</a>
             </li>
             <li>
-              <a class="text-body nav-link" href="#!">Accessories</a>
+              <a class="text-body nav-link" href="new-arrival.html">Accessories</a>
             </li>
           </ul>
         </div>
@@ -448,7 +440,7 @@
               <a class="text-body nav-link" href="#!">FAQ's</a>
             </li>
             <li>
-              <a class="text-body nav-link" href="#!">Blog</a>
+              <a class="text-body nav-link" href="blog.html">Blog</a>
             </li>
             <li>
               <a class="text-body nav-link" href="#!">Privacy Policy</a>

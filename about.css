@@ -6,11 +6,6 @@ main {
     max-width: 1200px;
     margin: 0 auto;
 }
-#about-background{
-  background-image: url('https://images.unsplash.com/photo-1522202176988-66273c2f20f0');
-  background-size: cover;
-  background-position: center;
-}
 
 .container {
     display: grid;
