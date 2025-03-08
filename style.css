@@ -146,6 +146,9 @@
   width: 300px;
   color: #555454;
 }
+#footer-list li{
+  align-items: start;
+}
 
 /* responsive */
 @media screen and (max-width: 992px){
