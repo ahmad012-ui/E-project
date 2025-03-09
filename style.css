@@ -102,10 +102,14 @@
 }
 #image-gallery img{
   gap: 0;
-  width: 550px;
+  width: 515px;
   height: 600px;
   object-fit: cover; 
   padding: 0;
+}
+#gallery-img{
+  object-fit: cover;
+  padding: 0px;
 }
 
 /* product details */
@@ -114,13 +118,30 @@
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  margin-top: 50px;
-  margin-bottom: 50px;
+  margin-top: 100px;
 }
 
 #women-products img{
   height: 400px;
   width: 100%;
+}
+
+/* services */
+#service{
+  display: flex;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 30px;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 50px;
+  margin-bottom: 3  0px;
+}
+
+#service-icon{
+  width: 100%;
+  height: 450px;
+  margin-right: 20px;
 }
 
 /* footer */
@@ -143,8 +164,12 @@
   justify-content: center;
 }
 #nextag-footer-info{
-  width: 300px;
+  width: 250px;
   color: #555454;
+}
+#footer-list{
+  list-style: none;
+  justify-content: start;
 }
 
 /* responsive */
@@ -156,11 +181,11 @@
     width: 100%;
     margin-top: 10px;
     padding-right: 20px;
-    padding-left: 20px;
+    padding-left: 10px;
   }
   #logo{
-    width: 200px;
-    height: 150px;
+    width: 150px;
+    height: 100px;
     align-items: center;
     justify-content: center;
     margin-right: 100px;
@@ -174,7 +199,7 @@
   }
   #banner{
     width: 100%;
-    height: 300px;
+    height: 100%;
   }
   #brand-logo{
     font-size: 20px;
@@ -264,7 +289,7 @@
     font-size: 12px;
   }
   #nextag-footer-info,#nextag-info-div{
-    width: 400px;
+    width: auto;
     font-size: 12px;
     align-items: center;
     justify-content: center;
@@ -305,6 +330,10 @@
   #image-gallery img{
     width: 400px;
     height: 300px;
+  }
+  #gallery-img{
+    width: 348px;
+    padding: 0px;
   }
   /* #feat-products{
     display: flex;

@@ -14,7 +14,9 @@
     <!-- bootstrap cdn -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-    
+    <link rel="stylesheet" href="bootstrap.bundle.min.js">
+    <link rel="stylesheet" href="bootstrap.min.css">
+     
     <!-- tailwind cdn -->
     <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
 
@@ -23,6 +25,7 @@
 
 </head>
 <body>
+  <!-- navbar -->
   <nav style="background-color: #ffffff;" class="navbar navbar-expand-md fixed-top"> 
     <div id="nav">
       <div>
@@ -186,7 +189,7 @@
         </li>
         <!-- services -->
         <li class="nav-item">
-          <a class="nav-link" href="#">Services</a>
+          <a class="nav-link" href="services.html">Services</a>
         </li>
         <!-- contact -->
         <li class="nav-item">
@@ -211,6 +214,7 @@
         <form class="d-flex">
             <input class="form-control me-2" type="search" placeholder="Search..." aria-label="Search">
             <button class="btn btn-dark btn-gradient" type="submit">Search</button>
+            <div id="search-card"></div>
         </form>
     </div>
   </div>
@@ -232,13 +236,13 @@
     <div class="" id="image-gallery">
       <div class="row" style="padding: 0;">
         <div id="gallery-img" class="col-lg-4 col-md-4 col-sm-2">
-         <img src="img/gallery 1.jpeg" alt="Handbag">
+         <a href=""><img id="img" src="img/gallery 1.jpeg" alt="Handbag"></a>
         </div>
         <div id="gallery-img" class="col-lg-4 col-md-4 col-sm-2">
-         <img src="img/gallery 2.jpeg" alt="backpack">
+          <a href=""><img id="img" src="img/gallery 2.jpeg" alt="backpack"></a>
         </div>
         <div id="gallery-img" class="col-lg-4 col-md-4 col-sm-2"> 
-         <img src="img/gallery 3.jpeg" alt="phonecase holders">
+          <a href=""><img id="img" src="img/gallery 3.jpeg" alt="phonecase holders"></a>
         </div> 
       </div>  
     </div>
@@ -246,6 +250,45 @@
     <!-- featured products -->
     <section>
     <h2 id="feat-products" class="font-weight-bold mt-4 text-wrap">Our Featured Products</h2>
+    <div class="container mt-4">
+        <div class="row">
+            <div id="women-products" class="col-12 col-sm-6 col-lg-3 text-center mb-4">
+                <img src="img/BirdinBag – Premium Studded Decor Duffel.jpeg" alt="Travel bags" class="img-fluid" />
+                <p class="mt-2">Travel (Classic Leather)</p>
+            </div>
+            <div id="women-products" class="col-12 col-sm-6 col-lg-3 text-center mb-4">
+                <img src="img/travel hobo.jpeg" alt="Hobo" class="img-fluid" />
+                <p class="mt-2">HOBO</p>
+            </div>
+            <div id="women-products" class="col-12 col-sm-6 col-lg-3 text-center mb-4">
+                <img src="img/Commuter Backpack I Harber London.jpeg" alt="Backpack" class="img-fluid" />
+                <p class="mt-2">Backpack</p>
+            </div>
+            <div id="women-products" class="col-12 col-sm-6 col-lg-3 text-center mb-4">
+                <img src="img/card-holder.jpeg" alt="Phone case card holders" class="img-fluid" />
+                <p class="mt-2">Phone Case Card Holders</p>
+            </div>
+        </div>
+    </div>
+    </section>
+    
+    <!-- men's banner -->
+    <section id="men's section">
+     <div style="margin-top: 80px;" class="carousel slide">
+      <div class="carousel-inner"> 
+        <div id="carousel-banner" class="carousel-item active">
+          <img id="banner" src="img/MEN_SPRING_2025_HP_250307_DI3.webp" class="d-block w-100" alt="">
+          <div class="carousel-caption d-none d-md-block">
+          </div>
+        </div>  
+      </div>
+     </div>
+    </section>
+
+   <!--men's featured products -->
+   <section>
+    <h5 id="feat-products" class="text-sm fw-lighter mt-4 text-wrap">Men</h5>
+    <h1 class="fs-4  text-wrap text-center">Spring-2025</h1>
     <div class="container mt-4">
         <div class="row">
             <div id="women-products" class="col-12 col-sm-6 col-lg-3 text-center mb-4">
@@ -267,40 +310,29 @@
         </div>
     </div>
     </section>
-    
-    <!-- New-arrival products -->
 
-    <section id="new-arrivals">
-      <h2 id="new-arrivals" class="font-weight-bold mt-4">New Arrivals</h2>
+    <!-- services -->
+
+    <section id="services">
+      <h2 id="service" class="font-weight-bold mt-4">Nextag Services</h2>
       <div class="container mt-4">
         <div class="row">
-          <div id="new-arrivals" class="col-12 col-sm-6 col-lg-3 text-center mb-4">
-            <img src="img/pic1.webp" alt="" >
+          <div class="col-lg-4 col-sm-6  text-center mb-4">
+            <a href="contact.html" class=" nav-link"><img id="service-icon" src="img/contact.jpeg" alt="duffel">
+            <p class="lead" >Services</p>
+            <p><a href="contact.html" class="text-dark">Contact</a></p></a>
           </div>
-          <div id="new-arrivals" class="col-12 col-sm-6 col-lg-3 text-center mb-4">
-            <img src="img/pic10.jpg" alt="" >
+          <div class="col-lg-4 col-sm-6  text-center mb-4">
+            <a href="" class=" nav-link"><img id="service-icon" src="img/download (4).jpeg" alt="gift box">
+            <p class="lead">Art Of Gifting</p></a>
           </div>
-          <div id="new-arrivals" class="col-12 col-sm-6 col-lg-3 text-center mb-4">
-            <img src="img/pic12.jpg" alt="" >
-          </div>
-          <div id="new-arrivals" class="col-12 col-sm-6 col-lg-3 text-center mb-4">
-            <img src="img/pic13.jpg" alt="" >
+          <div class="col-lg-4 col-sm-6 text-center mb-4">
+            <a href="shoppage.html" class=" nav-link"><img id="service-icon" src="img/customization.jpeg" alt="Clutch">
+            <p class="lead">Personalizations</p> 
+            <p><a href="" class="text-dark">Expolre</a></p></a>
           </div>
           
         </div>
-        <!-- Pagination -->
-        <!-- <nav aria-label="Page navigation example">
-          <ul class="pagination">
-          <li class="page-item disabled">
-            <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
-          </li>
-          <li class="page-item"><a class="page-link" href="#">1</a></li>
-          <li class="page-item"><a class="page-link" href="#">2</a></li>
-          <li class="page-item"><a class="page-link" href="#">3</a></li>
-          <li class="page-item">
-            <a class="page-link" href="#">Next</a>
-          </li>
-        </ul> -->
       </div>
     </section>
 
@@ -368,7 +400,7 @@
     <!-- Section: Links -->
     <section class="">
       <!--Grid row-->
-      <div class="row">
+      <div class="row align-item-start">
         <!--Grid column-->
         <div class="col-lg-3 col-md-4  mb-4 mb-md-2 mt-md-2">
           <article>
@@ -377,7 +409,7 @@
             <span id="footer-logo" class="self-center text-2xl font-semibold whitespace-nowrap text-black">NEXTAG</span></a>
           </div>
           <div id="nextag-footer-info">
-            <p class="text-gray-500 dark:text-dark text-sm">
+            <p class="text-gray-500 dark:text-dark text-sm text-start">
             NEXTAG offers a curated collection of premium purses 
             and wallets from top brands. With detailed product 
             insights, comparisons, and a seamless shopping experience,
@@ -389,10 +421,10 @@
         <!--Grid column-->
 
         <!--Grid column-->
-        <div class="col-lg-3 col-md-4 mb-4 mb-md-2">
+        <div class="col-lg-3 col-md-4 mb-4 mb-md-2 text-start">
           <h5 class="text-uppercase">Quick Links</h5>
 
-          <ul class="list-unstyled mb-0">
+          <ul id="footer-list" class="list-unstyled mb-0">
             <li>
               <a class="text-body nav-link" href="index.html">Home</a>
             </li>
@@ -410,11 +442,11 @@
         <!--Grid column-->
 
         <!--Grid column-->
-        <div class="col-lg-3 col-md-4 mb-4 mb-md-2">
+        <div class="col-lg-3 col-md-4 mb-4 mb-md-2 text-start">
           <article>
           <h5 class="text-uppercase">Products</h5>
           </article>
-          <ul class="list-unstyled mb-0">
+          <ul id="footer-list" class="list-unstyled mb-0 ">
             <li>
               <a class="text-body nav-link" href="#!">Handbag</a>
             </li>
@@ -432,21 +464,21 @@
         <!--Grid column-->
 
         <!--Grid column-->
-        <div class="col-lg-3 col-md-4 mb-4 mb-md-2">
+        <div class="col-lg-3 col-md-4 mb-4 mb-md-2 text-start">
           <h5 class="text-uppercase">Info</h5>
 
-          <ul class="list-unstyled mb-0">
+          <ul id="footer-list" class="list-unstyled mb-0">
             <li>
-              <a class="text-body nav-link" href="#!">FAQ's</a>
+              <a class="text-body nav-link" href="contact.html#faqs">FAQ's</a>
             </li>
             <li>
               <a class="text-body nav-link" href="blog.html">Blog</a>
             </li>
             <li>
-              <a class="text-body nav-link" href="#!">Privacy Policy</a>
+              <a class="text-body nav-link" href="privacy_policy.pdf" target="_blank">Privacy Policy</a>
             </li>
             <li>
-              <a class="text-body nav-link" href="#!">Term's & Conditions</a>
+              <a class="text-body nav-link" href="terms_conditions.pdf">Term's & Conditions</a>
             </li>
           </ul>
         </div>
