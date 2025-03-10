@@ -13,3 +13,17 @@ iframe{
     margin-top: 50px;
     padding-top: 50px;
 }
+@media screen and (max-width: 992px) {
+    #contact{
+        margin-top: 100px;
+        padding-right: 20px;
+        padding-left: 20px;
+        box-shadow: none;
+        margin-bottom: 50px;
+        width: 100%;
+        height: auto;
+        justify-content: center;
+        align-items: center;
+        font-size: medium;
+    }
+}
