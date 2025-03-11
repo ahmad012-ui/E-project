@@ -1,156 +1,322 @@
 <html lang="en"><head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <!-- font awesome cdn -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-icons/4.0.0/font/MaterialIcons-Regular.ttf">
-    <!-- css styling -->
-     <link rel="stylesheet" href="shop.page.css">
-    
-    <!-- bootstrap cdn -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
-    
-    <!-- tailwind cdn -->
-    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <!-- font awesome cdn -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-icons/4.0.0/font/MaterialIcons-Regular.ttf">
+  <!-- css styling -->
+   <link rel="stylesheet" href="shop.page.css">
   
-    <!-- jquery cdn -->
-   
-    <link rel="shortcut icon" href="brand logo.png" type="image/x-icon">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.css" integrity="sha512-UTNP5BXLIptsaj5WdKFrkFov94lDx+eBvbKyoe1YAfjeRPC+gT5kyZ10kOHCfNZqEui1sxmqvodNUx3KbuYI/A==" crossorigin="anonymous" referrerpolicy="no-referrer">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css" integrity="sha512-OTcub78R3msOCtY3Tc6FzeDJ8N9qvQn1Ph49ou13xgA9VsH9+LRxoFU6EqLhW4+PKRfU+/HReXmSZXHEkpYoOA==" crossorigin="anonymous" referrerpolicy="no-referrer">
-    <link rel="stylesheet" href="shop.page.css">
-  </head>
-  <body>
-    <div id="flex">
-      <div>
-        <nav style="background-color: #ffffff; position: fixed;" class="navbar navbar-expand-md fixed-top"> 
-            <div id="nav">
-              <div>
-               <button id="menu" type="menu" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions"><i class="fa-solid fa-bars">  Menu</i></button>
-              </div>
-              <div id="brand-logo">
-                <a href="index.html"><img src="img/NEXTAGt.png" alt=""></a>
-              </div>
-              <div id="search-profile">
-                <div id="search_"></div>
-               <button type="button" id="search" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop" aria-controls="offcanvasTop"><i class="fa-solid fa-magnifying-glass"></i></button>
-              </div>
+  <!-- bootstrap cdn -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+
+  <!-- tailwind cdn -->
+  <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+
+  <!-- jquery cdn -->
+ 
+  <link rel="shortcut icon" href="brand logo.png" type="image/x-icon">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.css" integrity="sha512-UTNP5BXLIptsaj5WdKFrkFov94lDx+eBvbKyoe1YAfjeRPC+gT5kyZ10kOHCfNZqEui1sxmqvodNUx3KbuYI/A==" crossorigin="anonymous" referrerpolicy="no-referrer">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css" integrity="sha512-OTcub78R3msOCtY3Tc6FzeDJ8N9qvQn1Ph49ou13xgA9VsH9+LRxoFU6EqLhW4+PKRfU+/HReXmSZXHEkpYoOA==" crossorigin="anonymous" referrerpolicy="no-referrer">
+  <link rel="stylesheet" href="shop.page.css">
+</head>
+<body>
+  <div id="flex">
+    <div>
+      <nav style="background-color: #ffffff; position: fixed;" class="navbar navbar-expand-md fixed-top"> 
+          <div id="nav">
+            <div>
+             <button id="menu" type="menu" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions"><i class="fa-solid fa-bars">  Menu</i></button>
             </div>
-          </nav>
-      </div>
-      <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop" aria-controls="offcanvasTop">Toggle top offcanvas</button>
-  
-  <div class="offcanvas offcanvas-top" tabindex="-1" id="offcanvasTop" aria-labelledby="offcanvasTopLabel">
-  <div class="offcanvas-header">
-    <h5 class="offcanvas-title" id="offcanvasTopLabel">Search</h5>
-    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-  </div>
-  <div class="offcanvas-body">
-    <form action="" class="d-flex">
-        <input type="text" class="form-control m-1" placeholder="Search..." aria-label="Search">
-        <button class="btn btn-dark btn-gradient" type="submit">Search</button>
-    </form>
-  </div>
-  </div>
-  
-      <!-- Carousel featuring men's products -->
-   <div id="mean">
-    <h1 style="position: relative; top: 60px; text-align: center;" >Men</h1>
-    <div id="cdn" class="owl-carousel owl-theme owl-loaded owl-drag">
-    <div class="owl-stage-outer">
-  
-        <div class="owl-stage" style="transform: translate3d(-2304px, 0px, 0px); transition: all; width: 9216px;">
-            
-  <div class="owl-item cloned" style="width: 374px; margin-right: 10px;">
-    <div class="item">
-    <h4>
-            <img src="img/one.webp" alt="">
-        </h4>
-    </div>
-  </div>
-  <div class="owl-item cloned" style="width: 374px; margin-right: 10px;">
-    <div class="item">
-        <h4>
-            <img src="img/two.webp" alt="">
-        </h4>
-    </div>
-  </div>
-  <div class="owl-item cloned" style="width: 374px; margin-right: 10px;">
-    <div class="item">
-        <h4>
-            <img src="img/three.webp" alt="">
-        </h4>
-    </div>
-  </div>
-  <div class="owl-item cloned" style="width: 374px; margin-right: 10px;">
-    <div class="item">
-        <h4>
-            <img src="img/four.webp" alt="">
-        </h4>
-    </div>
-  </div>
-  
-  </div>
-  </div>
-  </div>
-  </div>
-  <section >
-       <div id="filter">
-         Filter<img src="https://img.icons8.com/?size=100&id=3004&format=png&color=000000" id="filter-icon" alt="" srcset="">
-       </div><br><br><br><br><br><br><br><br>
-  
-      
-  </section>
-  <main style="overflow: hidden;">
-        <!-- <div class="container mt-5">
-          <div class="image-gallery">
-            <div id="div-1">
-              <img src="img/gallery 2.jpeg"  id="image" alt="Image 1">
-              <img src="img/women wallet.jpg" id="image" alt="Image 2">
-              <img src="img/gallery 1.jpeg" id="image" alt="Image 3">
-              <img src="img/travel bag.jpg" id="image" alt="Image 4">
+            <div id="brand-logo">
+              <a href="index.html"><img src="img/NEXTAGt.png" alt=""></a>
             </div>
-              
-            
-      </div>
-     </div> -->
-      
-     <div id="img">
-      <div id="image">
-        <img src="img/Envelope bag 1.webp" alt="">
-        <img src="img/gallery 2.jpeg" alt="">
-        <img src="img/four.webp" alt="">
-        <img src="img/travel.jpeg" alt="">
-      </div>
-     </div>
-  
-     
+            <div id="search-profile">
+              <div id="search_"></div>
+             <button type="button" id="search" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop" aria-controls="offcanvasTop"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </div>
+          </div>
+        </nav>
+    </div>
+    <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop" aria-controls="offcanvasTop">Toggle top offcanvas</button>
+
+<div class="offcanvas offcanvas-top" tabindex="-1" id="offcanvasTop" aria-labelledby="offcanvasTopLabel">
+<div class="offcanvas-header">
+  <h5 class="offcanvas-title" id="offcanvasTopLabel">Search</h5>
+  <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+</div>
+<div class="offcanvas-body">
+  <form action="" class="d-flex">
+      <input type="text" class="form-control m-1" placeholder="Search..." aria-label="Search">
+      <button class="btn btn-dark btn-gradient" type="submit">Search</button>
+  </form>
+</div>
+</div>
+
+    <!-- Carousel featuring men's products -->
+ <div id="mean">
+  <h1 style="position: relative; top: 60px; text-align: center;" >Men</h1>
+  <div id="cdn" class="owl-carousel owl-theme owl-loaded owl-drag">
+  <div class="owl-stage-outer">
+
+      <div class="owl-stage" style="transform: translate3d(-2304px, 0px, 0px); transition: all; width: 9216px;">
+          
+<div class="owl-item cloned" id="owll" style="width: 374px; margin-right: 10px;">
+  <div class="item">
+  <h4>
+          <img src="img/one.webp" alt="">
+      </h4>
+  </div>
+</div>
+<div class="owl-item cloned" style="width: 374px; margin-right: 10px;">
+  <div class="item">
+      <h4>
+          <img src="img/two.webp" alt="">
+      </h4>
+  </div>
+</div>
+<div class="owl-item cloned" style="width: 374px; margin-right: 10px;">
+  <div class="item">
+      <h4>
+          <img src="img/three.webp" alt="">
+      </h4>
+  </div>
+</div>
+<div class="owl-item cloned" style="width: 374px; margin-right: 10px;">
+  <div class="item">
+      <h4>
+          <img src="img/four.webp" alt="">
+      </h4>
+  </div>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+<section >
+     <div id="filter">
+       Filter<img src="https://img.icons8.com/?size=100&id=3004&format=png&color=000000" id="filter-icon" alt="" srcset="">
+     </div><br><br><br><br><br><br><br><br>
+
     
-  </main>
-  
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js" integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script>
-        $('.owl-carousel').owlCarousel({
-    loop:true,
-    margin:5,
-    nav:true,
-    responsive:{
-        0:{
-            items:1
-        },
-        600:{
-            items:2
-        },
-        1000:{
-            items:3
-        }
-    }
-  })
-    </script>
-  
-  </body>
-  </html>
+</section>
+
+<div class="container">
+  <div class="row justify-content-center">
+    <!-- First Item -->
+    <div id="men" class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4 d-flex flex-column align-items-center text-center">
+      <img id="woman" src="img/ooog.jpeg" alt="school-bag" class="img-fluid" data-bs-toggle="modal" data-bs-target="#staticBackdrop" style="height: 350px; object-fit: cover;">
+      <p>Commuter Backpack I Harber London.</p>
+    </div>
+
+    <!-- Second Item -->
+    <div id="men" class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4 d-flex flex-column align-items-center text-center">
+      <img id="woman" src="img/download (1).jpeg" alt="two-hand-bags" data-bs-toggle="modal" data-bs-target="#secont-modal"  class="img-fluid" style="height: 350px; object-fit: cover;">
+      <p>Leather Travel Luggage.</p>
+    </div>
+
+    <!-- Third Item -->
+    <div  id="men" class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4 d-flex flex-column align-items-center text-center">
+      <img id="woman" src="img/contact.jpeg" data-bs-toggle="modal" data-bs-target="#third-modal" alt="hand-bag" class="img-fluid" style="height: 350px; object-fit: cover;">
+      <p> | Frank Clegg Leatherworks.</p>
+    </div>
+
+    <!-- Fourth Item -->
+    <div id="men" class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4 d-flex flex-column align-items-center text-center">
+      <img id="woman" src="img/Sling bag 3.webp" data-bs-toggle="modal" data-bs-target="#modal-third" class="img-fluid" alt="multiples-bags" style="height: 350px; object-fit: cover;">
+      <p>Bags and Cases for Travelv.</p>
+    </div>
+  </div>
+</div>
+
+
+
+
+<!-- <div class="container ">
+  <div class="row">
+    <img src="img/card holders.jpeg" class="col-3 col-lg-3 col-md-4 col-sm-2 col-xs-6" data-bs-target="#staticBackdrop" data-bs-toggle="modal" style="width: 280px; height: 300px;" alt="" srcset=""
+    >
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing.
+    </p>
+    <img src="img/card holders.jpeg" class="col-3 col-lg-3 col-md-4 col-sm-2 col-xs-6"  style="width: 280px; height: 300px;" alt="" srcset="">
+    <img src="img/card holders.jpeg" class="col-3 col-lg-3 col-md-4 col-sm-2 col-xs-6"  style="width: 280px; height: 300px;" alt="" srcset="">
+    <img src="img/card holders.jpeg" class="col-3 col-lg-3 col-md-4 col-sm-2 col-xs-6"  style="width: 280px; height: 300px;" alt="" srcset="">
+  </div>
+ <div>
+  <div style="display: flex; justify-content: space-evenly;">
+    <img src="img/card holders.jpeg" style="width: 300px; height: 300px;" alt="" srcset="">
+    <img src="img/card holders.jpeg" style="width: 300px; height: 300px;" alt="" srcset="">
+    <img src="img/card holders.jpeg" style="width: 300px; height: 300px;" alt="" srcset="">
+    <img src="img/card holders.jpeg" style="width: 300px; height: 300px;" alt="" srcset="">
+  </div>
+ </div>
+
+</div>  -->
+
+
+<!-- modal -->
+
+<!-- Button trigger modal -->
+
+<!-- Modal -->
+
+<!-- Modal -->
+
+<!-- Button trigger modal -->
+
+
+<!-- Modal -->
+
+  <!-- Button trigger modal -->
+
+
+<!-- Button trigger modal -->
+
+
+<!-- Modal -->
+<div class="modal fade"  id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <img src="img/NEXTAGt.png" class="mx-auto" alt="" style="height: 40px;">
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body row">
+        <!-- Left side: Image -->
+        <div class="col-md-6 text-center">
+          <img src="img/ooog.jpeg" style="height: 300px; width: 300px;" alt="" srcset="">
+        </div>
+        
+        <!-- Right side: Details -->
+        <div class="col-md-6">
+          <h4>Youth Chest Bag</h4>
+          <p>Customer Solutions AWS Spatial Computing Blog</p>
+          <h6 >Price : PKR <sup>2,000</sup></h6>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Check Out</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="modal fade"  id="secont-modal"  data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <img src="img/NEXTAGt.png" class="mx-auto" alt="" style="height: 40px;">
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body row">
+        <!-- Left side: Image -->
+        <div class="col-md-6 text-center">
+          <img src="img/download (1).jpeg" style="height: 300px; width: 300px;" alt="" srcset="">
+        </div>
+        
+        <!-- Right side: Details -->
+        <div class="col-md-6">
+          <h4>Youth Chest Bag</h4>
+          <p>Customer Solutions AWS Spatial Computing Blog</p>
+          <h6 >Price : PKR <sup>2,000</sup></h6>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Check Out</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="modal fade"  id="third-modal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <img src="img/NEXTAGt.png" class="mx-auto" alt="" style="height: 40px;">
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body row">
+        <!-- Left side: Image -->
+        <div class="col-md-6 text-center">
+          <img src="img/contact.jpeg" style="height: 300px; width: 300px;" alt="" srcset="">
+        </div>
+        
+        <!-- Right side: Details -->
+        <div class="col-md-6">
+          <h4>Youth Chest Bag</h4>
+          <p>Customer Solutions AWS Spatial Computing Blog</p>
+          <h6 >Price : PKR <sup>2,000</sup></h6>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Check Out</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+<!-- Modal -->
+<div class="modal fade" id="modal-third" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <img src="img/NEXTAGt.png" class="mx-auto" alt="" style="height: 40px;">
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body row">
+        <!-- Left side: Image -->
+        <div class="col-md-6 text-center">
+          <img src="img/Sling bag 3.webp" style="height: 300px; width: 300px;" alt="">
+        </div>
+        
+        <!-- Right side: Details -->
+        <div class="col-md-6">
+          <h4>Youth Chest Bag</h4>
+          <p>Customer Solutions AWS Spatial Computing Blog</p>
+          <h6 >Price : PKR <sup>2,000</sup></h6>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Check Out</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js" integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script>
+      $('.owl-carousel').owlCarousel({
+  loop:true,
+  margin:5,
+  nav:true,
+  responsive:{
+      0:{
+          items:1
+      },
+      600:{
+          items:2
+      },
+      1000:{
+          items:3
+      }
+  }
+})
+  </script>
+
+</body>
+</html>

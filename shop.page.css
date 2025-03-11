@@ -3,6 +3,7 @@
     padding: 0;
     box-sizing: border-box;
    font-family: Verdana, Geneva, Tahoma, sans-serif;
+ 
 }
 #nav{
     display: flex;
@@ -12,6 +13,7 @@
     margin-top: 10px;
     padding-right: 30px;
     padding-left: 30px;
+    
 }
 .item img{
     height: 150px;
@@ -29,7 +31,17 @@ left: 64%;
 }
 #mean{
 padding: 6vw;
+
 }
+
+#woman{
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#woman:hover {
+    transform: scale(1.02);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
 
 #filter{
     display: flex;
@@ -54,39 +66,26 @@ padding: 6vw;
 }
 
 
-.image-gallery{
-   width: 100%;
-  overflow: hidden;
-}
-
-#div-1{
-  display: flex;
-  gap: 10px;
+.container-two{
+    display: grid;
+    justify-content: space-evenly;
     
 }
-#image{
+
+#bag-one{
     display: flex;
-   height: 300px;
+    justify-content: space-evenly;
+}
+
+#bag-one img{
+    height: 200px;
 }
 
 
-#img{
-    width: 100%;
-    flex-wrap: wrap;
-    flex-direction: column;
-}
 
-#image{
-    display: flex;
-    justify-content: space-around;
-   
-}
 
-#image img{
-    width: 330px;
-    height: 400px;
-    
-}
+
+
 
 
 
@@ -122,7 +121,7 @@ padding: 6vw;
     justify-content: space-evenly; 
     /* grid-template-columns: repeat(4, 1fr);  */
    
-}
+
 
 /* Make the images responsive */
 /* .image-gallery img {
