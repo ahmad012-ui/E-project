@@ -20,6 +20,7 @@
     
     <!-- tailwind cdn -->
     <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
 
     <!-- jquery cdn -->
     <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
@@ -46,162 +47,63 @@
       <!-- off canvas -->
     
       <!-- off-canvas for menu -->
-      <div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
-        <div class="offcanvas-header">
-          <h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel"><img id="offcanvas-logo" src="img/NEXTAGt.png" alt=""></h5>
-          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-        </div>
-        <div id="offcanvass-body" class="offcanvas-body">
-          <!-- your content here -->
-          <ul id="main-list">
-            <li class="nav-item">
-              <a class="nav-link" href="new-arrival.html">New Arrivals</a>
-            </li>
-            <!-- women -->
-            <li id="women" class="nav-item ">
-              <a id="women-tag" class="nav-link" href="#">Women</a>
-              <div id="women-list">
-                <!-- women bags  -->
-                <div id="bag-and-backpack-list dropdown">
-                  <!-- bags and wallets list -->
-                  <ul style="list-style: none;">
-                    <div id="women-bag">
-                      <li class="nav-item"><a id="women-product" class="nav-link" href="#">Bags</a>
-                         <div>
-                          <ul id="women-bag-list" style="list-style: none;">
-                            <!-- handbag  -->
-                            <li class="nav-item" id="women-handbag"><a id="women-handbag-tag" class="nav-link" href="#">Handbags</a>
-                              <!-- handbag list -->
-                              <div id="women-handbag-list">
-                                <ul style="list-style: none;">
-                                  <li class="nav-item"><a class="nav-link" href="#">Tote Bags</a></li>
-                                  <li class="nav-item"><a class="nav-link" href="#">Duffel Bags</a></li>
-                                  <li class="nav-item"><a class="nav-link" href="#">Crossbody Bags</a></li>
-                                  <li class="nav-item"><a class="nav-link" href="#">Clutch/Pouch</a></li>
-                                  <li class="nav-item"><a class="nav-link" href="#">Briefcases</a></li>
-                                  <li class="nav-item"><a class="nav-link" href="#">Messenger Bags</a></li>
-                                  <li class="nav-item"><a class="nav-link" href="#">Sling Bags</a></li>
-                                </ul>
-                              </div> 
-                            </li>
-                            <!-- backpack -->
-                            <li class="nav-item" id="women-backpack"><a id="women-backpack-tag" class="nav-link" href="#">Backpacks</a>
-                              <!-- backpack list -->
-                              <div id="women-backpack-list"> 
-                                <ul style="list-style: none;">
-                                  <li class="nav-item"><a class="nav-link" href="#">Backpacks</a></li>
-                                  <li class="nav-item"><a class="nav-link" href="#">Travel Bags</a></li>
-                                  <li class="nav-item"><a class="nav-link" href="#">Backpack Accessories</a></li>
-                                  <li class="nav-item"><a class="nav-link" href="#">School Bags</a></li>
-                                  <li class="nav-item"><a class="nav-link" href="#">Backpack Cases</a></li>
-                                </ul>
-                                </div>
-                            </li>
-                          </ul>
-                         </div>
-                      </li>
-                      <!-- wallet -->
-                      <li class="nav-item" id="women-wallet"><a id="women-wallet-tag" class="nav-link" href="#">Wallets</a>
-                        <!-- wallet list -->
-                         <div>
-                          <ul id="women-wallet-list" style="list-style: none;">
-                            <li class="nav-item"><a class="nav-link" href="#">Bi-Fold Wallets</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#">Tri-Fold Wallets</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#">Money Clips</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#">Card Holders</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#">Passport Holders</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#">Coin Purses</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#">Phone Wallets</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#">Travel Wallets</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#">Checkbook Wallets</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#">RFID Wallets</a></li>
-                          </ul>
-                         </div>
-                        </li>
-                    </div>
-                  </ul>
-                </div>
-              </div>
-            </li>
-            <!-- men -->
-            <li id="men" class="nav-item">
-              <a id="men-tag" class="nav-link" href="#">Men</a>
-              <div>
-                <!-- bags  -->
-              <ul id="men-list" style="list-style: none;">
-                <li class="nav-item" id="bag"><a id="men-product" class="nav-link" href="#">Bags</a>
-                  <!-- handbag list -->
-                  <ul id="bag-list" style="list-style: none;">
-                    <li class="nav-item" id="handbag"><a id="men-handbag-tag" class="nav-link" href="#">Handbags</a>
-                    <div id="handbag-list">
-                      <ul style="list-style: none;">
-                        <li class="nav-item"><a class="nav-link" href="#">Tote Bags</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">Duffel Bags</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">Crossbody Bags</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">Clutch/Pouch</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">Briefcases</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">Messenger Bags</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">Sling Bags</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">Laptop Bags</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">Belt Bags (Fanny Pack)</a></li>
-                      </ul>
-                    </div>
-                    </li>
-                    <!-- backpack list -->
-                    <li class="nav-item" id="backpack"><a id="men-backpack-tag" class="nav-link" href="#">Backpacks</a>
-                      <div id="backpack-list">
-                      <ul style="list-style: none;">
-                        <li class="nav-item"><a class="nav-link" href="#">Classic Leather Backpack</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">Laptop Backpack</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">Everyday Backpack</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">Travel Backpack</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">Hiking Backpack</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">Tactical/Military Backpack</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">Anti-Theft Backpack</a></li>
-                        <li class="nav-item"><a class="nav-link"href="#">Gym Backpack</a></li>
-                        <li class="nav-item"><a class="nav-link"href="#">Roll-Top Backpack</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">Convertible Backpack</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">Camera Backpack</a></li>
-                      </ul>
-                      </div>
-                    </li>
-                  </ul>
-                </li>
-                <!-- wallet list -->
-                <li class="nav-item" id="wallet"><a id="men-wallet-tag" class="nav-link" href="#">Walllets</a>
-                  <div id="wallet-list">
-                  <ul style="list-style: none;">
-                    <li class="nav-item"><a class="nav-link" href="#">Bi-Fold Wallets</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Tri-Fold Wallets</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Money Clips</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Card Holders</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Passport Holders</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Coin Purses</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Phone Wallets</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Travel Wallets</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Checkbook Wallets</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">RFID Wallets</a></li>
-                  </ul>
-                  </div>
-                </li>
-              </ul>
-              </div>
-            </li>
-            <!-- services -->
-            <li class="nav-item">
-              <a class="nav-link" href="#">Services</a>
-            </li>
-            <!-- contact -->
-            <li class="nav-item">
-              <a class="nav-link" href="#">Contact</a>
-            </li>
-            <!-- about us -->
-            <li class="nav-item">
-              <a class="nav-link" href="about.html">About Us</a>
-            </li>
+      <offcanvas>
+  <div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel"><img id="offcanvas-logo" src="img/NEXTAGt.png" alt=""></h5>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div id="offcanvass-body" class="offcanvas-body">
+      <!-- your content here -->
+      <ul id="main-list">
+        <!-- Home -->
+        <li class="nav-item">
+          <a href="index.html" class="nav-link">Home</a>
+        </li>
+        <!-- new arrival -->
+        <li class="nav-item">
+          <a class="nav-link" href="new-arrival.html">New Arrivals</a>
+        </li>
+        <!-- Women Dropdown -->
+        <li class="nav-item dropend">
+          <a class="nav-link " href="#" id="womenDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Women
+          </a>
+            <ul id="dropdown-menu" class="dropdown-menu" aria-labelledby="womenDropdown">
+             <li><a id="item" class="dropdown-item" href="#">Handbags</a></li>
+             <li><a id="item" class="dropdown-item" href="#">Backpacks</a></li>
+             <li><a id="item" class="dropdown-item" href="#">Wallets</a></li>
+             <li><a id="item" class="dropdown-item" href="new-arrival.html">Accessories</a></li>
+            </ul>
+        </li>
+        <!-- Men Dropdown -->
+        <li class="nav-item dropend">
+         <a class="nav-link " href="#" id="menDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+         Men
+         </a>
+          <ul id="dropdown-menu" class="dropdown-menu" aria-labelledby="menDropdown">
+            <li><a id="item" class="dropdown-item" href="#">Briefcases</a></li>
+            <li><a id="item" class="dropdown-item" href="#">Backpacks</a></li>
+            <li><a id="item" class="dropdown-item" href="#">Wallets</a></li>
+            <li><a id="item" class="dropdown-item" href="new-arrival.html">Accessories</a></li>
           </ul>
-        </div>
-      </div>
+        </li>
+        <!-- services -->
+        <li class="nav-item">
+          <a class="nav-link" href="services.html">Services</a>
+        </li>
+        <!-- contact -->
+        <li class="nav-item">
+          <a class="nav-link" href="contact.html">Contact</a>
+        </li>
+        <!-- about us -->
+        <li class="nav-item">
+          <a class="nav-link" href="about.html">About Us</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</offcanvas>
     
       <!-- search bar -->
       <div class="offcanvas offcanvas-top" tabindex="-1" id="offcanvasTop" aria-labelledby="offcanvasTopLabel">
@@ -243,11 +145,11 @@
                 <form class="bg-gray-100 p-6 rounded-lg shadow-lg">
                     <div class="mb-4">
                         <label class="block text-lg font-medium" for="name">Name</label>
-                        <input type="text" id="name" class="w-full p-3 border border-gray-300 rounded-lg" placeholder="Your Name">
+                        <input type="text" id="name" class="w-full p-3 border border-gray-300 rounded-lg" required placeholder="Your Name">
                     </div>
                     <div class="mb-4">
                         <label class="block text-lg font-medium" for="email">Email</label>
-                        <input type="email" id="email" class="w-full p-3 border border-gray-300 rounded-lg" placeholder="Your Email">
+                        <input type="email" id="email" class="w-full p-3 border border-gray-300 rounded-lg" required placeholder="Your Email">
                     </div>
                     <div class="mb-4">
                         <label class="block text-lg font-medium" for="message">Message</label>
@@ -258,79 +160,73 @@
             </div>
         </div>
     </section>
-    <section id="faqs" class="container my-5">
-      <!-- Heading -->
-      <h2 id="faq" class="text-3xl fw-semibold mb-6 text-center">FAQ's</h2>
-      <!-- Grid container -->
-      <div class="accordion" id="faqAccordion">
-        <!-- FAQ 1 -->
-        <div class="accordion-item">
-            <h2 class="accordion-header">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" 
-                    data-bs-target="#faq1" aria-expanded="false" aria-controls="faq1">
-                    Q: Where is NEXTAG located?
-                </button>
-            </h2>
-            <div id="faq1" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                <div class="accordion-body">NEXTAG is located in the heart of Los Angeles, California. You can also shop online through our website.</div>
-            </div>
-        </div>
 
-        <!-- FAQ 2 -->
-        <div class="accordion-item">
-            <h2 class="accordion-header">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" 
-                    data-bs-target="#faq2" aria-expanded="false" aria-controls="faq2">
-                    Q: Do you offer international shipping?
-                </button>
-            </h2>
-            <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                <div class="accordion-body">Yes! We provide worldwide shipping with secure and fast delivery options.</div>
-            </div>
-        </div>
-
-        <!-- FAQ 3 -->
-        <div class="accordion-item">
-            <h2 class="accordion-header">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" 
-                    data-bs-target="#faq3" aria-expanded="false" aria-controls="faq3">
-                    Q: What payment methods do you accept?
-                </button>
-            </h2>
-            <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                <div class="accordion-body">We accept credit/debit cards, PayPal, and other secure payment options at checkout.</div>
-            </div>
-        </div>
-
-        <!-- FAQ 4 -->
-        <div class="accordion-item">
-            <h2 class="accordion-header">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" 
-                    data-bs-target="#faq4" aria-expanded="false" aria-controls="faq4">
-                    Q: Can I return or exchange a product?
-                </button>
-            </h2>
-            <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                <div class="accordion-body">We offer hassle-free returns and exchanges within 14 days of purchase, provided the item is unused and in original packaging.</div>
-            </div>
-        </div>
-
-        <!-- FAQ 5 -->
-        <div class="accordion-item">
-            <h2 class="accordion-header">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" 
-                    data-bs-target="#faq5" aria-expanded="false" aria-controls="faq5">
-                    Q: Do you offer gift wrapping?
-                </button>
-            </h2>
-            <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                <div class="accordion-body">Yes! We provide premium gift wrapping with stylish packaging and personalized message cards.</div>
-            </div>
-        </div>
-
+    <!-- faq -->
+    <section id="faqs" class="container mx-auto my-10 p-6 max-w-3xl">
+      <h2 class="text-3xl font-semibold text-center mb-6">FAQ's</h2>
+      <div class="space-y-4" x-data="{ openFaq: null }">
+          <!-- FAQ 1 -->
+          <div class="border border-gray-300 rounded-lg overflow-hidden">
+              <button @click="openFaq === 1 ? openFaq = null : openFaq = 1" class="w-full text-left px-4 py-3 bg-gray-100 hover:bg-gray-200 focus:outline-none flex justify-between items-center">
+                  <span class="font-medium">Where is NEXTAG located?</span>
+                  <span x-show="openFaq !== 1"><i class="fa-solid fa-plus"></i></span>
+                  <span x-show="openFaq === 1"><i class="fa-solid fa-minus"></i></span>
+              </button>
+              <div x-show="openFaq === 1" x-collapse class="p-4 text-gray-700">
+                  NEXTAG is located in the heart of Los Angeles, California. You can also shop online through our website.
+              </div>
+          </div>
+  
+          <!-- FAQ 2 -->
+          <div class="border border-gray-300 rounded-lg overflow-hidden">
+              <button @click="openFaq === 2 ? openFaq = null : openFaq = 2" class="w-full text-left px-4 py-3 bg-gray-100 hover:bg-gray-200 focus:outline-none flex justify-between items-center">
+                  <span class="font-medium">Do you offer international shipping?</span>
+                  <span x-show="openFaq !== 2"><i class="fa-solid fa-plus"></i></span>
+                  <span x-show="openFaq === 2"><i class="fa-solid fa-minus"></i></span>
+              </button>
+              <div x-show="openFaq === 2" x-collapse class="p-4 text-gray-700">
+                  Yes! We provide worldwide shipping with secure and fast delivery options.
+              </div>
+          </div>
+  
+          <!-- FAQ 3 -->
+          <div class="border border-gray-300 rounded-lg overflow-hidden">
+              <button @click="openFaq === 3 ? openFaq = null : openFaq = 3" class="w-full text-left px-4 py-3 bg-gray-100 hover:bg-gray-200 focus:outline-none flex justify-between items-center">
+                  <span class="font-medium">What payment methods do you accept?</span>
+                  <span x-show="openFaq !== 3"><i class="fa-solid fa-plus"></i></span>
+                  <span x-show="openFaq === 3"><i class="fa-solid fa-minus"></i></span>
+              </button>
+              <div x-show="openFaq === 3" x-collapse class="p-4 text-gray-700">
+                  We accept credit/debit cards, PayPal, and other secure payment options at checkout.
+              </div>
+          </div>
+  
+          <!-- FAQ 4 -->
+          <div class="border border-gray-300 rounded-lg overflow-hidden">
+              <button @click="openFaq === 4 ? openFaq = null : openFaq = 4" class="w-full text-left px-4 py-3 bg-gray-100 hover:bg-gray-200 focus:outline-none flex justify-between items-center">
+                  <span class="font-medium">Can I return or exchange a product?</span>
+                  <span x-show="openFaq !== 4"><i class="fa-solid fa-plus"></i></span>
+                  <span x-show="openFaq === 4"><i class="fa-solid fa-minus"></i></span>
+              </button>
+              <div x-show="openFaq === 4" x-collapse class="p-4 text-gray-700">
+                  We offer hassle-free returns and exchanges within 14 days of purchase, provided the item is unused and in original packaging.
+              </div>
+          </div>
+  
+          <!-- FAQ 5 -->
+          <div class="border border-gray-300 rounded-lg overflow-hidden">
+              <button @click="openFaq === 5 ? openFaq = null : openFaq = 5" class="w-full text-left px-4 py-3 bg-gray-100 hover:bg-gray-200 focus:outline-none flex justify-between items-center">
+                  <span class="font-medium">Do you offer gift wrapping?</span>
+                  <span x-show="openFaq !== 5"><i class="fa-solid fa-plus"></i></span>
+                  <span x-show="openFaq === 5"><i class="fa-solid fa-minus"></i></span>
+              </button>
+              <div x-show="openFaq === 5" x-collapse class="p-4 text-gray-700">
+                  Yes! We provide premium gift wrapping with stylish packaging and personalized message cards.
+              </div>
+          </div>
       </div>
-    </section>
-
+  </section>
+  
     
 <!-- Footer -->
 <footer class="bg-body-tertiary text-center">
@@ -581,5 +477,15 @@
     });
 
     // CONTACT VALIDATION 
+    var email = document.getElementById("form5Example24");
+    var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    email.addEventListener("input", function(event) {
+      if (!emailPattern.test(email.value)) {
+        email.classList.add("is-invalid");
+      } else {
+        email.classList.remove("is-invalid");
+      }
+    })
+
     
   </script>

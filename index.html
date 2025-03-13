@@ -19,14 +19,14 @@
      
     <!-- tailwind cdn -->
     <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
-
+ 
     <!-- jquery cdn -->
     <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
 
 </head>
 <body>
   <!-- navbar -->
-  <nav style="background-color: #ffffff;" class="navbar navbar-expand-md fixed-top"> 
+  <nav id="navbar" style="background-color: #ffffff;" class="navbar navbar-expand-md fixed-top"> 
     <div id="nav">
       <div>
        <button id="menu" type="menu" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions"><i class="fa-solid fa-bars">  Menu</i></button>
@@ -54,138 +54,37 @@
     <div id="offcanvass-body" class="offcanvas-body">
       <!-- your content here -->
       <ul id="main-list">
+        <!-- Home -->
+        <li class="nav-item">
+          <a href="index.html" class="nav-link">Home</a>
+        </li>
+        <!-- new arrival -->
         <li class="nav-item">
           <a class="nav-link" href="new-arrival.html">New Arrivals</a>
         </li>
-        <!-- women -->
-        <li id="women" class="nav-item ">
-          <a id="women-tag" class="nav-link" href="#">Women</a>
-          <div id="women-list">
-            <!-- women bags  -->
-            <div id="bag-and-backpack-list dropdown">
-              <!-- bags and wallets list -->
-              <ul style="list-style: none;">
-                <div id="women-bag">
-                  <li class="nav-item"><a id="women-product" class="nav-link" href="#">Bags</a>
-                     <div>
-                      <ul id="women-bag-list" style="list-style: none;">
-                        <!-- handbag  -->
-                        <li class="nav-item" id="women-handbag"><a id="women-handbag-tag" class="nav-link" href="#">Handbags</a>
-                          <!-- handbag list -->
-                          <div id="women-handbag-list">
-                            <ul style="list-style: none;">
-                              <li class="nav-item"><a class="nav-link" href="#">Tote Bags</a></li>
-                              <li class="nav-item"><a class="nav-link" href="#">Duffel Bags</a></li>
-                              <li class="nav-item"><a class="nav-link" href="#">Crossbody Bags</a></li>
-                              <li class="nav-item"><a class="nav-link" href="#">Clutch/Pouch</a></li>
-                              <li class="nav-item"><a class="nav-link" href="#">Briefcases</a></li>
-                              <li class="nav-item"><a class="nav-link" href="#">Messenger Bags</a></li>
-                              <li class="nav-item"><a class="nav-link" href="#">Sling Bags</a></li>
-                            </ul>
-                          </div> 
-                        </li>
-                        <!-- backpack -->
-                        <li class="nav-item" id="women-backpack"><a id="women-backpack-tag" class="nav-link" href="#">Backpacks</a>
-                          <!-- backpack list -->
-                          <div id="women-backpack-list"> 
-                            <ul style="list-style: none;">
-                              <li class="nav-item"><a class="nav-link" href="#">Backpacks</a></li>
-                              <li class="nav-item"><a class="nav-link" href="#">Travel Bags</a></li>
-                              <li class="nav-item"><a class="nav-link" href="#">Backpack Accessories</a></li>
-                              <li class="nav-item"><a class="nav-link" href="#">School Bags</a></li>
-                              <li class="nav-item"><a class="nav-link" href="#">Backpack Cases</a></li>
-                            </ul>
-                            </div>
-                        </li>
-                      </ul>
-                     </div>
-                  </li>
-                  <!-- wallet -->
-                  <li class="nav-item" id="women-wallet"><a id="women-wallet-tag" class="nav-link" href="#">Wallets</a>
-                    <!-- wallet list -->
-                     <div>
-                      <ul id="women-wallet-list" style="list-style: none;">
-                        <li class="nav-item"><a class="nav-link" href="#">Bi-Fold Wallets</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">Tri-Fold Wallets</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">Money Clips</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">Card Holders</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">Passport Holders</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">Coin Purses</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">Phone Wallets</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">Travel Wallets</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">Checkbook Wallets</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">RFID Wallets</a></li>
-                      </ul>
-                     </div>
-                    </li>
-                </div>
-              </ul>
-            </div>
-          </div>
+        <!-- Women Dropdown -->
+        <li class="nav-item dropend">
+          <a class="nav-link " href="#" id="womenDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Women
+          </a>
+            <ul id="dropdown-menu" class="dropdown-menu" aria-labelledby="womenDropdown">
+             <li><a id="item" class="dropdown-item" href="#">Handbags</a></li>
+             <li><a id="item" class="dropdown-item" href="#">Backpacks</a></li>
+             <li><a id="item" class="dropdown-item" href="#">Wallets</a></li>
+             <li><a id="item" class="dropdown-item" href="new-arrival.html">Accessories</a></li>
+            </ul>
         </li>
-        <!-- men -->
-        <li id="men" class="nav-item">
-          <a id="men-tag" class="nav-link" href="#">Men</a>
-          <div>
-            <!-- bags  -->
-          <ul id="men-list" style="list-style: none;">
-            <li class="nav-item" id="bag"><a id="men-product" class="nav-link" href="#">Bags</a>
-              <!-- handbag list -->
-              <ul id="bag-list" style="list-style: none;">
-                <li class="nav-item" id="handbag"><a id="men-handbag-tag" class="nav-link" href="#">Handbags</a>
-                <div id="handbag-list">
-                  <ul style="list-style: none;">
-                    <li class="nav-item"><a class="nav-link" href="#">Tote Bags</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Duffel Bags</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Crossbody Bags</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Clutch/Pouch</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Briefcases</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Messenger Bags</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Sling Bags</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Laptop Bags</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Belt Bags (Fanny Pack)</a></li>
-                  </ul>
-                </div>
-                </li>
-                <!-- backpack list -->
-                <li class="nav-item" id="backpack"><a id="men-backpack-tag" class="nav-link" href="#">Backpacks</a>
-                  <div id="backpack-list">
-                  <ul style="list-style: none;">
-                    <li class="nav-item"><a class="nav-link" href="#">Classic Leather Backpack</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Laptop Backpack</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Everyday Backpack</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Travel Backpack</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Hiking Backpack</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Tactical/Military Backpack</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Anti-Theft Backpack</a></li>
-                    <li class="nav-item"><a class="nav-link"href="#">Gym Backpack</a></li>
-                    <li class="nav-item"><a class="nav-link"href="#">Roll-Top Backpack</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Convertible Backpack</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Camera Backpack</a></li>
-                  </ul>
-                  </div>
-                </li>
-              </ul>
-            </li>
-            <!-- wallet list -->
-            <li class="nav-item" id="wallet"><a id="men-wallet-tag" class="nav-link" href="#">Walllets</a>
-              <div id="wallet-list">
-              <ul style="list-style: none;">
-                <li class="nav-item"><a class="nav-link" href="#">Bi-Fold Wallets</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">Tri-Fold Wallets</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">Money Clips</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">Card Holders</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">Passport Holders</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">Coin Purses</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">Phone Wallets</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">Travel Wallets</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">Checkbook Wallets</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">RFID Wallets</a></li>
-              </ul>
-              </div>
-            </li>
+        <!-- Men Dropdown -->
+        <li class="nav-item dropend">
+         <a class="nav-link " href="#" id="menDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+         Men
+         </a>
+          <ul id="dropdown-menu" class="dropdown-menu" aria-labelledby="menDropdown">
+            <li><a id="item" class="dropdown-item" href="#">Briefcases</a></li>
+            <li><a id="item" class="dropdown-item" href="#">Backpacks</a></li>
+            <li><a id="item" class="dropdown-item" href="#">Wallets</a></li>
+            <li><a id="item" class="dropdown-item" href="new-arrival.html">Accessories</a></li>
           </ul>
-          </div>
         </li>
         <!-- services -->
         <li class="nav-item">
@@ -224,7 +123,7 @@
     <div class="carousel slide">
       <div class="carousel-inner"> 
         <div id="carousel-banner" class="carousel-item active">
-          <img id="banner" src="img/banner.jpg" class="d-block w-100" alt="">
+          <img id="banner" src=" C:\Users\ahmed\Downloads\DALL·E 2025-03-13 03.47.17 - An ultra-realistic version of the previous image featuring a stylish model resembling Gigi Hadid, wearing a luxurious white gown with an elegant and s.webp" class="d-block w-100 img-fluid" alt="">
           <div class="carousel-caption d-none d-md-block">
             <a href="" class="nav-link" class="nav-link"><p class="text-4xl text-underline">Women</p></a>
           </div>
@@ -276,11 +175,11 @@
     </section>
     
     <!-- men's banner -->
-    <section id="men's section">
-     <div style="margin-top: 80px;" class="carousel slide">
-      <div class="carousel-inner"> 
+    <section id="men-section">
+     <div class="carousel slide">
+      <div class="carousel-inner">   
         <div id="carousel-banner" class="carousel-item active">
-          <a href=""><img id="banner" src="img/MEN_SPRING_2025_HP_250307_DI3.webp" class="d-block w-100" alt="Men"></a>
+          <a href=""><img id="banner" src="img/MEN_SPRING_2025_HP_250307_DI3.webp" class="d-block w-100 img-fluid" alt="Men"></a>
           <div class="carousel-caption d-none d-md-block">
           </div>
         </div>  
@@ -604,5 +503,11 @@
     }
 
     document.addEventListener("DOMContentLoaded", updateCartCount);
+
+    // for menu dropdown
+    // Initialization for ES Users
+import { Dropdown, Ripple, initMDB } from "mdb-ui-kit";
+
+initMDB({ Dropdown, Ripple });
 </script>
 
