@@ -97,6 +97,7 @@ body{
 #image-gallery{
   display: grid;
   margin: 0 auto;
+  overflow-x: hidden;
 }
 #image-gallery img{
   gap: 0;
