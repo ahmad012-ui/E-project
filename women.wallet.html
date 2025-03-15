@@ -98,9 +98,9 @@
   </div>
   </div>
   <section >
-       <div id="filter">
-         Filter<img src="https://img.icons8.com/?size=100&id=3004&format=png&color=000000" id="filter-icon" alt="" srcset="">
-       </div>
+    <div id="filter" data-bs-toggle="offcanvas" data-bs-target="#filterOffcanvas">
+      Filter<img  src="https://img.icons8.com/?size=100&id=3004&format=png&color=000000" id="filter-icon" alt="" srcset="">
+    </div>
        
        <br><br><br><br><br><br>
   
@@ -318,27 +318,109 @@
   
   
   
-  
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js" integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script>
-        $('.owl-carousel').owlCarousel({
-    loop:true,
-    margin:5,
-    nav:true,
-    responsive:{
-        0:{
-            items:1
-        },
-        600:{
-            items:2
-        },
-        1000:{
-            items:3
-        }
+<!-- Offcanvas Filter -->
+<div class="offcanvas offcanvas-end" tabindex="-1" id="filterOffcanvas" aria-labelledby="filterOffcanvasLabel">
+  <div class="offcanvas-header">
+      <h5 class="offcanvas-title" id="filterOffcanvasLabel">Filter Products</h5>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body">
+      <form id="filterForm">
+          <!-- Price Range Filter -->
+          <label for="priceRange">Price Range:</label>
+          <input type="number" id="minPrice" placeholder="Min Price" class="form-control mb-2">
+          <input type="number" id="maxPrice" placeholder="Max Price" class="form-control mb-2">
+
+          <!-- Brand Filter -->
+          <label for="brand">Brand:</label>
+          <select id="brandFilter" class="form-control mb-3">
+              <option value="">All</option>
+              <option value="Loewe">Loewe</option>
+              <option value="Gucci">Gucci</option>
+              <option value="French luxury">French Luxury</option>
+              <option value="Khaite Remi">Khaite Remi</option>
+          </select>
+
+          <!-- Apply Filter Button -->
+          <button type="button" class="btn btn-dark w-100" onclick="applyFilters()">Apply Filter</button>
+          <button type="button" class="btn btn-secondary w-100 mt-2" onclick="clearFilters()">Clear Filter</button>
+
+      </form>
+  </div>
+</div>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js" integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script>
+      $('.owl-carousel').owlCarousel({
+  loop:true,
+  margin:5,
+  nav:true,
+  responsive:{
+      0:{
+          items:1
+      },
+      600:{
+          items:2
+      },
+      1000:{
+          items:3
+      }
+  }
+})
+
+function applyFilters() {
+  // Get the values from the filter inputs
+  let minPrice = parseInt(document.getElementById("minPrice").value) || 0;
+  let maxPrice = parseInt(document.getElementById("maxPrice").value) || Infinity;
+  let selectedBrand = document.getElementById("brandFilter").value.toLowerCase();
+
+  // Get all the product elements
+  let products = document.querySelectorAll("#response .col-12");
+
+  // Loop through each product to apply the filter
+  products.forEach(product => {
+    let priceText = product.querySelector("h6").innerText; // Assuming price is in an <h6> element
+    let brandText = product.querySelector("p:nth-child(3)").innerText.toLowerCase(); // Assuming brand is in a <p> element
+    
+    // Extract the numeric price from the text (e.g. "Price: $1500" -> 1500)
+    let price = parseInt(priceText.replace(/\D/g, ''));
+
+    // Apply the filter conditions (price range and brand match)
+    if (price >= minPrice && price <= maxPrice && 
+        (selectedBrand === "" || brandText.includes(selectedBrand))) {
+      product.style.display = "block"; // Show product if it matches the filter
+    } else {
+      product.style.display = "none"; // Hide product if it doesn't match the filter
     }
-  })
-    </script>
+  });
+
+  // Close the offcanvas after applying the filter
+  var offcanvasElement = document.getElementById('filterOffcanvas');
+  var offcanvas = bootstrap.Offcanvas.getInstance(offcanvasElement);
+  offcanvas.hide();
+}
+
+function clearFilters() {
+  // Clear all the filter input fields
+  document.getElementById("minPrice").value = "";
+  document.getElementById("maxPrice").value = "";
+  document.getElementById("brandFilter").value = "";
+
+  // Get all the product elements and show all products
+  let products = document.querySelectorAll("#response .col-12");
+  products.forEach(product => {
+    product.style.display = "block"; // Show all products
+  });
+
+  // Close the offcanvas after clearing the filters
+  var offcanvasElement = document.getElementById('filterOffcanvas');
+  var offcanvas = bootstrap.Offcanvas.getInstance(offcanvasElement);
+  offcanvas.hide(); // Close the offcanvas
+}
+
+  </script>
   
   </body>
   </html>
