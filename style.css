@@ -1,0 +1,401 @@
+body{
+  overflow-x:hidden;
+}
+/* navbar */
+#nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-top: 10px;
+    padding-right: 20px;
+    padding-left: 20px;
+}
+.navbar-brand{
+    font-size: 24px;
+    color: #333;
+    text-decoration: none;
+}
+
+#search{
+  background :none;
+  border:none;
+}
+#menu{
+  background :none;
+  border:none;
+  cursor: pointer;
+  letter-spacing: 1px;
+}
+#brand-logo{
+  font-size: 25px;
+  cursor: pointer;
+    
+}
+#search-profile{
+  word-spacing: 7px;
+}
+
+/* offcanvas */
+#offcanvas-logo{
+    padding-left: 50px ;
+}
+
+#offcanvass-body{
+    font-size: 19px;
+}
+
+#main-list{
+  list-style: none;
+}
+
+/* menu list hovers */
+#men-tag:hover, #women-tag:hover, #men-list:hover, #women-bag:hover, .nav-item:hover{
+  cursor: pointer;
+  width: 150px;
+  border-bottom: 1px solid #dde0e062;
+  box-shadow: 1px 1px 5px #9e9f9f62;
+  transition: all 0.5s ease-out;
+  display: block;
+  border-radius: 10px;
+}
+
+/* dropdown menu */
+#dropdown-menu{
+  position: absolute;
+  background-color: #fff;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  border-radius: 20px;
+  transition: max-width 0.5s ease-out;
+
+}
+#item{
+  text-decoration: none;
+  display: block;
+  color: #191818;
+  border: 1px transparent;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease-out;
+  border-radius: 10px;
+  font-size: 18px;
+  background-color: rgb(255, 255, 255);
+  border-bottom: 1px solid #dde0e062;
+  box-shadow: 1px 1px 5px #9e9f9f62;
+  padding-bottom: 10px;
+}
+
+
+/* banner image */
+#banner{
+  width: 100%;
+  top: 0;
+}
+
+/* image gallery */
+#image-gallery{
+  display: grid;
+  margin: 0 auto;
+  overflow-x: hidden;
+}
+#image-gallery img{
+  gap: 0;
+  width: 100%;
+  height: 600px;
+  object-fit: cover; 
+  padding: 0;
+}
+#gallery-img{
+  object-fit: cover;
+  padding: 0px;
+}
+
+/* product details */
+#feat-products{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 100px;
+}
+
+#women-products img{
+  height: 400px;
+  width: 100%;
+}
+
+/* services */
+#service{
+  display: flex;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 30px;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 50px;
+  margin-bottom: 3  0px;
+}
+
+#service-icon{
+  width: 100%;
+  height: 450px;
+  margin-right: 20px;
+}
+
+/* footer */
+#footer{
+  margin-top: 50px;
+  border-top: 1px solid #5e5f5f62;
+  background-color: #5c5a5a;
+}
+#footer-logo{
+  left: 0px;
+  font-size: 1.9rem;
+  text-decoration: none; 
+  border-bottom: none;
+}
+#footer-copyright{
+  text-decoration: none;
+  color: #5c5a5a;
+}
+#footer-rights{
+  text-align: center;
+  justify-content: center;
+}
+#nextag-footer-info{
+  width: 250px;
+  color: #555454;
+}
+#footer-list{
+  list-style: none;
+  justify-content: start;
+}
+
+/* responsive */
+/* @media screen and (max-width: 992px){
+  #nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-top: 10px;
+    padding-right: 20px;
+    padding-left: 10px;
+  }
+  #logo{
+    width: 100px;
+    height: 100px;
+    align-items: center;
+    justify-content: center;
+    margin-right: 100px;
+    padding-left: 100px;
+    margin-left: 50px;
+  }
+  .navbar-brand{
+    font-size: 20px;
+    color: #333;
+    text-decoration: none;
+  }
+  #brand-logo{
+    width: 150px;
+  }
+  #search-profile{
+    display: none;
+  }
+  #offcanvas-logo{
+    padding-left: 20px ;
+  }
+  #offcanvass-body{
+    font-size: 30px;
+  }
+  #women-products img{
+    height: 300px;
+    width: 100%;
+    object-fit: cover;
+    gap: 0;
+  }
+  #men-tag:hover, #women-tag:hover
+  {
+    width: 150px;
+  }
+  #men-tag:hover:after, #women-tag:hover
+  {
+    right: 150px;
+  }
+  #men-tag:hover:after, #women-tag:hover
+  {
+    right: 0px;
+  }
+  #men-product:hover:after,
+  #men-handbag-tag:hover:after,
+  #men-wallet-tag:hover:after,
+  #men-backpack-tag:hover:after,
+  #women-product:hover:after,
+  #women-handbag-tag:hover:after,
+  #women-wallet-tag:hover:after,
+  #women-backpack-tag:hover:after
+  {
+    font-size: 12px;
+  }
+  #women-bag, #men-list{
+    position: relative;
+  }
+  #carousel-banner{
+    margin-top: 100px;
+    width: 100%;
+  }
+  #banner{
+    height: 250px;
+    width: 100%;
+  }
+  #feat-products{
+    margin-top: 40px;
+    margin-bottom: 20px;
+  }
+  #women-products img{
+    height: 300px;
+  }
+  #footer{
+    margin-top: 20px;
+  }
+  #footer-logo{
+    font-size: 1.5rem;
+  }
+  #footer-copyright{
+    font-size: 12px;
+  }
+  #nextag-footer-info,#nextag-info-div{
+    width: auto;
+    font-size: 12px;
+    align-items: center;
+    justify-content: center;
+  }
+  #footer-rights{
+    font-size: 12px;
+  }
+  #search{
+    display: block;
+    margin-top: 10px;
+  }
+  #menu{
+    display: block;
+    margin-top: 10px;
+  }
+  #search-profile{
+    display: block;
+    margin-top: 10px;
+  }
+  #offcanvas-logo{
+    padding-left: 10px ;
+  }
+  #offcanvass-body{
+    font-size: 12px;
+  }
+  #men-tag:hover, #women-tag:hover
+  {
+    width: 150px;
+  } */
+  /* image gallery */
+  /* #image-gallery{
+    display: grid;
+
+  }
+  #image-gallery img{
+    width: 400px;
+    height: 300px;
+  }
+  #gallery-img{
+    width: 400px;
+    padding: 0px;
+  }
+} */
+/* General Responsive Fixes */
+/* Navbar */
+@media (max-width: 992px) {
+  body{
+    right: 0;
+  }
+  #nav {
+    padding: 10px 20px;
+
+  }
+  #brand-logo img {
+    width: 120px;
+  }
+}
+
+/* Offcanvas */
+@media (max-width: 768px) {
+  #offcanvas-logo {
+    padding-left: 15px;
+  }
+  #offcanvass-body {
+    font-size: 18px;
+  }
+}
+
+/* Banner */
+@media (max-width: 768px) {
+  #banner {
+    margin-top: 90px;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+/* Image Gallery */
+@media (max-width: 768px) {
+  #image-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+  }
+  #image-gallery img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+/* Product Section */
+@media (max-width: 768px) {
+  #women-products img {
+    height: auto;
+    width: 100%;
+  }
+}
+#men-section{
+  margin-top: 0px;
+  border-top: 1px solid black;
+  top: 0;
+}
+
+/* Services Section */
+@media (max-width: 768px) {
+  #services {
+    text-align: center;
+  }
+  #service-icon {
+    height: auto;
+    width: 100%;
+    margin: 0 auto;
+  }
+}
+
+/* Footer */
+@media (max-width: 768px) {
+  #footer {
+    padding: 20px;
+    text-align: center;
+  }
+  #footer-logo {
+    font-size: 1.5rem;
+  }
+  #nextag-footer-info {
+    width: 100%;
+    font-size: 14px;
+  }
+}
+

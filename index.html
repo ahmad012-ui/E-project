@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NEXTAG/Homepage</title>
+
+    <!-- font awesome cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-icons/4.0.0/font/MaterialIcons-Regular.ttf">
+    <!-- css styling -->
+     <link rel="stylesheet" href="style.css">
+    
+    <!-- bootstrap cdn -->
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="bootstrap.bundle.min.js">
+    <link rel="stylesheet" href="bootstrap.min.css">
+     
+    <!-- tailwind cdn -->
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+
+    <!-- jquery cdn -->
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+   
+    
+</head>
+<body>
+  <!-- navbar -->
+  <nav style="background-color: #ffffff;" class="navbar navbar-expand-md fixed-top"> 
+    <div id="nav">
+      <div>
+       <button id="menu" type="menu" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions"><i class="fa-solid fa-bars">  Menu</i></button>
+      </div>
+      <div id="brand-logo">
+        <a href="index.html"><img src="img/NEXTAGt.png" alt=""></a>
+      </div>
+      <div id="search-profile">
+        <div id="search_"></div>
+       <button type="button" id="search" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop" aria-controls="offcanvasTop"><i class="fa-solid fa-magnifying-glass"></i></button>
+      </div>
+    </div>
+  </nav>
+  
+  <!-- off canvas -->
+
+  <!-- off-canvas for menu -->
+<offcanvas>
+  <div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel"><img id="offcanvas-logo" src="img/NEXTAGt.png" alt=""></h5>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div id="offcanvass-body" class="offcanvas-body">
+      <!-- your content here -->
+      <ul id="main-list">
+        <!-- Home -->
+         <li class="nav-item">
+          <a href="index.html" class="nav-link">Home</a>
+         </li>
+         <!-- new arrival -->
+        <li class="nav-item">
+          <a class="nav-link" href="new-arrival.html">New Arrivals</a>
+        </li>
+        <!-- Women Dropdown -->
+        <li class="nav-item dropend">
+          <a class="nav-link " href="#" id="womenDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" data-bs-container="body">
+            Women
+          </a>
+            <ul id="dropdown-menu" class="dropdown-menu" aria-labelledby="womenDropdown">
+             <li><a id="item" class="dropdown-item" href="shop.page.women.html#handbag">Handbags</a></li>
+             <li><a id="item" class="dropdown-item" href="shop.page.women.html#backpack">Backpacks</a></li>
+             <li><a id="item" class="dropdown-item" href="shop.page.women.html#wallets">Wallets</a></li>
+             <li><a id="item" class="dropdown-item" href="new-arrival.html">Accessories</a></li>
+            </ul>
+        </li>
+        <!-- Men Dropdown -->
+        <li class="nav-item dropend">
+         <a class="nav-link " href="#" id="menDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+         Men
+         </a>
+          <ul id="dropdown-menu" class="dropdown-menu" aria-labelledby="menDropdown">
+            <li><a id="item" class="dropdown-item" href="shoppage.html#briefcases">Briefcases</a></li>
+            <li><a id="item" class="dropdown-item" href="shoppage.html#backpack">Backpacks</a></li>
+            <li><a id="item" class="dropdown-item" href="shoppage.html#wallet">Wallets</a></li>
+            <li><a id="item" class="dropdown-item" href="new-arrival.html">Accessories</a></li>
+          </ul>
+        </li>
+        <!-- services -->
+        <li class="nav-item">
+          <a class="nav-link" href="services.html">Services</a>
+        </li>
+        <!-- contact -->
+        <li class="nav-item">
+          <a class="nav-link" href="contact.html">Contact</a>
+        </li>
+        <!-- about us -->
+        <li class="nav-item">
+          <a class="nav-link" href="about.html">About Us</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</offcanvas>
+
+  <!-- search bar -->
+  <div class="offcanvas offcanvas-top" tabindex="-1" id="offcanvasTop" aria-labelledby="offcanvasTopLabel">
+    <div class="offcanvas-header">
+        <h5 class="offcanvas-title align-item-center" id="offcanvasTopLabel">Search</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+        <form class="d-flex">
+            <input class="form-control me-2" type="search" placeholder="Search..." aria-label="Search">
+            <button class="btn btn-dark btn-gradient" type="submit">Search</button>
+            <div id="search-card"></div>
+        </form>
+    </div>
+  </div>
+
+  <!--main-->
+  <main>
+    <div class="carousel slide">
+      <div class="carousel-inner"> 
+        <div id="carousel-banner" class="carousel-item active">
+          <img id="banner" src="img/banner.jpg" class="d-block w-100" alt="">
+          <div class="carousel-caption d-none d-md-block">
+            <a href="" class="nav-link" class="nav-link"><p class="text-4xl text-underline">Women</p></a>
+          </div>
+        </div>  
+      </div>
+    </div>
+    <!-- image gallery -->
+    <div class="" id="image-gallery">
+      <div class="row" style="padding: 0;">
+        <div id="gallery-img" class="col-lg-4 col-md-4 col-sm-2">
+         <a href="shop.page.women.html#handbag" class="nav-link"><img id="img" src="img/gallery 1.jpeg" alt="Handbag"></a>
+        </div>
+        <div id="gallery-img" class="col-lg-4 col-md-4 col-sm-2">
+          <a href="shop.page.women.html#backpack" class="nav-link"><img id="img" src="img/gallery 2.jpeg" alt="backpack"></a>
+        </div>
+        <div id="gallery-img" class="col-lg-4 col-md-4 col-sm-2"> 
+          <a href="shop.page.women.html#wallets" class="nav-link"><img id="img" src="img/gallery 3.jpeg" alt="phonecase holders"></a>
+        </div> 
+      </div>  
+    </div>
+
+    <!-- featured products -->
+    <section>
+    <h2 id="feat-products" class="font-weight-bold mt-4 text-wrap">Our Featured Products</h2>
+    <div class="container mt-4">
+        <div class="row">
+            <div id="women-products" class="col-12 col-sm-6 col-lg-3 text-center mb-4">
+                <a href="" class="nav-link">
+                  <img src="img/travel hobo.jpeg" alt="Hobo" class="img-fluid" />
+                <p class="mt-2">HOBO</p></a>
+            </div>
+            <div id="women-products" class="col-12 col-sm-6 col-lg-3 text-center mb-4">
+              <a href="" class="nav-link">
+                <img src="img/Minimalist Large Capacity Backpack.jpeg" alt="Backpack" class="img-fluid" />
+                <p class="mt-2">Backpack</p></a>
+            </div>
+            <div id="women-products" class="col-12 col-sm-6 col-lg-3 text-center mb-4">
+              <a href="" class="nav-link">
+                <img src="img/BirdinBag – Premium Studded Decor Duffel.jpeg" alt="Travel bags" class="img-fluid" />
+                <p class="mt-2">Travel</p></a>
+            </div>
+            <div id="women-products" class="col-12 col-sm-6 col-lg-3 text-center mb-4">
+              <a href="" class="nav-link">
+                <img src="img/Pu Leather Card Case Multi-card Slot Leather Purses Card Holder Men Women.jpeg" alt="card holders" class="img-fluid" />
+                <p class="mt-2">Wallets</p></a>
+            </div>
+        </div>
+    </div>
+    </section>
+    
+    <!-- men's banner -->
+    <section id="men's section">
+     <div style="margin-top: 80px;" class="carousel slide">
+      <div class="carousel-inner"> 
+        <div id="carousel-banner" class="carousel-item active">
+          <a href=""><img id="banner" src="img/MEN_SPRING_2025_HP_250307_DI3.webp" class="d-block w-100" alt="Men"></a>
+          <div class="carousel-caption d-none d-md-block">
+          </div>
+        </div>  
+      </div>
+     </div>
+    </section>
+
+   <!--men's featured products -->
+   <section>
+    <h4  class="text-center mt-5 text-wrap">Men</h4>
+    <div class="container mt-4">
+        <div class="row">
+            <div id="women-products" class="col-12 col-sm-6 col-lg-3 text-center mb-4">
+              <a href="" class="nav-link">
+                <img src="img/travel.jpg" alt="Travel bags" class="img-fluid" />
+                <p class="mt-2">Travel (Classic Leather)</p></a>
+            </div>
+            <div id="women-products" class="col-12 col-sm-6 col-lg-3 text-center mb-4">
+              <a href="" class="nav-link">
+                <img src="img/Gazeli Brown Leather Briefcase by Capra.jpeg" alt="briefcase" class="img-fluid" />
+                <p class="mt-2">Briefcase/Weekend Bags</p></a>
+            </div>
+            <div id="women-products" class="col-12 col-sm-6 col-lg-3 text-center mb-4">
+              <a href="" class="nav-link">
+                <img src="img/Commuter Backpack I Harber London.jpeg" alt="Backpack" class="img-fluid" />
+                <p class="mt-2">Backpack</p></a>
+            </div>
+            <div id="women-products" class="col-12 col-sm-6 col-lg-3 text-center mb-4">
+              <a href="" class="nav-link">
+                <img src="img/card-holder.jpeg" alt="Phone case card holders" class="img-fluid" />
+                <p class="mt-2">Phone Case Card Holders</p></a>
+            </div>
+        </div>
+    </div>
+    </section>
+
+    <!-- services -->
+    <section id="services">
+      <h2 id="service" class="font-weight-bold mt-4">Nextag Services</h2>
+      <div class="container mt-4">
+        <div class="row">
+          <div class="col-lg-4 col-sm-6  text-center mb-4">
+            <a href="contact.html" class=" nav-link"><img id="service-icon" src="img/contact.jpeg" alt="duffel">
+            <p class="lead" >Services</p>
+            <p><a href="contact.html" class="text-dark">Contact</a></p></a>
+          </div>
+          <div class="col-lg-4 col-sm-6  text-center mb-4">
+            <a href="" class=" nav-link"><img id="service-icon" src="img/download (4).jpeg" alt="gift box">
+            <p class="lead">Art Of Gifting</p>
+            <p><a href="" class="text-dark">Shop Now</a></p></a>
+          </div>
+          <div class="col-lg-4 col-sm-6 text-center mb-4">
+            <a href="shoppage.html" class=" nav-link"><img id="service-icon" src="img/customization.jpeg" alt="Clutch">
+            <p class="lead">Personalizations</p> 
+            <p><a href="" class="text-dark">Expolre</a></p></a>
+          </div>
+          
+        </div>
+      </div>
+    </section>
+
+
+  </main>
+
+<!-- Footer -->
+<footer class="bg-body-tertiary text-center">
+  <!-- Grid container -->
+  <div class="container p-4">
+    <!-- Section: Social media -->
+    <section class="mb-4">
+      <!-- Facebook -->
+      <a data-mdb-ripple-init class="btn btn-outline btn-floating m-1" href="https://www.facebook.com/" role="button"
+        ><i class="fab fa-facebook-f"></i
+      ></a>
+
+      <!-- Twitter -->
+      <a data-mdb-ripple-init class="btn btn-outline btn-floating m-1" target="_blank" href="https://www.x.com/" role="button"
+        ><i class="fab fa-twitter"></i
+      ></a>
+
+      <!-- Instagram -->
+      <a data-mdb-ripple-init class="btn btn-outline btn-floating m-1" target="_blank" href="https://www.instagram.com/" role="button"
+        ><i class="fab fa-instagram"></i
+      ></a>
+    </section>
+    <!-- Section: Social media -->
+
+    <!-- Section: Form -->
+    <section class="">
+      <form action="">
+        <!--Grid row-->
+        <div class="row d-flex justify-content-center">
+          <!--Grid column-->
+          <div class="col-auto">
+            <p class="pt-2">
+              <strong>Sign up for our newsletter</strong>
+            </p>
+          </div>
+          <!--Grid column-->
+
+          <!--Grid column-->
+          <div class="col-md-5 col-12">
+            <!-- Email input -->
+            <div data-mdb-input-init class="form-outline mb-4">
+              <input type="email" id="form5Example24" class="form-control" required placeholder="Email Address" />
+            </div>
+          </div>
+          <!--Grid column-->
+
+          <!--Grid column-->
+          <div class="col-auto">
+            <!-- Submit button -->
+            <button data-mdb-ripple-init type="submit" class="btn btn-outline btn-dark mb-4">
+              Subscribe
+            </button>
+          </div>
+          <!--Grid column-->
+        </div>
+        <!--Grid row-->
+      </form>
+    </section>
+
+    <!-- Section: Links -->
+    <section class="">
+      <!--Grid row-->
+      <div class="row align-item-start">
+        <!--Grid column-->
+        <div class="col-lg-3 col-md-4  mb-4 mb-md-2 mt-md-2">
+          <article>
+          <div id="nextag-info-div" class="flex items-center"><a href="index.html" style="text-decoration: none;" class="flex items-center">
+            <span id="footer-logo" class="self-center text-2xl font-semibold whitespace-nowrap text-black">NEXTAG</span></a>
+          </div>
+          <div id="nextag-footer-info">
+            <p class="text-gray-500 dark:text-dark text-sm text-start">
+            NEXTAG offers a curated collection of premium purses 
+            and wallets from top brands. With detailed product 
+            insights, comparisons, and a seamless shopping experience,
+            we make finding the perfect accessory effortless.
+            </p>
+          </div>
+         </article>
+        </div>
+        <!--Grid column-->
+
+        <!--Grid column-->
+        <div class="col-lg-3 col-md-4 mb-4 mb-md-2 text-start">
+          <h5 class="text-uppercase">Quick Links</h5>
+
+          <ul id="footer-list" class="list-unstyled mb-0">
+            <li>
+              <a class="text-body nav-link" href="index.html">Home</a>
+            </li>
+            <li>
+              <a class="text-body nav-link" href="about.html">About Us</a>
+            </li>
+            <li>
+              <a class="text-body nav-link" href="contact.html">Contact</a>
+            </li>
+            <li>
+              <a class="text-body nav-link" href="services.html">Services</a>
+            </li>
+          </ul>
+        </div>
+        <!--Grid column-->
+
+        <!--Grid column-->
+        <div class="col-lg-3 col-md-4 mb-4 mb-md-2 text-start">
+          <article>
+          <h5 class="text-uppercase">Products</h5>
+          </article>
+          <ul id="footer-list" class="list-unstyled mb-0 ">
+            <li>
+              <a class="text-body nav-link" href="#!">Handbag</a>
+            </li>
+            <li>
+              <a class="text-body nav-link" href="#!">Wallet</a>
+            </li>
+            <li>
+              <a class="text-body nav-link" href="#!">Backpacks</a>
+            </li>
+            <li>
+              <a class="text-body nav-link" href="new-arrival.html">Accessories</a>
+            </li>
+          </ul>
+        </div>
+        <!--Grid column-->
+
+        <!--Grid column-->
+        <div class="col-lg-3 col-md-4 mb-4 mb-md-2 text-start">
+          <h5 class="text-uppercase">Info</h5>
+
+          <ul id="footer-list" class="list-unstyled mb-0">
+            <li>
+              <a class="text-body nav-link" href="contact.html#faqs">FAQ's</a>
+            </li>
+            <li>
+              <a class="text-body nav-link" href="blog.html">Blog</a>
+            </li>
+            <li>
+              <a class="text-body nav-link" href="privacy_policy.pdf" target="_blank">Privacy Policy</a>
+            </li>
+            <li>
+              <a class="text-body nav-link" href="terms_conditions.pdf" target="_blank">Term's & Conditions</a>
+            </li>
+          </ul>
+        </div>
+        <!--Grid column-->
+      </div>
+      <!--Grid row-->
+    </section>
+    <!-- Section: Links -->
+  </div>
+  <!-- Grid container -->
+
+  <!-- Copyright -->
+  <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.05);">
+    © 2020 Copyright:
+    <a class="text-reset text-semi-bold" href="index.html">NEXTAG.COM</a>
+  </div>
+  <!-- Copyright -->
+</footer>
+<!-- Footer -->
+
+<!-- js search file -->
+<script src="js/search.js"></script>
+
+<!-- js for service icons -->
+<script>
+  let script = document.createElement("script");
+  script.src = "search.js";
+  document.head.appendChild(script);
+</script>
+</body>
+</html>
+
+<script>
+  // for men's menu
+  $('#men-list').hide();
+  $('#bag-list').hide();
+  $('#backpack-list').hide();
+  $('#handbag-list').hide();
+  $('#wallet-list').hide();
+  $('#men').click(function(){
+    $('#men-list').show();
+    $('#men-list,#men').mouseleave(function(){
+        $('#men-list').hide();
+      });
+  });
+  // bag
+  $('#bag').click(function(){
+    $('#bag-list').show();
+    $('#bag-list,#bag').mouseleave(function(){
+        $('#bag-list').hide();
+      });
+  });
+  // backpack
+  $('#backpack').click(function(){
+    $('#backpack-list').toggle();
+    $('#backpack-list,#backpack').mouseleave(function(){
+        $('#backpack-list').hide();
+      });
+  });
+  // handbag
+  $('#handbag').click(function(){
+    $('#handbag-list').toggle();
+    $('#handbag-list,#handbag').mouseleave(function(){
+        $('#handbag-list').hide();
+      });
+  });
+  // wallet
+  $('#wallet').click(function(){
+    $('#wallet-list').toggle();
+    $('#wallet-list,#wallet').mouseleave(function(){
+        $('#wallet-list').hide();
+      });
+  });
+  
+  // for women's menu
+  $('#women-list').hide();
+  $('#women-bag-list').hide();
+  $('#women-backpack-list').hide();
+  $('#women-handbag-list').hide();
+  $('#women-wallet-list').hide();
+  // for main women's menu
+  $('#women').click(function(){
+    $('#women-list').show();
+  });
+  // women's menu leave event
+  $('#women-list,#women').mouseleave(function(){
+    $('#women-list').hide();
+  });
+  // women's bag
+  $('#women-bag').click(function(){
+    $('#women-bag-list').show();
+    $('#women-bag-list,#women-bag').mouseleave(function(){
+      $('#women-bag-list').hide();
+      });
+  });
+  // women's backpack
+  $('#women-backpack').click(function(){
+    $('#women-backpack-list').show();
+    $('#women-backpack-list,#women-backpack').mouseleave(function(){
+      $('#women-backpack-list').hide();
+      });
+  });
+  // women's handbag
+  $('#women-handbag').click(function(){
+    $('#women-handbag-list').show();
+    $('#women-handbag-list,#women-handbag').mouseleave(function(){
+      $('#women-handbag-list').hide();
+      });
+  });
+  // women's wallet
+  $('#women-wallet').click(function(){
+    $('#women-wallet-list').show();
+    $('#women-wallet-list').mouseleave(function(){
+      $('#women-wallet-list').hide();
+      });
+  });
+
+
+  // for add to cart
+    function updateCartCount() {
+        let cart = JSON.parse(localStorage.getItem("cart")) || [];
+        let totalItems = cart.reduce((sum, product) => sum + product.quantity, 0);
+        document.getElementById("cart-count").textContent = totalItems;
+    }
+
+    document.addEventListener("DOMContentLoaded", updateCartCount);
+</script>
+
