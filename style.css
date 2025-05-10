@@ -50,15 +50,28 @@ body{
 }
 
 /* menu list hovers */
-#men-tag:hover, #women-tag:hover, #men-list:hover, #women-bag:hover, .nav-item:hover{
-  cursor: pointer;
+#men-tag::after, #women-tag::after, #men-list::after, #women-bag::after, .nav-item::after{
+  /* cursor: pointer;
   width: 150px;
   border-bottom: 1px solid #dde0e062;
   box-shadow: 1px 1px 5px #9e9f9f62;
   transition: all 0.5s ease-out;
   display: block;
-  border-radius: 10px;
+  border-radius: 10px; */
+  /* content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: black;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); */
 }
+/* #men-tag:hover::after, #women-tag:hover::after, #men-list:hover::after, #women-bag:hover::after, .nav-item:hover::after, navbar-nav .nav-link:hover::after{
+  width: 100%;
+  background: black;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+} */
 
 /* dropdown menu */
 #dropdown-menu{

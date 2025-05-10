@@ -5,253 +5,132 @@
    font-family: Verdana, Geneva, Tahoma, sans-serif;
  
 }
-#nav{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+/* owl carouser */
+#wom-category{
     width: 100%;
-    margin-top: 10px;
-    padding-right: 30px;
-    padding-left: 30px;
-    
+    max-height: 300px;
+    margin-top: 10rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+#wom-category h1{
+    font-size: 40px;
+    display: inline;
+    color: black;
+    text-align: center;
+    text-transform: uppercase;
+    position: relative;
+    top: 50%;
+    padding-right: 30px; 
+}
+#owl{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+}
+.item{
+    width: 80%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    border-radius: 50%;
 }
 .item img{
-    height: 150px;
-    width: 100px;
-   border-radius: 50%;
-   animation-iteration-count: infinite;
+    width: 85%;
+    height: 95%;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: all 0.3s ease-in-out;
 }
-#cdn{
-height: 30%;
-width: 30%;
-position: absolute;
-top: 20%;
-left: 64%;
-
+.item img:hover{
+    transform: scale(1.1);
+    transition: all 0.3s ease-in-out;
 }
-#mean{
-padding: 6vw;
-
-}
-
-#woman{
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-#woman:hover {
-    transform: scale(1.02);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  }
-/* 
-#filter{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-     width: 100%;
-     position: relative;
-     left: 91%;
-     top: 100px;
-    border: 1px solid;
-    border-radius: 20px;
-    padding: 9px 10px ;
-    width: 7%;
-    height: 5%;
-
-}
-
-#filter-icon{
-    display: flex;
-     height: 20px;
-     width: 20px;
-}
-
-
-.container-two{
-    display: grid;
-    justify-content: space-evenly;
-    
-}
-
-#bag-one{
-    display: flex;
-    justify-content: space-evenly;
-}
-
-#bag-one img{
-    height: 200px;
-}
-
-@media (max-width:680) {
-   
+/* #img{
+    height: 160px;
 } */
 
-#filter {
+/* filter button */
+#filter{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 100%;
+    height: 50px;
+    border: none;
+    border-radius: 5px;
+    color: black;
+    font-size: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+#filter-container{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+    color: black;
+    font-size: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    gap: 20px;
+    padding: 20px;
+}
+#filter-btn, #sort-btn{
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 4px; 
-    /* padding: 12px; */
-    width: 100px;
-    height: 30px;
-    background-color: #f0f0f0;
-    border-radius: 480px;
-    position: relative;
-    top: 110px; 
-    left: 90%;
-    border: 1px solid;
-  }
-  
-  /* Icon style */
-  #filter-icon {
-    font-weight: bold;
-    width: 20px;
-    height: 18px;
-  }
-  
-  /* Responsiveness */
-  @media screen and (max-width: 1280px) {
-    #filter {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 1px; 
-        padding: 4px;
-        width: 120px;
-        height: 50px;
-        background-color: #f0f0f0;
-        border-radius: 310px;
-        position: relative;
-        top: 290px; 
-        left: 80%;
-        border: 1px solid;
-        font-weight: 900;
-    }
-  
-    #filter-icon {
-      width: 24px;
-      height:  24px;
-    }
-
-    #men{
-        position: relative;
-        top: 190px;
-    }
-  }
-  
-  @media screen and (max-width: 480px) {
-    #filter {
-      padding: 2px;
-      position: relative;
-      top: 300px;
-      width: 110px;
-      height: 40px;
-      border-radius: 300px;
-      border: 1px solid;
-      left: 69%;
-      gap: 6px;
-    }
-    #men{
-        position: relative;
-        top: 200px;
-    }
-  
-    #filter-icon {
-     position: relative;
-    
-      width: 17px;
-      height: 17px;
-    }
-  }
-
-  /* @media screen and (max-width: 768px) {
-    #filter {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 4px; 
-        padding: 14px;
-        width: 13%;
-        height: 7%;
-        background-color: #f0f0f0;
-        border-radius: 60%;
-        position: relative;
-        top: 190px; 
-        left: 85%;
-        border: 1px solid;
-    }
-  
-    #filter-icon {
-      width: 17px;
-      height: 17px;
-    }
-
-    #men{
-        position: relative;
-        top: 150px;
-    }
-  }
-   */
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* .image-gallery {
     width: 100%;
-    display: flex;
+    border: none;
+    border-radius: 50px;
+    color: black;
+    font-size: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+/* #filter-btn::after, #sort-btn::after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: black;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+#filter-btn:hover::after, #sort-btn:hover::after{
+    width: 100%; 
+} */
+
+/* main product section */
+#product-container{
+    display: grid;
+    /* grid-template-columns:repeat(auto-fit, minmax(300px, 1fr)); */
+    /* grid-template-columns: repeat(4, 1fr); */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    margin: 0;
+    padding: 0;
+    gap: 20px;
+    justify-content: center;
     align-items: center;
-    justify-content: space-evenly; 
-    /* grid-template-columns: repeat(4, 1fr);  */
-   
-
-
-/* Make the images responsive */
-/* .image-gallery img {
-   
-    height: 350px;
-    border-radius: 8px;
+    margin-top: 50px;
 }
-
-
-@media (max-width: 768px) {
-    .image-gallery {
-        grid-template-columns: repeat(2, 1fr); 
-    }
+.product-item img{
+    width: 700%;
+    height: 300px; 
+    object-fit: cover;
+    /* border-radius: 10px; */
+    transition: all 0.3s ease-in-out;
 }
-
-
-@media (max-width: 480px) {
-    .image-gallery {
-        grid-template-columns: 1fr; 
-    }
-}  */
