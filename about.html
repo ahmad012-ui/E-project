@@ -27,17 +27,20 @@
 
 </head>
 <body>
-  <nav style="background-color: #ffffff;" class="navbar navbar-expand-md fixed-top"> 
+  <nav style="background-color: #ffffff; position: fixed;" class="navbar navbar-expand-md fixed-top"> 
     <div id="nav">
       <div>
        <button id="menu" type="menu" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions"><i class="fa-solid fa-bars">  Menu</i></button>
       </div>
       <div id="brand-logo">
-        <a href="index.html"><img src="img/NEXTAGt.png" alt=""></a>
+        <a href="index.html"><img src="img/NEXTAGt.png" alt="NEXTAG Logo"></a>
       </div>
       <div id="search-profile">
         <div id="search_"></div>
        <button type="button" id="search" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop" aria-controls="offcanvasTop"><i class="fa-solid fa-magnifying-glass"></i></button>
+       <button type="button" id="search" data-bs-toggle="offcanvas" data-bs-target="#staticBackdrop">
+         <i class="fa-solid fa-cart-shopping"></i>
+       </button>
       </div>
     </div>
   </nav>
@@ -60,29 +63,13 @@
         <li class="nav-item">
           <a class="nav-link" href="new-arrival.html">New Arrivals</a>
         </li>
-        <!-- Women Dropdown -->
-        <li class="nav-item dropend">
-          <a class="nav-link " href="#" id="womenDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" data-bs-container="body">
-            Women
-          </a>
-            <ul id="dropdown-menu" class="dropdown-menu" aria-labelledby="womenDropdown">
-             <li><a id="item" class="dropdown-item" href="shop.page.women.html#handbag">Handbags</a></li>
-             <li><a id="item" class="dropdown-item" href="shop.page.women.html#backpack">Backpacks</a></li>
-             <li><a id="item" class="dropdown-item" href="shop.page.women.html#wallets">Wallets</a></li>
-             <li><a id="item" class="dropdown-item" href="new-arrival.html">Accessories</a></li>
-            </ul>
+        <!-- Women Link -->
+        <li class="nav-item">
+          <a class="nav-link" href="shop.page.women.html">Women</a>
         </li>
-        <!-- Men Dropdown -->
-        <li class="nav-item dropend">
-         <a class="nav-link " href="#" id="menDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-         Men
-         </a>
-          <ul id="dropdown-menu" class="dropdown-menu" aria-labelledby="menDropdown">
-            <li><a id="item" class="dropdown-item" href="shoppage.html#briefcases">Briefcases</a></li>
-            <li><a id="item" class="dropdown-item" href="shoppage.html#backpack">Backpacks</a></li>
-            <li><a id="item" class="dropdown-item" href="shoppage.html#wallet">Wallets</a></li>
-            <li><a id="item" class="dropdown-item" href="new-arrival.html">Accessories</a></li>
-          </ul>
+        <!-- Men Link -->
+        <li class="nav-item">
+          <a class="nav-link" href="shoppage_men.html">Men</a>
         </li>
         <!-- services -->
         <li class="nav-item">
@@ -114,6 +101,40 @@
         </form>
     </div>
   </div>
+
+  <!-- Cart Sidebar -->
+  <aside class="offcanvas offcanvas-end" data-bs-backdrop="static" tabindex="-1" id="staticBackdrop"
+    aria-labelledby="staticBackdropLabel">
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title" id="staticBackdropLabel">Shopping Cart</h5>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+      <div id="cart-container" class="d-flex flex-column justify-content-start">
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th>Image</th>
+              <th>Product</th>
+              <th>Price</th>
+              <th>Quantity</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Cart items will be populated here -->
+          </tbody>
+        </table>
+        <div id="cart-total" class="mt-3 p-3 bg-light rounded">
+          <h6>Total: $<span id="total-amount">0.00</span></h6>
+        </div>
+      </div>
+    </div>
+    <div class="offcanvas-footer p-3">
+      <button type="button" class="btn btn-dark w-100 mb-2" data-bs-dismiss="offcanvas">Checkout</button>
+      <button type="button" class="btn btn-outline-secondary w-100" data-bs-dismiss="offcanvas">Continue Shopping</button>
+    </div>
+  </aside>
 
     <main>
         <section class="intro">
@@ -300,6 +321,11 @@
 </footer>
 <!-- Footer -->
    
+  <!-- Search JS -->
+  <script src="search.js"></script>
+  
+  <!-- Add to Cart JS -->
+  <script src="add-to-cart.js"></script>
     
 </body>
 </html>

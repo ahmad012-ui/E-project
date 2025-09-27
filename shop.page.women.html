@@ -1,199 +1,204 @@
-<html lang="en"><head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <!-- font awesome cdn -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-icons/4.0.0/font/MaterialIcons-Regular.ttf">
-    <!-- css styling -->
-      <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="shoppage.women.css">
-    
-    <!-- bootstrap cdn -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
-  
-    <!-- tailwind cdn -->
-    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
-  
-    <!-- jquery cdn -->
-   
-    <link rel="shortcut icon" href="brand logo.png" type="image/x-icon">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.css" integrity="sha512-UTNP5BXLIptsaj5WdKFrkFov94lDx+eBvbKyoe1YAfjeRPC+gT5kyZ10kOHCfNZqEui1sxmqvodNUx3KbuYI/A==" crossorigin="anonymous" referrerpolicy="no-referrer">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css" integrity="sha512-OTcub78R3msOCtY3Tc6FzeDJ8N9qvQn1Ph49ou13xgA9VsH9+LRxoFU6EqLhW4+PKRfU+/HReXmSZXHEkpYoOA==" crossorigin="anonymous" referrerpolicy="no-referrer">
-    <link rel="stylesheet" href="shop.page.css">
+<html lang="en">
 
-    <!-- js link -->
-    <script src="shoppage-women.js"></script>
-    
-    
-  </head>
-  <body>
-    <!-- navbar -->
-    <div id="flex">
-      <div>
-        <nav style="background-color: #ffffff; position: fixed;" class="navbar navbar-expand-md fixed-top"> 
-            <div id="nav">
-              <div>
-               <button id="menu" type="menu" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions"><i class="fa-solid fa-bars">  Menu</i></button>
-              </div>
-              <div id="brand-logo">
-                <a href="index.html"><img src="img/NEXTAGt.png" alt=""></a>
-              </div>
-              <div id="search-profile">
-                <div id="search_"></div>
-                <button type="button" id="search" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop" aria-controls="offcanvasTop"><i class="fa-solid fa-magnifying-glass"></i></button>
-                <button type="button" id="search" data-bs-toggle="offcanvas" data-bs-target="#staticBackdrop"><i class="fa-solid fa-cart-shopping"></i></button>
-              </div>
-            </div>
-          </nav>
-      </div>
-    </div>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <!-- font awesome cdn -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/material-design-icons/4.0.0/font/MaterialIcons-Regular.ttf">
+  <!-- css styling -->
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="shoppage.women.css">
+
+  <!-- bootstrap cdn -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+    crossorigin="anonymous"></script>
+
+  <!-- tailwind cdn -->
+  <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+
+  <!-- jquery cdn -->
+
+  <link rel="shortcut icon" href="brand logo.png" type="image/x-icon">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.css"
+    integrity="sha512-UTNP5BXLIptsaj5WdKFrkFov94lDx+eBvbKyoe1YAfjeRPC+gT5kyZ10kOHCfNZqEui1sxmqvodNUx3KbuYI/A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css"
+    integrity="sha512-OTcub78R3msOCtY3Tc6FzeDJ8N9qvQn1Ph49ou13xgA9VsH9+LRxoFU6EqLhW4+PKRfU+/HReXmSZXHEkpYoOA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer">
+  <link rel="stylesheet" href="shop.page.css">
+
+  <!-- js link -->
+  <script src="shoppage-women.js"></script>
 
 
-      <!-- off canvas -->
+</head>
 
-  <!-- off-canvas for menu -->
-<offcanvas>
-  <div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
-    <div class="offcanvas-header">
-      <h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel"><img id="offcanvas-logo" src="img/NEXTAGt.png" alt=""></h5>
-      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-    </div>
-    <div id="offcanvass-body" class="offcanvas-body">
-      <!-- your content here -->
-      <ul id="main-list">
-        <!-- Home -->
-         <li class="nav-item">
-          <a href="index.html" class="nav-link">Home</a>
-         </li>
-         <!-- new arrival -->
-        <li class="nav-item">
-          <a class="nav-link" href="new-arrival.html">New Arrivals</a>
-        </li>
-        <!-- Women Dropdown -->
-        <li class="nav-item dropend">
-          <a class="nav-link " href="shop.page.women.html" id="womenDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" data-bs-container="body">
-            Women
-          </a>
-            <!-- <ul id="dropdown-menu" class="dropdown-menu" aria-labelledby="womenDropdown">
-             <li><a id="item" class="dropdown-item" href="shoppage.women.html#handbag">Handbags</a></li>
-             <li><a id="item" class="dropdown-item" href="shoppage.women.html#backpack">Backpacks</a></li>
-             <li><a id="item" class="dropdown-item" href="shoppage.women.html#wallets">Wallets</a></li>
-             <li><a id="item" class="dropdown-item" href="new-arrival.html">Accessories</a></li>
-            </ul> -->
-        </li>
-        <!-- Men Dropdown -->
-        <li class="nav-item dropend">
-         <a class="nav-link " href="shoppage_men.html" id="menDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-         Men
-         </a>
-          <!-- <ul id="dropdown-menu" class="dropdown-menu" aria-labelledby="menDropdown">
-            <li><a id="item" class="dropdown-item" href="shoppage.html#briefcases">Briefcases</a></li>
-            <li><a id="item" class="dropdown-item" href="shoppage.html#backpack">Backpacks</a></li>
-            <li><a id="item" class="dropdown-item" href="shoppage.html#wallet">Wallets</a></li>
-            <li><a id="item" class="dropdown-item" href="new-arrival.html">Accessories</a></li>
-          </ul> -->
-        </li>
-        <!-- services -->
-        <li class="nav-item">
-          <a class="nav-link" href="services.html">Services</a>
-        </li>
-        <!-- contact -->
-        <li class="nav-item">
-          <a class="nav-link" href="contact.html">Contact</a>
-        </li>
-        <!-- about us -->
-        <li class="nav-item">
-          <a class="nav-link" href="about.html">About Us</a>
-        </li>
-      </ul>
+<body>
+  <!-- navbar -->
+  <div id="flex">
+    <div>
+      <nav style="background-color: #ffffff; position: fixed;" class="navbar navbar-expand-md fixed-top">
+        <div id="nav">
+          <div>
+            <button id="menu" type="menu" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions"
+              aria-controls="offcanvasWithBothOptions"><i class="fa-solid fa-bars"> Menu</i></button>
+          </div>
+          <div id="brand-logo">
+            <a href="index.html"><img src="img/NEXTAGt.png" alt=""></a>
+          </div>
+          <div id="search-profile">
+            <div id="search_"></div>
+            <button type="button" id="search" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop"
+              aria-controls="offcanvasTop"><i class="fa-solid fa-magnifying-glass"></i></button>
+            <button type="button" id="search" data-bs-toggle="offcanvas" data-bs-target="#staticBackdrop"><i
+                class="fa-solid fa-cart-shopping"></i></button>
+          </div>
+        </div>
+      </nav>
     </div>
   </div>
-</offcanvas>
+
+
+  <!-- off canvas -->
+
+  <!-- off-canvas for menu -->
+  <offcanvas>
+    <div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions"
+      aria-labelledby="offcanvasWithBothOptionsLabel">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel"><img id="offcanvas-logo" src="img/NEXTAGt.png"
+            alt=""></h5>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div id="offcanvass-body" class="offcanvas-body">
+        <!-- your content here -->
+        <ul id="main-list">
+          <!-- Home -->
+          <li class="nav-item">
+            <a href="index.html" class="nav-link">Home</a>
+          </li>
+          <!-- new arrival -->
+          <li class="nav-item">
+            <a class="nav-link" href="new-arrival.html">New Arrivals</a>
+          </li>
+          <!-- Women Link -->
+          <li class="nav-item">
+            <a class="nav-link" href="shop.page.women.html">Women</a>
+          </li>
+          <!-- Men Link -->
+          <li class="nav-item">
+            <a class="nav-link" href="shoppage_men.html">Men</a>
+          </li>
+          <!-- services -->
+          <li class="nav-item">
+            <a class="nav-link" href="services.html">Services</a>
+          </li>
+          <!-- contact -->
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contact</a>
+          </li>
+          <!-- about us -->
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">About Us</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </offcanvas>
 
   <!-- search bar -->
   <div class="offcanvas offcanvas-top" tabindex="-1" id="offcanvasTop" aria-labelledby="offcanvasTopLabel">
     <div class="offcanvas-header">
-        <h5 class="offcanvas-title align-item-center" id="offcanvasTopLabel">Search</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      <h5 class="offcanvas-title align-item-center" id="offcanvasTopLabel">Search</h5>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
     </div>
     <div class="offcanvas-body">
-        <form class="d-flex">
-            <input class="form-control me-2" type="search" placeholder="Search..." aria-label="Search">
-            <button class="btn btn-dark btn-gradient" type="submit">Search</button>
-            <div id="search-card"></div>
-        </form>
+      <form class="d-flex">
+        <input class="form-control me-2" type="search" placeholder="Search..." aria-label="Search" id="search-input">
+        <button class="btn btn-dark btn-gradient" type="submit">Search</button>
+      </form>
+      <div id="search-card" class="mt-3"></div>
     </div>
   </div>
 
-  <!-- off canvas for add to cart -->
-  <aside class="offcanvas offcanvas-end" data-bs-backdrop="static" tabindex="-1" id="staticBackdrop" aria-labelledby="staticBackdropLabel">
+  <!-- Cart Sidebar -->
+  <aside class="offcanvas offcanvas-end" data-bs-backdrop="static" tabindex="-1" id="staticBackdrop"
+    aria-labelledby="staticBackdropLabel">
     <div class="offcanvas-header">
-      <h5 class="offcanvas-title" id="staticBackdropLabel">Add To Cart</h5>
+      <h5 class="offcanvas-title" id="staticBackdropLabel">Shopping Cart</h5>
       <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
     </div>
     <div class="offcanvas-body">
       <div id="cart-container" class="d-flex flex-column justify-content-start">
-        <table>
+        <table class="table table-striped">
           <thead>
             <tr>
               <th>Image</th>
               <th>Product</th>
               <th>Price</th>
               <th>Quantity</th>
-              <th>Delete</th>
+              <th>Action</th>
             </tr>
           </thead>
-          <tbody>  
-            <tr>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-          </tbody>  
+          <tbody>
+            <!-- Cart items will be populated here -->
+          </tbody>
         </table>
+        <div id="cart-total" class="mt-3 p-3 bg-light rounded">
+          <h6>Total: $<span id="total-amount">0.00</span></h6>
+        </div>
+      </div>
     </div>
+    <div class="offcanvas-footer p-3">
+      <button type="button" class="btn btn-dark w-100 mb-2" data-bs-dismiss="offcanvas">Checkout</button>
+      <button type="button" class="btn btn-outline-secondary w-100" data-bs-dismiss="offcanvas">Continue Shopping</button>
     </div>
-    <div class="offcanvas-footer">
-      <button type="button" class="btn btn-dark" data-bs-dismiss="offcanvas">Checkout</button>
-      <button type="button" class="btn btn-outline-secondary ms-2">Continue Shopping</button>
-  </aside>  
+  </aside>
 
   <!-- Carousel featuring men's products -->
-   <div id="wom-category">
+  <div id="wom-category">
     <h1>WOMEN</h1>
     <div id="owl" class="owl-carousel owl-theme" onload="filterProducts()">
-      <div class="item" id="img"><img id="" class="img-fluid pic1"   src="img/pic16.webp" alt="handbags"></div>
-      <div class="item" id="img"><img id="" class="img-fluid pic2"  src="img/download.jpg" alt="backpack"></div>
+      <div class="item" id="img"><img id="" class="img-fluid pic1" src="img/pic16.webp" alt="handbags"></div>
+      <div class="item" id="img"><img id="" class="img-fluid pic2" src="img/download.jpg" alt="backpack"></div>
       <div class="item"><img id="" class="img-fluid pic3" src="img/wallet 333.jpg" alt="Wallets"></div>
-      <div class="item"><img id="" class="img-fluid pic4" src="img/32b617bdda30a39a83ddb2710c2b7853.jpg" alt="Accessories"></div>
+      <div class="item"><img id="" class="img-fluid pic4" src="img/32b617bdda30a39a83ddb2710c2b7853.jpg"
+          alt="Accessories"></div>
     </div>
-   </div>
+  </div>
 
-   <!--filter  -->
-   <div class="filter">
-      <div id="filter-container" class="">
-        <div class="justify-content-start">
-          <button type="menu" id="filter-btn" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample"><h5>Filter</h5></button>
-        </div>
-        <!-- <div class="justify-content-start ">
+  <!--filter  -->
+  <div class="filter">
+    <div id="filter-container" class="">
+      <div class="justify-content-start">
+        <button type="menu" id="filter-btn" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample">
+          <h5>Filter</h5>
+        </button>
+      </div>
+      <!-- <div class="justify-content-start ">
           <button type="menu" id="sort-btn"><h5>Sort By</h5></button>
         </div> -->
-      </div>
-   </div>
+    </div>
+  </div>
 
-   <!-- filter off-canvas -->
+  <!-- filter off-canvas -->
 
-   <!-- filter js file -->
-   <script src="shoppage-women.js"></script>
-   <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+  <!-- filter js file -->
+  <script src="shoppage-women.js"></script>
+  <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
     <div class="offcanvas-header">
       <h5 class="offcanvas-title" id="offcanvasExampleLabel">Offcanvas</h5>
       <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-    </div> 
+    </div>
     <div class="offcanvas-body">
       <div id="filter-box" class="d-flex flex-column justify-content-start">
         <!-- category wise -->
@@ -202,7 +207,7 @@
           <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
           <label class="form-check-label" for="flexCheckDefault">
             All
-          </label>  
+          </label>
         </div>
         <div class="form-check">
           <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
@@ -240,20 +245,20 @@
         </button>
         <ul class="dropdown-menu">
           <li><a class="dropdown-item" href="#">
-            <input type="radio" name="sort" id="low-to-high" value="low-to-high"> Low to High
-          </a></li>
+              <input type="radio" name="sort" id="low-to-high" value="low-to-high"> Low to High
+            </a></li>
           <li><a class="dropdown-item" href="#">
-            <input type="radio" name="sort" id="high-to-low" value="high-to-low"> High to Low
-          </a></li>
+              <input type="radio" name="sort" id="high-to-low" value="high-to-low"> High to Low
+            </a></li>
           <li><a class="dropdown-item" href="#">
-            <input type="radio" name="sort" id="newest-first" value="newest-first"> Newest First
-          </a></li>
+              <input type="radio" name="sort" id="newest-first" value="newest-first"> Newest First
+            </a></li>
           <li><a class="dropdown-item" href="#">
-            <input type="radio" name="sort" id="oldest-first" value="oldest-first"> Oldest First
-          </a></li>
+              <input type="radio" name="sort" id="oldest-first" value="oldest-first"> Oldest First
+            </a></li>
           <li><a class="dropdown-item" href="#">
-            <input type="radio" name="sort" id="best-selling" value="best-selling"> Best Selling
-          </a></li>
+              <input type="radio" name="sort" id="best-selling" value="best-selling"> Best Selling
+            </a></li>
         </ul>
       </div>
       <!-- brand -->
@@ -307,15 +312,15 @@
             YSL
           </label>
         </div>
-    </div>
-    <!-- apply btn -->
+      </div>
+      <!-- apply btn -->
       <div class="offcanvas-footer d-flex mt-5">
         <button type="button" class="btn btn-dark" data-bs-dismiss="offcanvas">Apply</button>
         <button type="button" id="clear-filters" class="btn btn-outline-secondary ms-2">Clear Filters</button>
       </div>
     </div>
-   </div> 
-  
+  </div>
+
   <!-- main product section -->
   <div class="container" id="response">
     <div id="product-container" class=" justify-content-center">
@@ -396,199 +401,206 @@
   </div>
   <!-- add to cart js file -->
   <script src="add-to-cart.js"></script>
+  
+  <!-- search js file -->
+  <script src="search.js"></script>
 
   <!-- Footer -->
-<footer class="bg-body-tertiary text-center">
-  <!-- Grid container -->
-  <div class="container p-4">
-    <!-- Section: Social media -->
-    <section class="mb-4">
-      <!-- Facebook -->
-      <a data-mdb-ripple-init class="btn btn-outline btn-floating m-1" href="https://www.facebook.com/" role="button"
-        ><i class="fab fa-facebook-f"></i
-      ></a>
+  <footer class="bg-body-tertiary text-center">
+    <!-- Grid container -->
+    <div class="container p-4">
+      <!-- Section: Social media -->
+      <section class="mb-4">
+        <!-- Facebook -->
+        <a data-mdb-ripple-init class="btn btn-outline btn-floating m-1" href="https://www.facebook.com/"
+          role="button"><i class="fab fa-facebook-f"></i></a>
 
-      <!-- Twitter -->
-      <a data-mdb-ripple-init class="btn btn-outline btn-floating m-1" target="_blank" href="https://www.x.com/" role="button"
-        ><i class="fab fa-twitter"></i
-      ></a>
+        <!-- Twitter -->
+        <a data-mdb-ripple-init class="btn btn-outline btn-floating m-1" target="_blank" href="https://www.x.com/"
+          role="button"><i class="fab fa-twitter"></i></a>
 
-      <!-- Instagram -->
-      <a data-mdb-ripple-init class="btn btn-outline btn-floating m-1" target="_blank" href="https://www.instagram.com/" role="button"
-        ><i class="fab fa-instagram"></i
-      ></a>
-    </section>
-    <!-- Section: Social media -->
+        <!-- Instagram -->
+        <a data-mdb-ripple-init class="btn btn-outline btn-floating m-1" target="_blank"
+          href="https://www.instagram.com/" role="button"><i class="fab fa-instagram"></i></a>
+      </section>
+      <!-- Section: Social media -->
 
-    <!-- Section: Form -->
-    <section class="">
-      <form action="">
-        <!--Grid row-->
-        <div class="row d-flex justify-content-center">
-          <!--Grid column-->
-          <div class="col-auto">
-            <p class="pt-2">
-              <strong>Sign up for our newsletter</strong>
-            </p>
-          </div>
-          <!--Grid column-->
-
-          <!--Grid column-->
-          <div class="col-md-5 col-12">
-            <!-- Email input -->
-            <div data-mdb-input-init class="form-outline mb-4">
-              <input type="email" id="form5Example24" class="form-control" required placeholder="Email Address" />
+      <!-- Section: Form -->
+      <section class="">
+        <form action="">
+          <!--Grid row-->
+          <div class="row d-flex justify-content-center">
+            <!--Grid column-->
+            <div class="col-auto">
+              <p class="pt-2">
+                <strong>Sign up for our newsletter</strong>
+              </p>
             </div>
+            <!--Grid column-->
+
+            <!--Grid column-->
+            <div class="col-md-5 col-12">
+              <!-- Email input -->
+              <div data-mdb-input-init class="form-outline mb-4">
+                <input type="email" id="form5Example24" class="form-control" required placeholder="Email Address" />
+              </div>
+            </div>
+            <!--Grid column-->
+
+            <!--Grid column-->
+            <div class="col-auto">
+              <!-- Submit button -->
+              <button data-mdb-ripple-init type="submit" class="btn btn-outline btn-dark mb-4">
+                Subscribe
+              </button>
+            </div>
+            <!--Grid column-->
+          </div>
+          <!--Grid row-->
+        </form>
+      </section>
+
+      <!-- Section: Links -->
+      <section class="">
+        <!--Grid row-->
+        <div class="row align-item-start">
+          <!--Grid column-->
+          <div class="col-lg-3 col-md-4  mb-4 mb-md-2 mt-md-2">
+            <article>
+              <div id="nextag-info-div" class="flex items-center"><a href="index.html" style="text-decoration: none;"
+                  class="flex items-center">
+                  <span id="footer-logo"
+                    class="self-center text-2xl font-semibold whitespace-nowrap text-black">NEXTAG</span></a>
+              </div>
+              <div id="nextag-footer-info">
+                <p class="text-gray-500 dark:text-dark text-sm text-start">
+                  NEXTAG offers a curated collection of premium purses
+                  and wallets from top brands. With detailed product
+                  insights, comparisons, and a seamless shopping experience,
+                  we make finding the perfect accessory effortless.
+                </p>
+              </div>
+            </article>
           </div>
           <!--Grid column-->
 
           <!--Grid column-->
-          <div class="col-auto">
-            <!-- Submit button -->
-            <button data-mdb-ripple-init type="submit" class="btn btn-outline btn-dark mb-4">
-              Subscribe
-            </button>
+          <div class="col-lg-3 col-md-4 mb-4 mb-md-2 text-start">
+            <h5 class="text-uppercase">Quick Links</h5>
+
+            <ul id="footer-list" class="list-unstyled mb-0">
+              <li>
+                <a class="text-body nav-link" href="index.html">Home</a>
+              </li>
+              <li>
+                <a class="text-body nav-link" href="about.html">About Us</a>
+              </li>
+              <li>
+                <a class="text-body nav-link" href="contact.html">Contact</a>
+              </li>
+              <li>
+                <a class="text-body nav-link" href="services.html">Services</a>
+              </li>
+            </ul>
+          </div>
+          <!--Grid column-->
+
+          <!--Grid column-->
+          <div class="col-lg-3 col-md-4 mb-4 mb-md-2 text-start">
+            <article>
+              <h5 class="text-uppercase">Products</h5>
+            </article>
+            <ul id="footer-list" class="list-unstyled mb-0 ">
+              <li>
+                <a class="text-body nav-link" href="#!">Handbag</a>
+              </li>
+              <li>
+                <a class="text-body nav-link" href="#!">Wallet</a>
+              </li>
+              <li>
+                <a class="text-body nav-link" href="#!">Backpacks</a>
+              </li>
+              <li>
+                <a class="text-body nav-link" href="new-arrival.html">Accessories</a>
+              </li>
+            </ul>
+          </div>
+          <!--Grid column-->
+
+          <!--Grid column-->
+          <div class="col-lg-3 col-md-4 mb-4 mb-md-2 text-start">
+            <h5 class="text-uppercase">Info</h5>
+
+            <ul id="footer-list" class="list-unstyled mb-0">
+              <li>
+                <a class="text-body nav-link" href="contact.html#faqs">FAQ's</a>
+              </li>
+              <li>
+                <a class="text-body nav-link" href="blog.html">Blog</a>
+              </li>
+              <li>
+                <a class="text-body nav-link" href="privacy_policy.pdf" target="_blank">Privacy Policy</a>
+              </li>
+              <li>
+                <a class="text-body nav-link" href="terms_conditions.pdf" target="_blank">Term's & Conditions</a>
+              </li>
+            </ul>
           </div>
           <!--Grid column-->
         </div>
         <!--Grid row-->
-      </form>
-    </section>
+      </section>
+      <!-- Section: Links -->
+    </div>
+    <!-- Grid container -->
 
-    <!-- Section: Links -->
-    <section class="">
-      <!--Grid row-->
-      <div class="row align-item-start">
-        <!--Grid column-->
-        <div class="col-lg-3 col-md-4  mb-4 mb-md-2 mt-md-2">
-          <article>
-          <div id="nextag-info-div" class="flex items-center"><a href="index.html" style="text-decoration: none;" class="flex items-center">
-            <span id="footer-logo" class="self-center text-2xl font-semibold whitespace-nowrap text-black">NEXTAG</span></a>
-          </div>
-          <div id="nextag-footer-info">
-            <p class="text-gray-500 dark:text-dark text-sm text-start">
-            NEXTAG offers a curated collection of premium purses 
-            and wallets from top brands. With detailed product 
-            insights, comparisons, and a seamless shopping experience,
-            we make finding the perfect accessory effortless.
-            </p>
-          </div>
-         </article>
-        </div>
-        <!--Grid column-->
+    <!-- Copyright -->
+    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.05);">
+      © 2020 Copyright:
+      <a class="text-reset text-semi-bold" href="index.html">NEXTAG.COM</a>
+    </div>
+    <!-- Copyright -->
+  </footer>
+  <!-- Footer -->
 
-        <!--Grid column-->
-        <div class="col-lg-3 col-md-4 mb-4 mb-md-2 text-start">
-          <h5 class="text-uppercase">Quick Links</h5>
 
-          <ul id="footer-list" class="list-unstyled mb-0">
-            <li>
-              <a class="text-body nav-link" href="index.html">Home</a>
-            </li>
-            <li>
-              <a class="text-body nav-link" href="about.html">About Us</a>
-            </li>
-            <li>
-              <a class="text-body nav-link" href="contact.html">Contact</a>
-            </li>
-            <li>
-              <a class="text-body nav-link" href="services.html">Services</a>
-            </li>
-          </ul>
-        </div>
-        <!--Grid column-->
 
-        <!--Grid column-->
-        <div class="col-lg-3 col-md-4 mb-4 mb-md-2 text-start">
-          <article>
-          <h5 class="text-uppercase">Products</h5>
-          </article>
-          <ul id="footer-list" class="list-unstyled mb-0 ">
-            <li>
-              <a class="text-body nav-link" href="#!">Handbag</a>
-            </li>
-            <li>
-              <a class="text-body nav-link" href="#!">Wallet</a>
-            </li>
-            <li>
-              <a class="text-body nav-link" href="#!">Backpacks</a>
-            </li>
-            <li>
-              <a class="text-body nav-link" href="new-arrival.html">Accessories</a>
-            </li>
-          </ul>
-        </div>
-        <!--Grid column-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"
+    integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+    integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script>var owl = $('.owl-carousel');
+    owl.owlCarousel({
+      loop: true,
+      nav: true,
+      margin: 10,
+      responsive: {
+        0: {
+          items: 1
+        },
+        600: {
+          items: 2
+        },
+        960: {
+          items: 4
+        },
+        1200: {
+          items: 4
+        }
+      }
+    });
+    owl.on('mousewheel', '.owl-stage', function (e) {
+      if (e.deltaY > 0) {
+        owl.trigger('next.owl');
+      } else {
+        owl.trigger('prev.owl');
+      }
+      e.preventDefault();
+    });
+  </script>
 
-        <!--Grid column-->
-        <div class="col-lg-3 col-md-4 mb-4 mb-md-2 text-start">
-          <h5 class="text-uppercase">Info</h5>
+</body>
 
-          <ul id="footer-list" class="list-unstyled mb-0">
-            <li>
-              <a class="text-body nav-link" href="contact.html#faqs">FAQ's</a>
-            </li>
-            <li>
-              <a class="text-body nav-link" href="blog.html">Blog</a>
-            </li>
-            <li>
-              <a class="text-body nav-link" href="privacy_policy.pdf" target="_blank">Privacy Policy</a>
-            </li>
-            <li>
-              <a class="text-body nav-link" href="terms_conditions.pdf" target="_blank">Term's & Conditions</a>
-            </li>
-          </ul>
-        </div>
-        <!--Grid column-->
-      </div>
-      <!--Grid row-->
-    </section>
-    <!-- Section: Links -->
-  </div>
-  <!-- Grid container -->
-
-  <!-- Copyright -->
-  <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.05);">
-    © 2020 Copyright:
-    <a class="text-reset text-semi-bold" href="index.html">NEXTAG.COM</a>
-  </div>
-  <!-- Copyright -->
-</footer>
-<!-- Footer -->
-  
-  
-  
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js" integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script>var owl = $('.owl-carousel');
-      owl.owlCarousel({
-          loop:true,
-          nav:true,
-          margin:10,
-          responsive:{
-              0:{
-                  items:1
-              },
-              600:{
-                  items:2
-              },            
-              960:{
-                  items:4
-              },
-              1200:{
-                  items:4
-              }
-          }
-      });
-      owl.on('mousewheel', '.owl-stage', function (e) {
-          if (e.deltaY>0) {
-              owl.trigger('next.owl');
-          } else {
-              owl.trigger('prev.owl');
-          }
-          e.preventDefault();
-      });
-    </script>
-  
-  </body>
-  </html>
+</html>

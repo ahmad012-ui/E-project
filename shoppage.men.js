@@ -1,78 +1,4 @@
-// for filter
-// document.addEventListener("DOMContentLoaded", function () {
-//     const products = document.querySelectorAll(".product-item");
-  
-//     const checkboxes = document.querySelectorAll("#filter-box .form-check-input");
-//     const priceRange = document.getElementById("customRange1");
-  
-//     const updateFilters = () => {
-//       const selectedCategories = [];
-//       const selectedBrands = [];
-  
-//       checkboxes.forEach((checkbox) => {
-//         const label = checkbox.nextElementSibling.innerText.trim();
-  
-//         if (checkbox.checked) {
-//           if (["Handbags", "Backpacks", "Wallets", "All"].includes(label)) {
-//             selectedCategories.push(label.toLowerCase());
-//           } else {
-//             selectedBrands.push(label.toLowerCase());
-//           }
-//         }
-//       });
-  
-//       const selectedPrice = parseFloat(priceRange.value);
-  
-//       products.forEach((product) => {
-//         const title = product.querySelector("h5").innerText.toLowerCase();
-//         const brandElement = product.querySelector("p");
-//         const brand = brandElement ? brandElement.innerText.toLowerCase().replace("brand: ", "") : "";
-  
-//         const priceText = product.querySelector("h6")?.innerText?.match(/\d+(\.\d+)?/);
-//         const price = priceText ? parseFloat(priceText[0]) : 0;
-  
-//         const matchesCategory =
-//           selectedCategories.includes("all") ||
-//           selectedCategories.some((cat) => title.includes(cat));
-  
-//         const matchesBrand =
-//           selectedBrands.length === 0 || selectedBrands.includes(brand);
-  
-//         const matchesPrice = price <= selectedPrice;
-  
-//         if (matchesCategory && matchesBrand && matchesPrice) {
-//           product.style.display = "block";
-//         } else {
-//           product.style.display = "none";
-//         }
-//       });
-//     };
-  
-//     // Attach event listeners
-//     checkboxes.forEach((checkbox) =>
-//       checkbox.addEventListener("change", updateFilters)
-//     );
-//     priceRange.addEventListener("input", () => {
-//       document.getElementById("updated-price-range").innerText = `$${priceRange.value}`;
-//       updateFilters();
-//     });
-  
-//     updateFilters(); // Initial filter
-//   });
-
-  // Clear Filter Button
-// document.getElementById("clear-filters").addEventListener("click", () => {
-//     checkboxes.forEach((checkbox) => {
-//       checkbox.checked = false;
-//     });
-  
-//     priceRange.value = priceRange.max;
-//     document.getElementById("updated-price-range").innerText = `$${priceRange.value}`;
-  
-//     updateFilters();
-//   });
-
-// for filter
+// Filter functionality for Men's products
 document.addEventListener("DOMContentLoaded", function () {
     // Select DOM elements
     const products = document.querySelectorAll(".product-item");
@@ -85,8 +11,12 @@ document.addEventListener("DOMContentLoaded", function () {
   
     // Initialize filter state to show all products
     checkboxes.forEach((checkbox) => (checkbox.checked = false)); // Uncheck all checkboxes
-    priceRange.value = 10000; // Set a high price to include all products
-    priceDisplay.textContent = `$${priceRange.value}`;
+    if (priceRange) {
+        priceRange.value = 10000; // Set a high price to include all products
+    }
+    if (priceDisplay) {
+        priceDisplay.textContent = `$${priceRange ? priceRange.value : 10000}`;
+    }
   
     // Filter products
     const updateFilters = () => {
@@ -97,7 +27,7 @@ document.addEventListener("DOMContentLoaded", function () {
       checkboxes.forEach((checkbox) => {
         const label = checkbox.nextElementSibling.textContent.trim().toLowerCase();
         if (checkbox.checked) {
-          if (["all", "handbags", "backpacks", "wallets"].includes(label)) {
+          if (["all", "bags", "backpacks", "wallets"].includes(label)) {
             selectedCategories.push(label);
           } else {
             selectedBrands.push(label);
@@ -105,7 +35,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
       });
   
-      const maxPrice = parseFloat(priceRange.value);
+      const maxPrice = parseFloat(priceRange ? priceRange.value : 10000);
   
       // Filter products
       let visibleCount = 0;
@@ -120,19 +50,29 @@ document.addEventListener("DOMContentLoaded", function () {
           ?.textContent.match(/\d+(\.\d+)?/);
         const price = priceText ? parseFloat(priceText[0]) : Infinity;
   
+        // Check if product matches category filter
         const matchesCategory =
           selectedCategories.length === 0 ||
           selectedCategories.includes("all") ||
-          selectedCategories.some((cat) => title.includes(cat));
+          selectedCategories.some((cat) => {
+            if (cat === "bags") {
+              return title.includes("bag") || title.includes("briefcase") || title.includes("travel");
+            }
+            return title.includes(cat);
+          });
+        
+        // Check if product matches brand filter
         const matchesBrand =
           selectedBrands.length === 0 || selectedBrands.includes(brand);
+        
+        // Check if product matches price filter
         const matchesPrice = price <= maxPrice;
   
         if (matchesCategory && matchesBrand && matchesPrice) {
-          product.classList.remove("hidden");
+          product.style.display = "block";
           visibleCount++;
         } else {
-          product.classList.add("hidden");
+          product.style.display = "none";
         }
       });
   
@@ -171,8 +111,10 @@ document.addEventListener("DOMContentLoaded", function () {
       });
   
       // Re-append sorted products
-      productContainer.innerHTML = "";
-      productsArray.forEach((product) => productContainer.appendChild(product));
+      if (productContainer) {
+        productContainer.innerHTML = "";
+        productsArray.forEach((product) => productContainer.appendChild(product));
+      }
       updateFilters();
     };
   
@@ -180,45 +122,55 @@ document.addEventListener("DOMContentLoaded", function () {
     checkboxes.forEach((checkbox) =>
       checkbox.addEventListener("change", updateFilters)
     );
-    priceRange.addEventListener("input", () => {
-      priceDisplay.textContent = `$${priceRange.value}`;
-      updateFilters();
-    });
+    
+    if (priceRange) {
+        priceRange.addEventListener("input", () => {
+            if (priceDisplay) {
+                priceDisplay.textContent = `$${priceRange.value}`;
+            }
+            updateFilters();
+        });
+    }
+    
     sortOptions.forEach((option) =>
       option.addEventListener("change", () => sortProducts(option.value))
     );
-    clearFiltersBtn.addEventListener("click", () => {
-      checkboxes.forEach((checkbox) => (checkbox.checked = false));
-      priceRange.value = 10000; // Reset to high value
-      priceDisplay.textContent = `$${priceRange.value}`;
-      sortOptions.forEach((option) => (option.checked = false));
-      updateFilters();
-    });
+    
+    if (clearFiltersBtn) {
+        clearFiltersBtn.addEventListener("click", () => {
+            checkboxes.forEach((checkbox) => (checkbox.checked = false));
+            if (priceRange) {
+                priceRange.value = 10000; // Reset to high value
+            }
+            if (priceDisplay) {
+                priceDisplay.textContent = `$${priceRange ? priceRange.value : 10000}`;
+            }
+            sortOptions.forEach((option) => (option.checked = false));
+            updateFilters();
+        });
+    }
   
     // Initial filter
     updateFilters();
-  });
-  
+});
 
-  // filter via owl carousel
-  function filterProducts() {
+// Filter via owl carousel
+function filterProducts() {
     const filterValue = this.getAttribute("data-filter");
     const products = document.querySelectorAll(".product-item");
 
     products.forEach((product) => {
-      if (filterValue === "all") {
-        product.style.display = "block";
-      } else {
-        const category = product.getElementsByClassName("pic")[0].getAttribute("data-category").toLowerCase();
-        // Check if the product's category matches the filter value
-        // Convert both to lowercase for case-insensitive comparison0
-        if (category === filterValue) {
-          product.style.display = "block";
+        if (filterValue === "all") {
+            product.style.display = "block";
         } else {
-          product.style.display = "none";
+            const category = product.getElementsByClassName("pic")[0]?.getAttribute("data-category")?.toLowerCase();
+            if (category === filterValue) {
+                product.style.display = "block";
+            } else {
+                product.style.display = "none";
+            }
         }
-      }
     });
-  }
+}
 
   

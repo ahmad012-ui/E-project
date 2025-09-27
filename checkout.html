@@ -42,7 +42,43 @@
   
   <!-- off canvas -->
 
-  
+  <!-- off-canvas for menu -->
+  <offcanvas>
+    <div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" 
+         id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel">
+          <img id="offcanvas-logo" src="img/NEXTAGt.png" alt="NEXTAG Logo">
+        </h5>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div id="offcanvass-body" class="offcanvas-body">
+        <ul id="main-list">
+          <li class="nav-item">
+            <a href="index.html" class="nav-link">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="new-arrival.html">New Arrivals</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="shop.page.women.html">Women</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="shoppage_men.html">Men</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="services.html">Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contact</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">About Us</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </offcanvas>
 
   <!-- search bar -->
   <div class="offcanvas offcanvas-top" tabindex="-1" id="offcanvasTop" aria-labelledby="offcanvasTopLabel">
@@ -52,10 +88,11 @@
     </div>
     <div class="offcanvas-body">
         <form class="d-flex">
-            <input class="form-control me-2" type="search" placeholder="Search..." aria-label="Search">
+            <input class="form-control me-2" type="search" placeholder="Search..." 
+                   aria-label="Search" id="search-input">
             <button class="btn btn-dark btn-gradient" type="submit">Search</button>
-            <div id="search-card"></div>
         </form>
+        <div id="search-card" class="mt-3"></div>
     </div>
   </div>
     <!-- checkout section -->
@@ -364,5 +401,6 @@
   
       document.getElementById("checkout-form").addEventListener("submit", validateForm);
   </script>
+  <script src="search.js"></script>
 </body>
 </html>

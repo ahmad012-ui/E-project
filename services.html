@@ -27,18 +27,20 @@
 </head>
 <body>
     <!-- navbar -->
-  <nav style="background-color: #ffffff;" class="navbar navbar-expand-md fixed-top"> 
+  <nav style="background-color: #ffffff; position: fixed;" class="navbar navbar-expand-md fixed-top"> 
     <div id="nav">
       <div>
        <button id="menu" type="menu" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions"><i class="fa-solid fa-bars">  Menu</i></button>
       </div>
       <div id="brand-logo">
-        <a href="index.html"><img src="img/NEXTAGt.png" alt=""></a>
+        <a href="index.html"><img src="img/NEXTAGt.png" alt="NEXTAG Logo"></a>
       </div>
       <div id="search-profile">
         <div id="search_"></div>
        <button type="button" id="search" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop" aria-controls="offcanvasTop"><i class="fa-solid fa-magnifying-glass"></i></button>
-       <!-- <i class="fa-solid fa-user"></i> -->
+       <button type="button" id="search" data-bs-toggle="offcanvas" data-bs-target="#staticBackdrop">
+         <i class="fa-solid fa-cart-shopping"></i>
+       </button>
       </div>
     </div>
   </nav>
@@ -63,29 +65,13 @@
           <li class="nav-item">
             <a class="nav-link" href="new-arrival.html">New Arrivals</a>
           </li>
-          <!-- Women Dropdown -->
-          <li class="nav-item dropend">
-            <a class="nav-link " href="#" id="womenDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Women
-            </a>
-              <ul id="dropdown-menu" class="dropdown-menu" aria-labelledby="womenDropdown">
-               <li><a id="item" class="dropdown-item" href="#">Handbags</a></li>
-               <li><a id="item" class="dropdown-item" href="#">Backpacks</a></li>
-               <li><a id="item" class="dropdown-item" href="#">Wallets</a></li>
-               <li><a id="item" class="dropdown-item" href="new-arrival.html">Accessories</a></li>
-              </ul>
+          <!-- Women Link -->
+          <li class="nav-item">
+            <a class="nav-link" href="shop.page.women.html">Women</a>
           </li>
-          <!-- Men Dropdown -->
-          <li class="nav-item dropend">
-           <a class="nav-link " href="#" id="menDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-           Men
-           </a>
-            <ul id="dropdown-menu" class="dropdown-menu" aria-labelledby="menDropdown">
-              <li><a id="item" class="dropdown-item" href="#">Briefcases</a></li>
-              <li><a id="item" class="dropdown-item" href="#">Backpacks</a></li>
-              <li><a id="item" class="dropdown-item" href="#">Wallets</a></li>
-              <li><a id="item" class="dropdown-item" href="new-arrival.html">Accessories</a></li>
-            </ul>
+          <!-- Men Link -->
+          <li class="nav-item">
+            <a class="nav-link" href="shoppage_men.html">Men</a>
           </li>
           <!-- services -->
           <li class="nav-item">

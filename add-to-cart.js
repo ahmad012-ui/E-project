@@ -24,6 +24,30 @@ function addToCart(product) {
   
   saveCart(cart);
   renderCart(); // Update cart UI
+  updateCartCount(); // Update cart count
+  showAddToCartAlert(); // Show success alert
+}
+
+// Show add to cart success alert
+function showAddToCartAlert() {
+  // Create alert element
+  const alert = document.createElement('div');
+  alert.className = 'alert alert-success alert-dismissible fade show position-fixed';
+  alert.style.cssText = 'top: 80px; right: 20px; z-index: 9999; min-width: 300px;';
+  alert.innerHTML = `
+    <i class="fa-solid fa-check-circle me-2"></i>
+    <strong>Success!</strong> Item added to cart successfully.
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+  `;
+  
+  document.body.appendChild(alert);
+  
+  // Auto remove after 3 seconds
+  setTimeout(() => {
+    if (alert.parentNode) {
+      alert.remove();
+    }
+  }, 3000);
 }
 
 // Update item quantity (+/-)
@@ -41,6 +65,7 @@ function updateQuantity(productId, change) {
 
     saveCart(cart);
     renderCart(); // Refresh cart display
+    updateCartCount(); // Update cart count
   }
 }
 
@@ -51,29 +76,60 @@ function removeFromCart(productId) {
   cart = cart.filter(item => item.id !== productId);
   saveCart(cart);
   renderCart();
+  updateCartCount(); // Update cart count
 }
 
 // Render Cart with Interactive Controls
 function renderCart() {
   const cart = loadCart();
   const tbody = document.querySelector('#cart-container table tbody');
+  const totalAmountElement = document.getElementById('total-amount');
+  
+  if (!tbody) return;
+  
   tbody.innerHTML = ''; // Clear existing content
+  
+  if (cart.length === 0) {
+    tbody.innerHTML = `
+      <tr>
+        <td colspan="5" class="text-center py-4">
+          <i class="fa-solid fa-shopping-cart fa-2x text-muted mb-2"></i>
+          <p class="text-muted">Your cart is empty</p>
+        </td>
+      </tr>
+    `;
+    if (totalAmountElement) {
+      totalAmountElement.textContent = '0.00';
+    }
+    return;
+  }
+
+  let total = 0;
 
   cart.forEach(item => {
     const row = document.createElement('tr');
+    const itemTotal = item.price * item.quantity;
+    total += itemTotal;
     
     // Build cart row HTML with buttons
     row.innerHTML = `
-      <td><img src="${item.image}" width="50"/></td>
-      <td>${item.name}</td>
-      <td>$${item.price.toFixed(2)}</td>
+      <td><img src="${item.image}" width="50" height="50" class="rounded" style="object-fit: cover;"/></td>
       <td>
-        <button class="btn btn-sm btn-outline-secondary decrement">-</button>
-        <span class="mx-2">${item.quantity}</span>
-        <button class="btn btn-sm btn-outline-secondary increment">+</button>
+        <div>
+          <div class="fw-bold">${item.name}</div>
+          <small class="text-muted">$${item.price.toFixed(2)} each</small>
+        </div>
+      </td>
+      <td class="fw-bold">$${itemTotal.toFixed(2)}</td>
+      <td>
+        <div class="btn-group" role="group">
+          <button class="btn btn-sm btn-outline-secondary decrement" ${item.quantity <= 1 ? 'disabled' : ''}>-</button>
+          <span class="btn btn-sm btn-outline-secondary disabled">${item.quantity}</span>
+          <button class="btn btn-sm btn-outline-secondary increment">+</button>
+        </div>
       </td>
       <td>
-        <button class="btn btn-danger btn-sm delete">
+        <button class="btn btn-danger btn-sm delete" title="Remove item">
           <i class="fa-solid fa-trash"></i>
         </button>
       </td>
@@ -94,6 +150,11 @@ function renderCart() {
 
     tbody.appendChild(row);
   });
+  
+  // Update total
+  if (totalAmountElement) {
+    totalAmountElement.textContent = total.toFixed(2);
+  }
 }
 
 // Initialize product cards with Add to Cart buttons
@@ -124,8 +185,37 @@ function setupProductCards() {
   });
 }
 
+// Update cart count in navbar
+function updateCartCount() {
+  const cart = loadCart();
+  const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
+  
+  // Update cart count in navbar if it exists
+  const cartCountElements = document.querySelectorAll('.cart-count, #cart-count');
+  cartCountElements.forEach(element => {
+    element.textContent = totalItems;
+    element.style.display = totalItems > 0 ? 'inline' : 'none';
+  });
+  
+  // Add cart count badge to cart button if it doesn't exist
+  const cartButtons = document.querySelectorAll('[data-bs-target="#staticBackdrop"]');
+  cartButtons.forEach(button => {
+    let badge = button.querySelector('.cart-count');
+    if (!badge) {
+      badge = document.createElement('span');
+      badge.className = 'cart-count position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger';
+      badge.style.fontSize = '0.7rem';
+      button.style.position = 'relative';
+      button.appendChild(badge);
+    }
+    badge.textContent = totalItems;
+    badge.style.display = totalItems > 0 ? 'inline' : 'none';
+  });
+}
+
 // Initialize when page loads
 window.addEventListener('DOMContentLoaded', () => {
   setupProductCards();
   renderCart();
+  updateCartCount();
 });
