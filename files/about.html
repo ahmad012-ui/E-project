@@ -6,8 +6,8 @@
     <title>About Us</title>
 
     <!-- css styling -->
-    <link rel="stylesheet" href="about.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/about.css">
+    <link rel="stylesheet" href="css/style.css">
 
     <!-- font awesome cdn -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -22,22 +22,27 @@
     <!-- bootstrap cdn -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="bootstrap.bundle.min.js">
-    <link rel="stylesheet" href="bootstrap.min.css">
+    <script src="js/bootstrap.bundle.min.js"></script>
 
 </head>
 <body>
-  <nav style="background-color: #ffffff;" class="navbar navbar-expand-md fixed-top"> 
+  <nav style="background-color: #ffffff; position: fixed;" class="navbar navbar-expand-md fixed-top"> 
     <div id="nav">
       <div>
        <button id="menu" type="menu" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions"><i class="fa-solid fa-bars">  Menu</i></button>
       </div>
       <div id="brand-logo">
-        <a href="index.html"><img src="img/NEXTAGt.png" alt=""></a>
+        <a href="index.html"><img src="img/NEXTAGt.png" alt="NEXTAG Logo"></a>
       </div>
       <div id="search-profile">
         <div id="search_"></div>
        <button type="button" id="search" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop" aria-controls="offcanvasTop"><i class="fa-solid fa-magnifying-glass"></i></button>
+       <button type="button" id="search" data-bs-toggle="offcanvas" data-bs-target="#staticBackdrop">
+         <i class="fa-solid fa-cart-shopping"></i>
+       </button>
+       <button type="button" id="user-btn">
+         <i class="fa-solid fa-user"></i>
+       </button>
       </div>
     </div>
   </nav>
@@ -46,7 +51,7 @@
 <offcanvas>
   <div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
     <div class="offcanvas-header">
-      <h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel"><img id="offcanvas-logo" src="img/NEXTAGt.png" alt=""></h5>
+      <h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel"><img id="offcanvas-logo" src="files/img/NEXTAGt.png" alt=""></h5>
       <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
     </div>
     <div id="offcanvass-body" class="offcanvas-body">
@@ -54,35 +59,20 @@
       <ul id="main-list">
         <!-- Home -->
          <li class="nav-item">
+
           <a href="index.html" class="nav-link">Home</a>
          </li>
          <!-- new arrival -->
         <li class="nav-item">
           <a class="nav-link" href="new-arrival.html">New Arrivals</a>
         </li>
-        <!-- Women Dropdown -->
-        <li class="nav-item dropend">
-          <a class="nav-link " href="#" id="womenDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" data-bs-container="body">
-            Women
-          </a>
-            <ul id="dropdown-menu" class="dropdown-menu" aria-labelledby="womenDropdown">
-             <li><a id="item" class="dropdown-item" href="shop.page.women.html#handbag">Handbags</a></li>
-             <li><a id="item" class="dropdown-item" href="shop.page.women.html#backpack">Backpacks</a></li>
-             <li><a id="item" class="dropdown-item" href="shop.page.women.html#wallets">Wallets</a></li>
-             <li><a id="item" class="dropdown-item" href="new-arrival.html">Accessories</a></li>
-            </ul>
+        <!-- Women Link -->
+        <li class="nav-item">
+          <a class="nav-link" href="shop.page.women.html">Women</a>
         </li>
-        <!-- Men Dropdown -->
-        <li class="nav-item dropend">
-         <a class="nav-link " href="#" id="menDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-         Men
-         </a>
-          <ul id="dropdown-menu" class="dropdown-menu" aria-labelledby="menDropdown">
-            <li><a id="item" class="dropdown-item" href="shoppage.html#briefcases">Briefcases</a></li>
-            <li><a id="item" class="dropdown-item" href="shoppage.html#backpack">Backpacks</a></li>
-            <li><a id="item" class="dropdown-item" href="shoppage.html#wallet">Wallets</a></li>
-            <li><a id="item" class="dropdown-item" href="new-arrival.html">Accessories</a></li>
-          </ul>
+        <!-- Men Link -->
+        <li class="nav-item">
+          <a class="nav-link" href="shoppage_men.html">Men</a>
         </li>
         <!-- services -->
         <li class="nav-item">
@@ -96,49 +86,157 @@
         <li class="nav-item">
           <a class="nav-link" href="about.html">About Us</a>
         </li>
+        <!-- blog -->
+        <li class="nav-item">
+          <a class="nav-link" href="blog.html">Blog</a>
+        </li>
       </ul>
     </div>
   </div>
 </offcanvas>
   
-  <!-- search bar -->
+  <!-- Search Bar -->
   <div class="offcanvas offcanvas-top" tabindex="-1" id="offcanvasTop" aria-labelledby="offcanvasTopLabel">
     <div class="offcanvas-header">
-        <h5 class="offcanvas-title align-item-center" id="offcanvasTopLabel">Search</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      <h5 class="offcanvas-title align-item-center" id="offcanvasTopLabel">Search</h5>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
     </div>
     <div class="offcanvas-body">
-        <form class="d-flex">
-            <input class="form-control me-2" type="search" placeholder="Search..." aria-label="Search">
-            <button class="btn btn-dark btn-gradient" type="submit">Search</button>
-        </form>
+      <form class="d-flex">
+        <input class="form-control me-2" type="search" placeholder="Search..." aria-label="Search" id="search-input">
+        <button class="btn btn-dark btn-gradient" type="submit">Search</button>
+      </form>
+      <div id="search-card" class="mt-3"></div>
     </div>
   </div>
 
-    <main>
-        <section class="intro">
-          <h1 id="h2">Welcome to Nextag</h1>
-            <p class="p">Nextag is a luxary brand dedicated to crafting high-end bags and wallets that seamlessly blend and practicality.
-              Our goal is to redefin fashion accessories with unparalleled quality and sophistication. </p>
-        </section>
-       <h3 id="h2">Our core Values</h3>
-         <div class="containeer">
-           <div class="card p-3">
-              <h3 class="">Excellence</h3>
-              <p>Every product is crafted with meticulous attention to detail and superior materials</p> 
-           </div>
-            <div class="card p-3">
-              <h3>Innovation</h3>
-              <p>We stay ahead of trends curating designs that set new standards in fashion.</p>
-            </div>
-            <div class="card p-3">
-             <h3>Luxury & Comfort</h3>
-              <p>Nextag ensures that elegance never compromises comfort and functionality.</p>
-            </div>
-           </div>
-          <h2 id="h2">Our Journey</h2>
-          <p class="p">Nextag was founded with a vision to redefine luxury accessories.since our inception,we have expanded globally,becoming a brand synonymous with sophistication and craftsmanship. </p>
+  <!-- Cart Sidebar -->
+  <aside class="offcanvas offcanvas-end" data-bs-backdrop="static" tabindex="-1" id="staticBackdrop"
+    aria-labelledby="staticBackdropLabel">
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title" id="staticBackdropLabel">Shopping Cart</h5>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+      <div id="cart-container" class="d-flex flex-column justify-content-start">
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th class="text-center">
+                <input type="checkbox" class="form-check-input" id="select-all-checkbox" checked>
+              </th>
+              <th>Image</th>
+              <th>Product</th>
+              <th>Subtotal</th>
+              <th>Quantity</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Cart items will be populated here -->
+          </tbody>
+        </table>
+        <div id="cart-total" class="mt-3 p-3 bg-light rounded">
+          <h6>Total: $<span id="total-amount">0.00</span></h6>
+        </div>
+      </div>
+    </div>
+    <div class="offcanvas-footer p-3">
+      <button type="button" class="btn btn-dark w-100 mb-2"
+        onclick="window.location.href='checkout.html'">Checkout</button>
+      <button type="button" class="btn btn-outline-secondary w-100" data-bs-dismiss="offcanvas">Continue
+        Shopping</button>
+    </div>
+  </aside>
 
+    <main>
+        <!-- Hero Section -->
+        <section class="hero-section">
+          <div class="hero-content">
+            <h1 class="hero-title">Welcome to NEXTAG</h1>
+            <p class="hero-subtitle">Redefining Luxury Accessories</p>
+            <div class="hero-divider"></div>
+            <p class="hero-description">
+              NEXTAG is a luxury brand dedicated to crafting high-end bags and wallets that seamlessly blend 
+              style and practicality. Our goal is to redefine fashion accessories with unparalleled quality 
+              and sophistication.
+            </p>
+          </div>
+        </section>
+
+        <!-- Core Values Section -->
+        <section class="values-section">
+          <div class="section-header">
+            <h2 class="section-title">Our Core Values</h2>
+            <p class="section-subtitle">The principles that guide everything we do</p>
+          </div>
+          
+          <div class="values-grid">
+            <div class="value-card">
+              <div class="value-icon">
+                <i class="fas fa-gem"></i>
+              </div>
+              <h3 class="value-title">Excellence</h3>
+              <p class="value-description">
+                Every product is crafted with meticulous attention to detail and superior materials, 
+                ensuring the highest quality standards.
+              </p>
+            </div>
+            
+            <div class="value-card">
+              <div class="value-icon">
+                <i class="fas fa-lightbulb"></i>
+              </div>
+              <h3 class="value-title">Innovation</h3>
+              <p class="value-description">
+                We stay ahead of trends, curating designs that set new standards in fashion and 
+                functionality for modern lifestyles.
+              </p>
+            </div>
+            
+            <div class="value-card">
+              <div class="value-icon">
+                <i class="fas fa-heart"></i>
+              </div>
+              <h3 class="value-title">Luxury & Comfort</h3>
+              <p class="value-description">
+                NEXTAG ensures that elegance never compromises comfort and functionality, 
+                creating accessories that enhance your daily experience.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Journey Section -->
+        <section class="journey-section">
+          <div class="journey-content">
+            <div class="section-header">
+              <h2 class="section-title">Our Journey</h2>
+              <div class="section-divider"></div>
+            </div>
+            <div class="journey-text">
+              <p class="journey-description">
+                NEXTAG was founded with a vision to redefine luxury accessories. Since our inception, 
+                we have expanded globally, becoming a brand synonymous with sophistication and craftsmanship. 
+                Our commitment to excellence has earned us the trust of discerning customers worldwide.
+              </p>
+              <div class="journey-stats">
+                <div class="stat-item">
+                  <span class="stat-number">10+</span>
+                  <span class="stat-label">Years of Excellence</span>
+                </div>
+                <div class="stat-item">
+                  <span class="stat-number">50+</span>
+                  <span class="stat-label">Countries Served</span>
+                </div>
+                <div class="stat-item">
+                  <span class="stat-number">100K+</span>
+                  <span class="stat-label">Happy Customers</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
     </main>
    
    <!-- Footer -->
@@ -300,6 +398,14 @@
 </footer>
 <!-- Footer -->
    
+  <!-- Search JS -->
+  <script src="js/search.js"></script>
+  
+  <!-- Add to Cart JS -->
+  <script src="js/add-to-cart.js"></script>
+
+  <!-- Auth JS -->
+  <script src="js/auth.js"></script>
     
 </body>
 </html>
