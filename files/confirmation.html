@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Confirmation - NEXTAG</title>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/checkout.css">
+    <style>
+        #confirmation{
+            margin-top: 150px;
+        }
+        .confirmation-page {
+            min-height: 60vh;
+        }
+        .order-receipt {
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+        .success-icon {
+            animation: checkmark 0.8s ease-in-out;
+        }
+        @keyframes checkmark {
+            0% { transform: scale(0); }
+            50% { transform: scale(1.2); }
+            100% { transform: scale(1); }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav style="background-color: #ffffff;" class="navbar navbar-expand-md fixed-top">
+        <div id="nav">
+            <div>
+                <button id="menu" type="menu" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions"><i class="fa-solid fa-bars">  Menu</i></button>
+            </div>
+            <div id="brand-logo">
+                <a href="index.html"><img src="img/NEXTAGt.png" alt=""></a>
+            </div>
+            <div id="search-profile">
+                <div id="search_"></div>
+                <button type="button" id="search" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop" aria-controls="offcanvasTop"><i class="fa-solid fa-magnifying-glass"></i></button>
+                <button type="button" id="user-btn">
+                  <i class="fa-solid fa-user"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Off canvas Menu -->
+    <div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel">
+                <img id="offcanvas-logo" src="img/NEXTAGt.png" alt="NEXTAG Logo">
+            </h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div id="offcanvass-body" class="offcanvas-body">
+            <ul id="main-list">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="new-arrival.html">New Arrivals</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="shop.page.women.html">Women</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="shoppage_men.html">Men</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="services.html">Services</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contact.html">Contact</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="about.html">About Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="blog.html">Blog</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Search Bar -->
+    <div class="offcanvas offcanvas-top" tabindex="-1" id="offcanvasTop" aria-labelledby="offcanvasTopLabel">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title align-item-center" id="offcanvasTopLabel">Search</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <form class="d-flex">
+                <input class="form-control me-2" type="search" placeholder="Search..." aria-label="Search" id="search-input">
+                <button class="btn btn-dark btn-gradient" type="submit">Search</button>
+            </form>
+            <div id="search-card" class="mt-3"></div>
+        </div>
+    </div>
+
+    <!-- Confirmation Section -->
+    <div id="confirmation" class="container mt-6 mb-5 confirmation-page">
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <!-- Success Message -->
+                <div class="text-center mb-4">
+                    <div class="success-icon mb-3">
+                        <i class="fa-solid fa-check-circle fa-4x text-success"></i>
+                    </div>
+                    <h2 class="text-success mb-3">Order Confirmed!</h2>
+                    <p class="lead text-muted">Thank you for your purchase. Your order has been successfully placed.</p>
+                </div>
+
+                <!-- Order Receipt -->
+                <div class="card shadow mb-4 order-receipt">
+                    <div class="card-header bg-dark text-white">
+                        <h4 class="mb-0"><i class="fa-solid fa-receipt me-2"></i>Order Receipt</h4>
+                    </div>
+                    <div class="card-body">
+                        <div class="row mb-3">
+                            <div class="col-md-6">
+                                <h6>Order Details</h6>
+                                <p class="mb-1"><strong>Order ID:</strong> <span id="order-id"></span></p>
+                                <p class="mb-1"><strong>Order Date:</strong> <span id="order-date"></span></p>
+                                <p class="mb-0"><strong>Payment Method:</strong> <span id="payment-method"></span></p>
+                            </div>
+                            <div class="col-md-6">
+                                <h6>Shipping Address</h6>
+                                <div id="shipping-address"></div>
+                            </div>
+                        </div>
+
+                        <hr>
+
+                        <h6>Items Ordered</h6>
+                        <div class="table-responsive">
+                            <table class="table table-striped">
+                                <thead>
+                                    <tr>
+                                        <th>Product</th>
+                                        <th>Quantity</th>
+                                        <th>Price</th>
+                                        <th>Total</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="order-items">
+                                    <!-- Order items will be populated here -->
+                                </tbody>
+                                <tfoot>
+                                    <tr>
+                                        <th colspan="3" class="text-end">Total Amount:</th>
+                                        <th id="order-total">$0.00</th>
+                                    </tr>
+                                </tfoot>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Action Buttons -->
+                <div class="text-center mt-4">
+                    <div class="row justify-content-center">
+                        <div class="col-auto">
+                            <button onclick="printReceipt()" class="btn btn-outline-primary me-2 mb-2">
+                                <i class="fa-solid fa-print me-1"></i> Print Receipt
+                            </button>
+                        </div>
+                        <div class="col-auto">
+                            <button onclick="continueShopping()" class="btn btn-success me-2 mb-2">
+                                <i class="fa-solid fa-shopping-bag me-1"></i> Continue Shopping
+                            </button>
+                        </div>
+                        <div class="col-auto">
+                            <button onclick="goHome()" class="btn btn-outline-secondary mb-2">
+                                <i class="fa-solid fa-home me-1"></i> Go to Homepage
+                            </button>
+                        </div>
+                    </div>
+                    <p class="text-muted mt-3 small">Thank you for shopping with NEXTAG! Your order has been confirmed.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-body-tertiary text-center mt-5">
+        <div class="container p-4">
+            <section class="mb-4">
+                <a data-mdb-ripple-init class="btn btn-outline btn-floating m-1" href="https://www.facebook.com/" role="button">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a data-mdb-ripple-init class="btn btn-outline btn-floating m-1" target="_blank" href="https://www.x.com/" role="button">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a data-mdb-ripple-init class="btn btn-outline btn-floating m-1" target="_blank" href="https://www.instagram.com/" role="button">
+                    <i class="fab fa-instagram"></i>
+                </a>
+            </section>
+            <section class="">
+                <form action="">
+                    <div class="row d-flex justify-content-center">
+                        <div class="col-auto">
+                            <p class="pt-2">
+                                <strong>Sign up for our newsletter</strong>
+                            </p>
+                        </div>
+                        <div class="col-md-5 col-12">
+                            <div data-mdb-input-init class="form-outline mb-4">
+                                <input type="email" id="form5Example24" class="form-control" required placeholder="Email Address" />
+                            </div>
+                        </div>
+                        <div class="col-auto">
+                            <button data-mdb-ripple-init type="submit" class="btn btn-outline btn-dark mb-4">
+                                Subscribe
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </section>
+            <section class="">
+                <div class="row align-item-start">
+                    <div class="col-lg-3 col-md-4 mb-4 mb-md-2 mt-md-2">
+                        <div id="nextag-info-div" class="flex items-center">
+                            <a href="index.html" style="text-decoration: none;" class="flex items-center">
+                                <span id="footer-logo" class="self-center text-2xl font-semibold whitespace-nowrap text-black">NEXTAG</span>
+                            </a>
+                        </div>
+                        <div id="nextag-footer-info">
+                            <p class="text-gray-500 dark:text-dark text-sm text-start">
+                                NEXTAG offers a curated collection of premium purses and wallets from top brands.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 mb-4 mb-md-2 text-start">
+                        <h5 class="text-uppercase">Quick Links</h5>
+                        <ul id="footer-list" class="list-unstyled mb-0">
+                            <li><a class="text-body nav-link" href="index.html">Home</a></li>
+                            <li><a class="text-body nav-link" href="about.html">About Us</a></li>
+                            <li><a class="text-body nav-link" href="contact.html">Contact</a></li>
+                            <li><a class="text-body nav-link" href="services.html">Services</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-3 col-md-4 mb-4 mb-md-2 text-start">
+                        <h5 class="text-uppercase">Products</h5>
+                        <ul id="footer-list" class="list-unstyled mb-0">
+                            <li><a class="text-body nav-link" href="#!">Handbag</a></li>
+                            <li><a class="text-body nav-link" href="#!">Wallet</a></li>
+                            <li><a class="text-body nav-link" href="#!">Backpacks</a></li>
+                            <li><a class="text-body nav-link" href="new-arrival.html">Accessories</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-3 col-md-4 mb-4 mb-md-2 text-start">
+                        <h5 class="text-uppercase">Info</h5>
+                        <ul id="footer-list" class="list-unstyled mb-0">
+                            <li><a class="text-body nav-link" href="contact.html#faqs">FAQ's</a></li>
+                            <li><a class="text-body nav-link" href="blog.html">Blog</a></li>
+                            <li><a class="text-body nav-link" href="privacy_policy.pdf" target="_blank">Privacy Policy</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.05);">
+            © 2024 NEXTAG. All rights reserved.
+        </div>
+    </footer>
+
+    <script src="js/add-to-cart.js"></script>
+    <script src="js/search.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // Get order details from sessionStorage
+            const orderData = JSON.parse(sessionStorage.getItem('orderData'));
+
+            if (!orderData) {
+                // If no order data, show message and redirect after delay
+                document.getElementById('confirmation').innerHTML = `
+                    <div class="text-center">
+                        <div class="alert alert-warning">
+                            <h4>No order data found</h4>
+                            <p>You will be redirected to the homepage shortly...</p>
+                        </div>
+                    </div>
+                `;
+                setTimeout(() => {
+                    window.location.href = 'index.html';
+                }, 3000);
+                return;
+            }
+
+            // Populate order details
+            document.getElementById('order-id').textContent = orderData.orderId;
+            document.getElementById('order-date').textContent = orderData.orderDate;
+            document.getElementById('payment-method').textContent = orderData.paymentMethod;
+
+            // Populate shipping address
+            const addressDiv = document.getElementById('shipping-address');
+            addressDiv.innerHTML = `
+                <p class="mb-0">${orderData.customerName}</p>
+                <p class="mb-0">${orderData.address}</p>
+                <p class="mb-0">${orderData.email}</p>
+            `;
+
+            // Populate order items
+            const orderItemsContainer = document.getElementById('order-items');
+            let total = 0;
+
+            orderData.items.forEach(item => {
+                const itemTotal = item.price * item.quantity;
+                total += itemTotal;
+
+                const row = document.createElement('tr');
+                row.innerHTML = `
+                    <td>${item.name}</td>
+                    <td>${item.quantity}</td>
+                    <td>$${item.price.toFixed(2)}</td>
+                    <td>$${itemTotal.toFixed(2)}</td>
+                `;
+                orderItemsContainer.appendChild(row);
+            });
+
+            document.getElementById('order-total').textContent = `$${total.toFixed(2)}`;
+
+            // Keep order data in sessionStorage for potential page refresh
+            // Will be cleared when user clicks navigation buttons
+        });
+
+        function printReceipt() {
+            window.print();
+        }
+
+        function continueShopping() {
+            // Clear order data before redirecting
+            sessionStorage.removeItem('orderData');
+            // Redirect to women's shop page as default shopping page
+            window.location.href = 'shop.page.women.html';
+        }
+
+        function goHome() {
+            // Clear order data before redirecting
+            sessionStorage.removeItem('orderData');
+            window.location.href = 'index.html';
+        }
+    </script>
+
+    <!-- Auth JS -->
+    <script src="js/auth.js"></script>
+</body>
+</html>

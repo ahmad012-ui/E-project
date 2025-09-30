@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Shop Women - NEXTAG</title>
+  <title>Shop Men - NEXTAG</title>
   <!-- font awesome cdn -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
     integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
@@ -13,7 +13,7 @@
     href="https://cdnjs.cloudflare.com/ajax/libs/material-design-icons/4.0.0/font/MaterialIcons-Regular.ttf">
   <!-- css styling -->
   <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/shoppage.women.css">
+  <link rel="stylesheet" href="css/shop.page-men.css">
 
   <!-- bootstrap cdn -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -24,6 +24,11 @@
 
   <!-- tailwind cdn -->
   <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+
+  <!-- js file -->
+  <script src="js/shoppage.men.js"></script>
+  <script src="js/shoppage-women.js"></script>
+  <script src="js/add-to-cart.js"></script>
 
   <!-- jquery cdn -->
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -36,17 +41,11 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css"
     integrity="sha512-OTcub78R3msOCtY3Tc6FzeDJ8N9qvQn1Ph49ou13xgA9VsH9+LRxoFU6EqLhW4+PKRfU+/HReXmSZXHEkpYoOA=="
     crossorigin="anonymous" referrerpolicy="no-referrer">
+  <link rel="stylesheet" href="css/shop.page-men.css">
   <link rel="stylesheet" href="css/enhanced-product-cards.css">
-
-  <!-- js link -->
-  <script src="js/shoppage-women.js"></script>
-  <script src="js/add-to-cart.js"></script>
-
-
 </head>
 
 <body>
-  <!-- navbar -->
   <div id="flex">
     <div>
       <nav style="background-color: #ffffff; position: fixed;" class="navbar navbar-expand-md fixed-top">
@@ -72,17 +71,15 @@
       </nav>
     </div>
   </div>
-
-
-  <!-- off canvas -->
+  <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop"
+    aria-controls="offcanvasTop">Toggle top offcanvas</button>
 
   <!-- off-canvas for menu -->
   <offcanvas>
     <div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions"
       aria-labelledby="offcanvasWithBothOptionsLabel">
       <div class="offcanvas-header">
-        <h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel"><img id="offcanvas-logo" src="img/NEXTAGt.png"
-            alt=""></h5>
+        <h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel"><img id="offcanvas-logo" src="img/NEXTAGt.png" alt=""></h5>
         <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
       </div>
       <div id="offcanvass-body" class="offcanvas-body">
@@ -125,82 +122,45 @@
     </div>
   </offcanvas>
 
-  <!-- search bar -->
+  <!--off cavnas for search  -->
   <div class="offcanvas offcanvas-top" tabindex="-1" id="offcanvasTop" aria-labelledby="offcanvasTopLabel">
     <div class="offcanvas-header">
-      <h5 class="offcanvas-title align-item-center" id="offcanvasTopLabel">Search</h5>
+      <h5 class="offcanvas-title" id="offcanvasTopLabel">Search</h5>
       <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
     </div>
     <div class="offcanvas-body">
       <form class="d-flex">
-        <input class="form-control me-2" type="search" placeholder="Search..." aria-label="Search" id="search-input">
+        <input type="search" class="form-control m-1" placeholder="Search..." aria-label="Search" id="search-input">
         <button class="btn btn-dark btn-gradient" type="submit">Search</button>
       </form>
       <div id="search-card" class="mt-3"></div>
     </div>
   </div>
 
-  <!-- Cart Sidebar -->
-  <aside class="offcanvas offcanvas-end" data-bs-backdrop="static" tabindex="-1" id="staticBackdrop"
-    aria-labelledby="staticBackdropLabel">
-    <div class="offcanvas-header">
-      <h5 class="offcanvas-title" id="staticBackdropLabel">Shopping Cart</h5>
-      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-    </div>
-    <div class="offcanvas-body">
-      <div id="cart-container" class="d-flex flex-column justify-content-start">
-        <table class="table table-striped">
-          <thead>
-            <tr>
-              <th class="text-center">
-                <input type="checkbox" class="form-check-input" id="select-all-checkbox" checked>
-              </th>
-              <th>Image</th>
-              <th>Product</th>
-              <th>Subtotal</th>
-              <th>Quantity</th>
-              <th>Action</th>
-            </tr>
-          </thead>
-          <tbody>
-            <!-- Cart items will be populated here -->
-          </tbody>
-        </table>
-        <div id="cart-total" class="mt-3 p-3 bg-light rounded">
-          <h6>Total: $<span id="total-amount">0.00</span></h6>
-        </div>
-      </div>
-    </div>
-    <div class="offcanvas-footer p-3">
-      <button type="button" class="btn btn-dark w-100 mb-2" onclick="window.location.href='checkout.html'">Checkout</button>
-      <button type="button" class="btn btn-outline-secondary w-100" data-bs-dismiss="offcanvas">Continue Shopping</button>
-    </div>
-  </aside>
-
-  <!-- Carousel featuring women's products -->
+  <!-- Carousel featuring men's products -->
   <div id="wom-category">
-    <h1>WOMEN</h1>
+    <h1>MEN</h1>
     <div id="owl" class="owl-carousel owl-theme">
-      <div class="item carousel-filter" data-filter="handbag">
-        <img class="img-fluid pic1" src="img/pic16.webp" alt="handbags">
+      <div class="item carousel-filter" data-filter="bag">
+        <img class="img-fluid pic1" src="img/hand_bag.webp" alt="handbags">
         <div class="carousel-overlay">
-          <h3>Handbags</h3>
+          <h3>Bags</h3>
         </div>
       </div>
       <div class="item carousel-filter" data-filter="backpack">
-        <img class="img-fluid pic2" src="img/Gemini_Generated_Image_2wgkgn2wgkgn2wgk.png" alt="backpack">
+        <img class="img-fluid pic2" src="img/backpack.webp" alt="backpack">
         <div class="carousel-overlay">
           <h3>Backpacks</h3>
         </div>
       </div>
       <div class="item carousel-filter" data-filter="wallet">
-        <img class="img-fluid pic3" src="img/Gemini_Generated_Image_girl7mgirl7mgirl.png" alt="Wallets">
+        <img class="img-fluid pic3" src="img/wallet 222.jpg" alt="Wallets">
         <div class="carousel-overlay">
           <h3>Wallets</h3>
         </div>
       </div>
       <div class="item carousel-filter" data-filter="accessory">
-        <img class="img-fluid pic4" src="img/download (3).jpeg" alt="Accessories">
+        <img class="img-fluid pic4" src="img/accessories.webp" alt="Accessories">
         <div class="carousel-overlay">
           <h3>Accessories</h3>
         </div>
@@ -208,27 +168,24 @@
     </div>
   </div>
 
-  <!--filter  -->
-  <div class="filter">
+  <!-- Filter Section -->
+  <div class="filter bg-light d-flex justify-content-center align-items-center">
     <div id="filter-container" class="">
       <div class="justify-content-start">
         <button type="menu" id="filter-btn" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample">
           <h5>Filter</h5>
         </button>
       </div>
-      <!-- <div class="justify-content-start ">
-          <button type="menu" id="sort-btn"><h5>Sort By</h5></button>
-        </div> -->
     </div>
   </div>
 
   <!-- filter off-canvas -->
 
   <!-- filter js file -->
-  <script src="js/shoppage-women.js"></script>
+  <script src="js/shoppage.men.js"></script>
   <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
     <div class="offcanvas-header">
-      <h5 class="offcanvas-title" id="offcanvasExampleLabel">Offcanvas</h5>
+      <h5 class="offcanvas-title" id="offcanvasExampleLabel">Filter Products</h5>
       <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
     </div>
     <div class="offcanvas-body">
@@ -236,32 +193,32 @@
         <!-- category wise -->
         <h5>Filter by:</h5>
         <div class="form-check">
-          <input class="form-check-input category-filter" type="checkbox" value="all" id="category-all">
-          <label class="form-check-label" for="category-all">
+          <input class="form-check-input category-filter" type="checkbox" value="all" id="men-category-all">
+          <label class="form-check-label" for="men-category-all">
             All
           </label>
         </div>
         <div class="form-check">
-          <input class="form-check-input category-filter" type="checkbox" value="handbag" id="category-handbag">
-          <label class="form-check-label" for="category-handbag">
-            Handbags
+          <input class="form-check-input category-filter" type="checkbox" value="bag" id="men-category-bag">
+          <label class="form-check-label" for="men-category-bag">
+            Bags
           </label>
         </div>
         <div class="form-check">
-          <input class="form-check-input category-filter" type="checkbox" value="backpack" id="category-backpack">
-          <label class="form-check-label" for="category-backpack">
+          <input class="form-check-input category-filter" type="checkbox" value="backpack" id="men-category-backpack">
+          <label class="form-check-label" for="men-category-backpack">
             Backpacks
           </label>
         </div>
         <div class="form-check">
-          <input class="form-check-input category-filter" type="checkbox" value="wallet" id="category-wallet">
-          <label class="form-check-label" for="category-wallet">
+          <input class="form-check-input category-filter" type="checkbox" value="wallet" id="men-category-wallet">
+          <label class="form-check-label" for="men-category-wallet">
             Wallets
           </label>
         </div>
         <div class="form-check">
-          <input class="form-check-input category-filter" type="checkbox" value="accessory" id="category-accessory">
-          <label class="form-check-label" for="category-accessory">
+          <input class="form-check-input category-filter" type="checkbox" value="accessory" id="men-category-accessory">
+          <label class="form-check-label" for="men-category-accessory">
             Accessories
           </label>
         </div>
@@ -303,50 +260,50 @@
       <div class="mt-3">
         <h5>Brands</h5>
         <div class="form-check">
-          <input class="form-check-input brand-filter" type="checkbox" value="Louis Vuitton" id="brand-lv">
-          <label class="form-check-label" for="brand-lv">
+          <input class="form-check-input brand-filter" type="checkbox" value="Louis Vuitton" id="men-brand-lv">
+          <label class="form-check-label" for="men-brand-lv">
             Louis Vuitton
           </label>
         </div>
         <div class="form-check">
-          <input class="form-check-input brand-filter" type="checkbox" value="Gucci" id="brand-gucci">
-          <label class="form-check-label" for="brand-gucci">
+          <input class="form-check-input brand-filter" type="checkbox" value="Gucci" id="men-brand-gucci">
+          <label class="form-check-label" for="men-brand-gucci">
             Gucci
           </label>
         </div>
         <div class="form-check">
-          <input class="form-check-input brand-filter" type="checkbox" value="Prada" id="brand-prada">
-          <label class="form-check-label" for="brand-prada">
+          <input class="form-check-input brand-filter" type="checkbox" value="Prada" id="men-brand-prada">
+          <label class="form-check-label" for="men-brand-prada">
             Prada
           </label>
         </div>
         <div class="form-check">
-          <input class="form-check-input brand-filter" type="checkbox" value="Chanel" id="brand-chanel">
-          <label class="form-check-label" for="brand-chanel">
+          <input class="form-check-input brand-filter" type="checkbox" value="Chanel" id="men-brand-chanel">
+          <label class="form-check-label" for="men-brand-chanel">
             Chanel
           </label>
         </div>
         <div class="form-check">
-          <input class="form-check-input brand-filter" type="checkbox" value="Dior" id="brand-dior">
-          <label class="form-check-label" for="brand-dior">
+          <input class="form-check-input brand-filter" type="checkbox" value="Dior" id="men-brand-dior">
+          <label class="form-check-label" for="men-brand-dior">
             Dior
           </label>
         </div>
         <div class="form-check">
-          <input class="form-check-input brand-filter" type="checkbox" value="Balenciaga" id="brand-balenciaga">
-          <label class="form-check-label" for="brand-balenciaga">
+          <input class="form-check-input brand-filter" type="checkbox" value="Balenciaga" id="men-brand-balenciaga">
+          <label class="form-check-label" for="men-brand-balenciaga">
             Balenciaga
           </label>
         </div>
         <div class="form-check">
-          <input class="form-check-input brand-filter" type="checkbox" value="Fendi" id="brand-fendi">
-          <label class="form-check-label" for="brand-fendi">
+          <input class="form-check-input brand-filter" type="checkbox" value="Fendi" id="men-brand-fendi">
+          <label class="form-check-label" for="men-brand-fendi">
             Fendi
           </label>
         </div>
         <div class="form-check">
-          <input class="form-check-input brand-filter" type="checkbox" value="YSL" id="brand-ysl">
-          <label class="form-check-label" for="brand-ysl">
+          <input class="form-check-input brand-filter" type="checkbox" value="YSL" id="men-brand-ysl">
+          <label class="form-check-label" for="men-brand-ysl">
             YSL
           </label>
         </div>
@@ -359,16 +316,57 @@
     </div>
   </div>
 
+  <!-- off canvas for add to cart -->
+  <!-- Cart Sidebar -->
+  <aside class="offcanvas offcanvas-end" data-bs-backdrop="static" tabindex="-1" id="staticBackdrop"
+    aria-labelledby="staticBackdropLabel">
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title" id="staticBackdropLabel">Shopping Cart</h5>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+      <div id="cart-container" class="d-flex flex-column justify-content-start">
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th class="text-center">
+                <input type="checkbox" class="form-check-input" id="select-all-checkbox" checked>
+              </th>
+              <th>Image</th>
+              <th>Product</th>
+              <th>Subtotal</th>
+              <th>Quantity</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Cart items will be populated here -->
+          </tbody>
+        </table>
+        <div id="cart-total" class="mt-3 p-3 bg-light rounded">
+          <h6>Total: $<span id="total-amount">0.00</span></h6>
+        </div>
+      </div>
+    </div>
+    <div class="offcanvas-footer p-3">
+      <button type="button" class="btn btn-dark w-100 mb-2"
+        onclick="window.location.href='checkout.html'">Checkout</button>
+      <button type="button" class="btn btn-outline-secondary w-100" data-bs-dismiss="offcanvas">Continue
+        Shopping</button>
+    </div>
+  </aside>
+
+
   <!-- main product section -->
   <div class="container" id="response">
     <div id="product-container">
       <div class="product-item" data-category="backpack" data-brand="Gucci" data-price="30">
         <div class="card h-100">
           <div class="card-img-container">
-            <img class="card-img-top img-fluid" src="img/gallery 2.jpeg" alt="backpack">
+            <img class="card-img-top img-fluid" src="img/pic1.webp" alt="backpack">
           </div>
           <div class="card-body d-flex flex-column">
-            <h5 class="card-title">Women's Backpack</h5>
+            <h5 class="card-title">Men's Backpack</h5>
             <p class="card-text text-muted mb-1">Brand: Gucci</p>
             <p class="card-text price fw-bold">$30.00</p>
             <!-- Size Selection -->
@@ -389,20 +387,21 @@
                 </div>
               </div>
             </div>
-            <button class="add-to-cart" data-product-id="1" data-product-name="Women's Backpack" data-product-price="30.00" data-product-image="img/gallery 2.jpeg">
+            <button class="add-to-cart" data-product-id="1" data-product-name="Men's Backpack"
+              data-product-price="30.00" data-product-image="img/pic1.webp">
               Add to Cart
             </button>
           </div>
         </div>
       </div>
 
-      <div class="product-item" data-category="handbag" data-brand="Prada" data-price="250.30">
+      <div class="product-item" data-category="wallet" data-brand="Prada" data-price="250.30">
         <div class="card h-100">
           <div class="card-img-container">
-            <img class="card-img-top img-fluid" src="img/gallery 1.jpeg" alt="women's handbag">
+            <img class="card-img-top img-fluid" src="img/wallet 222.jpg" alt="men's wallet">
           </div>
           <div class="card-body d-flex flex-column">
-            <h5 class="card-title">Elegant Handbag</h5>
+            <h5 class="card-title">Men's Wallet</h5>
             <p class="card-text text-muted mb-1">Brand: Prada</p>
             <p class="card-text price fw-bold">$250.30</p>
             <!-- Color Selection -->
@@ -418,25 +417,26 @@
                   <label class="form-check-label" for="color-brown-2">Brown</label>
                 </div>
                 <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="radio" name="color-2" id="color-red-2" value="Red">
-                  <label class="form-check-label" for="color-red-2">Red</label>
+                  <input class="form-check-input" type="radio" name="color-2" id="color-navy-2" value="Navy">
+                  <label class="form-check-label" for="color-navy-2">Navy</label>
                 </div>
               </div>
             </div>
-            <button class="add-to-cart" data-product-id="2" data-product-name="Elegant Handbag" data-product-price="250.30" data-product-image="img/gallery 1.jpeg">
+            <button class="add-to-cart" data-product-id="2" data-product-name="Men's Wallet" data-product-price="250.30"
+              data-product-image="img/wallet 222.jpg">
               Add to Cart
             </button>
           </div>
         </div>
       </div>
 
-      <div class="product-item" data-category="handbag" data-brand="Fendi" data-price="500">
+      <div class="product-item" data-category="bag" data-brand="Fendi" data-price="500">
         <div class="card h-100">
           <div class="card-img-container">
-            <img class="card-img-top img-fluid" src="img/Hobo bags 2.webp" alt="hobo bags">
+            <img class="card-img-top img-fluid" src="img/download (1).jpeg" alt="travel bags">
           </div>
           <div class="card-body d-flex flex-column">
-            <h5 class="card-title">Hobo Bag</h5>
+            <h5 class="card-title">Travel Bag</h5>
             <p class="card-text text-muted mb-1">Brand: Fendi</p>
             <p class="card-text price fw-bold">$500.00</p>
             <!-- Size Selection -->
@@ -444,135 +444,139 @@
               <small class="text-muted">Size:</small>
               <div class="d-flex gap-2 mt-1">
                 <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="radio" name="size-3" id="size-s-3" value="Small" checked>
-                  <label class="form-check-label" for="size-s-3">S</label>
-                </div>
-                <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="radio" name="size-3" id="size-m-3" value="Medium">
+                  <input class="form-check-input" type="radio" name="size-3" id="size-m-3" value="Medium" checked>
                   <label class="form-check-label" for="size-m-3">M</label>
                 </div>
                 <div class="form-check form-check-inline">
                   <input class="form-check-input" type="radio" name="size-3" id="size-l-3" value="Large">
                   <label class="form-check-label" for="size-l-3">L</label>
                 </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="size-3" id="size-xl-3" value="Extra Large">
+                  <label class="form-check-label" for="size-xl-3">XL</label>
+                </div>
               </div>
             </div>
-            <button class="add-to-cart" data-product-id="3" data-product-name="Hobo Bag" data-product-price="500.00" data-product-image="img/Hobo bags 2.webp">
+            <button class="add-to-cart" data-product-id="3" data-product-name="Travel Bag" data-product-price="500.00"
+              data-product-image="img/download (1).jpeg">
               Add to Cart
             </button>
           </div>
         </div>
       </div>
 
-      <div class="product-item" data-category="handbag" data-brand="Louis Vuitton" data-price="280">
+      <div class="product-item" data-category="backpack" data-brand="Louis Vuitton" data-price="280">
         <div class="card h-100">
           <div class="card-img-container">
-            <img class="card-img-top img-fluid" src="img/Envelope bag 1.webp" alt="Envelope bag">
+            <img class="card-img-top img-fluid" src="img/Commuter Backpack I Harber London.jpeg" alt="backpack">
           </div>
           <div class="card-body d-flex flex-column">
-            <h5 class="card-title">Envelope Bag</h5>
+            <h5 class="card-title">Commuter Backpack</h5>
             <p class="card-text text-muted mb-1">Brand: Louis Vuitton</p>
             <p class="card-text price fw-bold">$280.00</p>
-            <!-- Color Selection -->
-            <div class="mb-2">
-              <small class="text-muted">Color:</small>
-              <div class="d-flex gap-2 mt-1">
-                <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="radio" name="color-4" id="color-black-4" value="Black" checked>
-                  <label class="form-check-label" for="color-black-4">Black</label>
-                </div>
-                <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="radio" name="color-4" id="color-brown-4" value="Brown">
-                  <label class="form-check-label" for="color-brown-4">Brown</label>
-                </div>
-                <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="radio" name="color-4" id="color-white-4" value="White">
-                  <label class="form-check-label" for="color-white-4">White</label>
-                </div>
-              </div>
-            </div>
-            <button class="add-to-cart" data-product-id="4" data-product-name="Envelope Bag" data-product-price="280.00" data-product-image="img/Envelope bag 1.webp">
-              Add to Cart
-            </button>
-          </div>
-        </div>
-      </div>
-      
-      <div class="product-item" data-category="handbag" data-brand="Chanel" data-price="100">
-        <div class="card h-100">
-          <div class="card-img-container">
-            <img class="card-img-top img-fluid" src="img/Hobo bags 1.webp" alt="Hobo bags">
-          </div>
-          <div class="card-body d-flex flex-column">
-            <h5 class="card-title">Classic Hobo</h5>
-            <p class="card-text text-muted mb-1">Brand: Chanel</p>
-            <p class="card-text price fw-bold">$100.00</p>
             <!-- Size Selection -->
             <div class="mb-2">
               <small class="text-muted">Size:</small>
               <div class="d-flex gap-2 mt-1">
                 <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="radio" name="size-5" id="size-s-5" value="Small" checked>
-                  <label class="form-check-label" for="size-s-5">S</label>
+                  <input class="form-check-input" type="radio" name="size-4" id="size-s-4" value="Small" checked>
+                  <label class="form-check-label" for="size-s-4">S</label>
                 </div>
                 <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="radio" name="size-5" id="size-m-5" value="Medium">
-                  <label class="form-check-label" for="size-m-5">M</label>
+                  <input class="form-check-input" type="radio" name="size-4" id="size-m-4" value="Medium">
+                  <label class="form-check-label" for="size-m-4">M</label>
                 </div>
                 <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="radio" name="size-5" id="size-l-5" value="Large">
-                  <label class="form-check-label" for="size-l-5">L</label>
+                  <input class="form-check-input" type="radio" name="size-4" id="size-l-4" value="Large">
+                  <label class="form-check-label" for="size-l-4">L</label>
                 </div>
               </div>
             </div>
-            <button class="add-to-cart" data-product-id="5" data-product-name="Classic Hobo" data-product-price="100.00" data-product-image="img/Hobo bags 1.webp">
+            <button class="add-to-cart" data-product-id="4" data-product-name="Commuter Backpack"
+              data-product-price="280.00" data-product-image="img/Commuter Backpack I Harber London.jpeg">
               Add to Cart
             </button>
           </div>
         </div>
       </div>
-      
-      <div class="product-item" data-category="handbag" data-brand="Gucci" data-price="650">
+
+      <div class="product-item" data-category="accessory" data-brand="Chanel" data-price="100">
         <div class="card h-100">
           <div class="card-img-container">
-            <img class="card-img-top img-fluid" src="img/pic15.webp" alt="women's clutch bag">
+            <img class="card-img-top img-fluid" src="img/Fanny Pack 1.webp" alt="fanny pack">
           </div>
           <div class="card-body d-flex flex-column">
-            <h5 class="card-title">Clutch Bag</h5>
-            <p class="card-text text-muted mb-1">Brand: Gucci</p>
-            <p class="card-text price fw-bold">$650.00</p>
+            <h5 class="card-title">Fanny Pack</h5>
+            <p class="card-text text-muted mb-1">Brand: Chanel</p>
+            <p class="card-text price fw-bold">$100.00</p>
             <!-- Color Selection -->
             <div class="mb-2">
               <small class="text-muted">Color:</small>
               <div class="d-flex gap-2 mt-1">
                 <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="radio" name="color-6" id="color-black-6" value="Black" checked>
-                  <label class="form-check-label" for="color-black-6">Black</label>
+                  <input class="form-check-input" type="radio" name="color-5" id="color-black-5" value="Black" checked>
+                  <label class="form-check-label" for="color-black-5">Black</label>
                 </div>
                 <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="radio" name="color-6" id="color-red-6" value="Red">
-                  <label class="form-check-label" for="color-red-6">Red</label>
+                  <input class="form-check-input" type="radio" name="color-5" id="color-grey-5" value="Grey">
+                  <label class="form-check-label" for="color-grey-5">Grey</label>
                 </div>
                 <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="radio" name="color-6" id="color-gold-6" value="Gold">
-                  <label class="form-check-label" for="color-gold-6">Gold</label>
+                  <input class="form-check-input" type="radio" name="color-5" id="color-navy-5" value="Navy">
+                  <label class="form-check-label" for="color-navy-5">Navy</label>
                 </div>
               </div>
             </div>
-            <button class="add-to-cart" data-product-id="6" data-product-name="Clutch Bag" data-product-price="650.00" data-product-image="img/pic15.webp">
+            <button class="add-to-cart" data-product-id="5" data-product-name="Fanny Pack" data-product-price="100.00"
+              data-product-image="img/Fanny Pack 1.webp">
               Add to Cart
             </button>
           </div>
         </div>
       </div>
-      
-      <div class="product-item" data-category="handbag" data-brand="Balenciaga" data-price="350">
+
+      <div class="product-item" data-category="bag" data-brand="Gucci" data-price="650">
         <div class="card h-100">
           <div class="card-img-container">
-            <img class="card-img-top img-fluid" src="img/pic17.jpg" alt="women's handbag">
+            <img class="card-img-top img-fluid" src="img/GHURKA 'Cavalier No_97' bag.jpeg" alt="travel bag">
           </div>
           <div class="card-body d-flex flex-column">
-            <h5 class="card-title">Designer Handbag</h5>
+            <h5 class="card-title">Cavalier Travel Bag</h5>
+            <p class="card-text text-muted mb-1">Brand: Gucci</p>
+            <p class="card-text price fw-bold">$650.00</p>
+            <!-- Size Selection -->
+            <div class="mb-2">
+              <small class="text-muted">Size:</small>
+              <div class="d-flex gap-2 mt-1">
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="size-6" id="size-m-6" value="Medium" checked>
+                  <label class="form-check-label" for="size-m-6">M</label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="size-6" id="size-l-6" value="Large">
+                  <label class="form-check-label" for="size-l-6">L</label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="size-6" id="size-xl-6" value="Extra Large">
+                  <label class="form-check-label" for="size-xl-6">XL</label>
+                </div>
+              </div>
+            </div>
+            <button class="add-to-cart" data-product-id="6" data-product-name="Cavalier Travel Bag"
+              data-product-price="650.00" data-product-image="img/GHURKA 'Cavalier No_97' bag.jpeg">
+              Add to Cart
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-item" data-category="bag" data-brand="Balenciaga" data-price="350">
+        <div class="card h-100">
+          <div class="card-img-container">
+            <img class="card-img-top img-fluid" src="img/Gazeli Brown Leather Briefcase by Capra.jpeg" alt="Travel bag">
+          </div>
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title">Leather Briefcase</h5>
             <p class="card-text text-muted mb-1">Brand: Balenciaga</p>
             <p class="card-text price fw-bold">$350.00</p>
             <!-- Size Selection -->
@@ -580,67 +584,69 @@
               <small class="text-muted">Size:</small>
               <div class="d-flex gap-2 mt-1">
                 <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="radio" name="size-7" id="size-s-7" value="Small" checked>
-                  <label class="form-check-label" for="size-s-7">S</label>
-                </div>
-                <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="radio" name="size-7" id="size-m-7" value="Medium">
+                  <input class="form-check-input" type="radio" name="size-7" id="size-m-7" value="Medium" checked>
                   <label class="form-check-label" for="size-m-7">M</label>
                 </div>
                 <div class="form-check form-check-inline">
                   <input class="form-check-input" type="radio" name="size-7" id="size-l-7" value="Large">
                   <label class="form-check-label" for="size-l-7">L</label>
                 </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="size-7" id="size-xl-7" value="Extra Large">
+                  <label class="form-check-label" for="size-xl-7">XL</label>
+                </div>
               </div>
             </div>
-            <button class="add-to-cart" data-product-id="7" data-product-name="Designer Handbag" data-product-price="350.00" data-product-image="img/pic17.jpg">
+            <button class="add-to-cart" data-product-id="7" data-product-name="Leather Briefcase"
+              data-product-price="350.00" data-product-image="img/Gazeli Brown Leather Briefcase by Capra.jpeg">
               Add to Cart
             </button>
           </div>
         </div>
       </div>
-      
-      <div class="product-item" data-category="handbag" data-brand="Dior" data-price="250">
+
+      <div class="product-item" data-category="bag" data-brand="Dior" data-price="250">
         <div class="card h-100">
           <div class="card-img-container">
-            <img class="card-img-top img-fluid" src="img/pic18.webp" alt="women's handbag">
+            <img class="card-img-top img-fluid" src="img/contact.jpeg" alt="travel bag">
           </div>
           <div class="card-body d-flex flex-column">
-            <h5 class="card-title">Luxury Handbag</h5>
+            <h5 class="card-title">Business Bag</h5>
             <p class="card-text text-muted mb-1">Brand: Dior</p>
             <p class="card-text price fw-bold">$250.00</p>
-            <!-- Color Selection -->
+            <!-- Size Selection -->
             <div class="mb-2">
-              <small class="text-muted">Color:</small>
+              <small class="text-muted">Size:</small>
               <div class="d-flex gap-2 mt-1">
                 <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="radio" name="color-8" id="color-pink-8" value="Pink" checked>
-                  <label class="form-check-label" for="color-pink-8">Pink</label>
+                  <input class="form-check-input" type="radio" name="size-8" id="size-m-8" value="Medium" checked>
+                  <label class="form-check-label" for="size-m-8">M</label>
                 </div>
                 <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="radio" name="color-8" id="color-beige-8" value="Beige">
-                  <label class="form-check-label" for="color-beige-8">Beige</label>
+                  <input class="form-check-input" type="radio" name="size-8" id="size-l-8" value="Large">
+                  <label class="form-check-label" for="size-l-8">L</label>
                 </div>
                 <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="radio" name="color-8" id="color-blue-8" value="Blue">
-                  <label class="form-check-label" for="color-blue-8">Blue</label>
+                  <input class="form-check-input" type="radio" name="size-8" id="size-xl-8" value="Extra Large">
+                  <label class="form-check-label" for="size-xl-8">XL</label>
                 </div>
               </div>
             </div>
-            <button class="add-to-cart" data-product-id="8" data-product-name="Luxury Handbag" data-product-price="250.00" data-product-image="img/pic18.webp">
+            <button class="add-to-cart" data-product-id="8" data-product-name="Business Bag" data-product-price="250.00"
+              data-product-image="img/contact.jpeg">
               Add to Cart
             </button>
           </div>
         </div>
       </div>
-      
-      <div class="product-item" data-category="handbag" data-brand="YSL" data-price="300">
+
+      <div class="product-item" data-category="bag" data-brand="YSL" data-price="300">
         <div class="card h-100">
           <div class="card-img-container">
-            <img class="card-img-top img-fluid" src="img/pic19.webp" alt="women's duffle bag">
+            <img class="card-img-top img-fluid" src="img/Duffel bag 1.webp" alt="duffle travel bag">
           </div>
           <div class="card-body d-flex flex-column">
-            <h5 class="card-title">Duffle Bag</h5>
+            <h5 class="card-title">Duffel Bag</h5>
             <p class="card-text text-muted mb-1">Brand: YSL</p>
             <p class="card-text price fw-bold">$300.00</p>
             <!-- Size Selection -->
@@ -648,129 +654,133 @@
               <small class="text-muted">Size:</small>
               <div class="d-flex gap-2 mt-1">
                 <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="radio" name="size-9" id="size-s-9" value="Small" checked>
-                  <label class="form-check-label" for="size-s-9">S</label>
-                </div>
-                <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="radio" name="size-9" id="size-m-9" value="Medium">
+                  <input class="form-check-input" type="radio" name="size-9" id="size-m-9" value="Medium" checked>
                   <label class="form-check-label" for="size-m-9">M</label>
                 </div>
                 <div class="form-check form-check-inline">
                   <input class="form-check-input" type="radio" name="size-9" id="size-l-9" value="Large">
                   <label class="form-check-label" for="size-l-9">L</label>
                 </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="size-9" id="size-xl-9" value="Extra Large">
+                  <label class="form-check-label" for="size-xl-9">XL</label>
+                </div>
               </div>
             </div>
-            <button class="add-to-cart" data-product-id="9" data-product-name="Duffle Bag" data-product-price="300.00" data-product-image="img/pic19.webp">
+            <button class="add-to-cart" data-product-id="9" data-product-name="Duffel Bag" data-product-price="300.00"
+              data-product-image="img/Duffel bag 1.webp">
               Add to Cart
             </button>
           </div>
         </div>
       </div>
-      
-      <div class="product-item" data-category="wallet" data-brand="Fendi" data-price="250">
+
+      <div class="product-item" data-category="bag" data-brand="Fendi" data-price="250">
         <div class="card h-100">
           <div class="card-img-container">
-            <img class="card-img-top img-fluid" src="img/women wallet.jpg" alt="wallet">
+            <img class="card-img-top img-fluid" src="img/Messenger bag 2.webp" alt="travel bag">
           </div>
           <div class="card-body d-flex flex-column">
-            <h5 class="card-title">Women's Wallet</h5>
+            <h5 class="card-title">Messenger Bag</h5>
             <p class="card-text text-muted mb-1">Brand: Fendi</p>
             <p class="card-text price fw-bold">$250.00</p>
-            <!-- Color Selection -->
+            <!-- Size Selection -->
             <div class="mb-2">
-              <small class="text-muted">Color:</small>
+              <small class="text-muted">Size:</small>
               <div class="d-flex gap-2 mt-1">
                 <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="radio" name="color-10" id="color-black-10" value="Black" checked>
-                  <label class="form-check-label" for="color-black-10">Black</label>
+                  <input class="form-check-input" type="radio" name="size-10" id="size-m-10" value="Medium" checked>
+                  <label class="form-check-label" for="size-m-10">M</label>
                 </div>
                 <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="radio" name="color-10" id="color-brown-10" value="Brown">
-                  <label class="form-check-label" for="color-brown-10">Brown</label>
+                  <input class="form-check-input" type="radio" name="size-10" id="size-l-10" value="Large">
+                  <label class="form-check-label" for="size-l-10">L</label>
                 </div>
                 <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="radio" name="color-10" id="color-red-10" value="Red">
-                  <label class="form-check-label" for="color-red-10">Red</label>
+                  <input class="form-check-input" type="radio" name="size-10" id="size-xl-10" value="Extra Large">
+                  <label class="form-check-label" for="size-xl-10">XL</label>
                 </div>
               </div>
             </div>
-            <button class="add-to-cart" data-product-id="10" data-product-name="Women's Wallet" data-product-price="250.00" data-product-image="img/women wallet.jpg">
+            <button class="add-to-cart" data-product-id="10" data-product-name="Messenger Bag"
+              data-product-price="250.00" data-product-image="img/Messenger bag 2.webp">
               Add to Cart
             </button>
           </div>
         </div>
       </div>
-      
-      <div class="product-item" data-category="wallet" data-brand="Prada" data-price="550">
+
+      <div class="product-item" data-category="bag" data-brand="Prada" data-price="550">
         <div class="card h-100">
           <div class="card-img-container">
-            <img class="card-img-top img-fluid" src="img/wallet hd.jpeg" alt="wallet">
+            <img class="card-img-top img-fluid" src="img/LEATHER GOODS MANUFACTURER_.jpeg" alt="Leather bags">
           </div>
           <div class="card-body d-flex flex-column">
-            <h5 class="card-title">Premium Wallet</h5>
+            <h5 class="card-title">Classic Leather Bag</h5>
             <p class="card-text text-muted mb-1">Brand: Prada</p>
             <p class="card-text price fw-bold">$550.00</p>
-            <!-- Color Selection -->
+            <!-- Size Selection -->
             <div class="mb-2">
-              <small class="text-muted">Color:</small>
+              <small class="text-muted">Size:</small>
               <div class="d-flex gap-2 mt-1">
                 <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="radio" name="color-11" id="color-black-11" value="Black" checked>
-                  <label class="form-check-label" for="color-black-11">Black</label>
+                  <input class="form-check-input" type="radio" name="size-11" id="size-m-11" value="Medium" checked>
+                  <label class="form-check-label" for="size-m-11">M</label>
                 </div>
                 <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="radio" name="color-11" id="color-white-11" value="White">
-                  <label class="form-check-label" for="color-white-11">White</label>
+                  <input class="form-check-input" type="radio" name="size-11" id="size-l-11" value="Large">
+                  <label class="form-check-label" for="size-l-11">L</label>
                 </div>
                 <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="radio" name="color-11" id="color-silver-11" value="Silver">
-                  <label class="form-check-label" for="color-silver-11">Silver</label>
+                  <input class="form-check-input" type="radio" name="size-11" id="size-xl-11" value="Extra Large">
+                  <label class="form-check-label" for="size-xl-11">XL</label>
                 </div>
               </div>
             </div>
-            <button class="add-to-cart" data-product-id="11" data-product-name="Premium Wallet" data-product-price="550.00" data-product-image="img/wallet hd.jpeg">
+            <button class="add-to-cart" data-product-id="11" data-product-name="Classic Leather Bag"
+              data-product-price="550.00" data-product-image="img/LEATHER GOODS MANUFACTURER_.jpeg">
               Add to Cart
             </button>
           </div>
         </div>
       </div>
-      
-      <div class="product-item" data-category="wallet" data-brand="Louis Vuitton" data-price="700">
+
+      <div class="product-item" data-category="bag" data-brand="Louis Vuitton" data-price="700">
         <div class="card h-100">
           <div class="card-img-container">
-            <img class="card-img-top img-fluid" src="img/card holders.jpeg" alt="card holders">
+            <img class="card-img-top img-fluid" src="img/travel.jpg" alt="leather bags">
           </div>
           <div class="card-body d-flex flex-column">
-            <h5 class="card-title">Card Holder</h5>
+            <h5 class="card-title">Premium Travel Bag</h5>
             <p class="card-text text-muted mb-1">Brand: Louis Vuitton</p>
             <p class="card-text price fw-bold">$700.00</p>
-            <!-- Color Selection -->
+            <!-- Size Selection -->
             <div class="mb-2">
-              <small class="text-muted">Color:</small>
+              <small class="text-muted">Size:</small>
               <div class="d-flex gap-2 mt-1">
                 <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="radio" name="color-12" id="color-brown-12" value="Brown" checked>
-                  <label class="form-check-label" for="color-brown-12">Brown</label>
+                  <input class="form-check-input" type="radio" name="size-12" id="size-m-12" value="Medium" checked>
+                  <label class="form-check-label" for="size-m-12">M</label>
                 </div>
                 <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="radio" name="color-12" id="color-black-12" value="Black">
-                  <label class="form-check-label" for="color-black-12">Black</label>
+                  <input class="form-check-input" type="radio" name="size-12" id="size-l-12" value="Large">
+                  <label class="form-check-label" for="size-l-12">L</label>
                 </div>
                 <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="radio" name="color-12" id="color-blue-12" value="Blue">
-                  <label class="form-check-label" for="color-blue-12">Blue</label>
+                  <input class="form-check-input" type="radio" name="size-12" id="size-xl-12" value="Extra Large">
+                  <label class="form-check-label" for="size-xl-12">XL</label>
                 </div>
               </div>
             </div>
-            <button class="add-to-cart" data-product-id="12" data-product-name="Card Holder" data-product-price="700.00" data-product-image="img/card holders.jpeg">
+            <button class="add-to-cart" data-product-id="12" data-product-name="Premium Travel Bag"
+              data-product-price="700.00" data-product-image="img/travel.jpg">
               Add to Cart
             </button>
           </div>
         </div>
       </div>
     </div>
-    
+
     <!-- No products found message -->
     <div id="no-products-message" class="text-center mt-5" style="display: none;">
       <div class="alert alert-info">
@@ -780,7 +790,7 @@
     </div>
   </div>
 
-  
+
   <!-- search js file -->
   <script src="js/search.js"></script>
 
@@ -950,11 +960,11 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
     integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-  <script>var owl = $('.owl-carousel');
-    owl.owlCarousel({
+  <script>
+    $('.owl-carousel').owlCarousel({
       loop: true,
+      margin: 5,
       nav: true,
-      margin: 10,
       responsive: {
         0: {
           items: 1
@@ -962,26 +972,15 @@
         600: {
           items: 2
         },
-        960: {
-          items: 4
-        },
-        1200: {
-          items: 4
+        1000: {
+          items: 3
         }
       }
-    });
-    owl.on('mousewheel', '.owl-stage', function (e) {
-      if (e.deltaY > 0) {
-        owl.trigger('next.owl');
-      } else {
-        owl.trigger('prev.owl');
-      }
-      e.preventDefault();
-    });
+    })
   </script>
 
 </body>
 
 </html>
-<!-- Authentication JS -->
-<script src="js/auth.js"></script>
+	<!-- Authentication JS -->
+	<script src="js/auth.js"></script>

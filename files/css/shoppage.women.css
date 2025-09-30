@@ -1,0 +1,367 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+   font-family: Verdana, Geneva, Tahoma, sans-serif;
+ 
+}
+/* owl carousel */
+#wom-category{
+    width: 100%;
+    min-height: 300px;
+    margin-top: 10rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    padding: 2rem 0;
+}
+#wom-category h1{
+    font-size: 40px;
+    display: inline;
+    color: black;
+    text-align: center;
+    text-transform: uppercase;
+    position: relative;
+    top: 50%;
+    padding-right: 30px; 
+}
+#owl{
+    width: 50%;
+    height: 250px;
+    display: block;
+    position: relative;
+    overflow: visible;
+    border-radius: 10px;
+}
+.item{
+    width: 100%;
+    height: 200px;
+    display: block;
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px;
+    margin: 0 10px;
+}
+.item img{
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+/* Enhanced Carousel Styles */
+.carousel-filter {
+    position: relative;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    overflow: hidden;
+}
+
+.carousel-filter:hover {
+    transform: scale(1.05);
+}
+
+.carousel-filter:hover img {
+    transform: scale(1.1);
+}
+
+.carousel-filter.active {
+    border: 3px solid #007bff;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0, 123, 255, 0.3);
+}
+
+.carousel-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(transparent, rgba(0,0,0,0.8));
+    color: white;
+    padding: 15px;
+    text-align: center;
+    transform: translateY(100%);
+    transition: transform 0.3s ease;
+}
+
+.carousel-filter:hover .carousel-overlay {
+    transform: translateY(0);
+}
+
+.carousel-overlay h3 {
+    margin: 0;
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+/* Product Cards Enhancement */
+.product-item {
+    transition: all 0.3s ease;
+    margin-bottom: 2rem;
+}
+
+.card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: none;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+}
+
+.card-img-top {
+    height: 250px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.card:hover .card-img-top {
+    transform: scale(1.05);
+}
+
+.card-body {
+    padding: 1.5rem;
+}
+
+.card-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: #333;
+}
+
+.card-text {
+    color: #666;
+    margin-bottom: 0.5rem;
+}
+
+.add-to-cart {
+    background: linear-gradient(45deg, #007bff, #0056b3);
+    border: none;
+    border-radius: 25px;
+    padding: 0.5rem 1.5rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.add-to-cart:hover {
+    background: linear-gradient(45deg, #0056b3, #004085);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 123, 255, 0.3);
+}
+
+/* Filter Enhancements */
+.filter {
+    background: #f8f9fa;
+    padding: 1rem;
+    border-radius: 8px;
+    margin: 2rem 0;
+}
+
+#filter-btn {
+    background: linear-gradient(45deg, #007bff, #0056b3);
+    color: white;
+    border: none;
+    border-radius: 25px;
+    padding: 0.75rem 2rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+#filter-btn:hover {
+    background: linear-gradient(45deg, #0056b3, #004085);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 123, 255, 0.3);
+}
+
+/* No Products Message */
+#no-products-message {
+    background: #f8f9fa;
+    border: 2px dashed #dee2e6;
+    border-radius: 12px;
+    padding: 3rem;
+    margin: 2rem 0;
+}
+
+#no-products-message h4 {
+    color: #6c757d;
+    margin-bottom: 1rem;
+}
+
+#no-products-message p {
+    color: #adb5bd;
+    margin: 0;
+}
+
+/* Responsive Improvements */
+@media (max-width: 768px) {
+    #wom-category {
+        flex-direction: column;
+        margin-top: 8rem;
+    }
+    
+    #wom-category h1 {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+        padding-right: 0;
+    }
+    
+    #owl {
+        width: 90%;
+    }
+    
+    .carousel-overlay h3 {
+        font-size: 0.9rem;
+    }
+}
+/* Owl Carousel Navigation Styles */
+.owl-nav {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.owl-nav button {
+    background: #007bff !important;
+    color: white !important;
+    border: none !important;
+    border-radius: 50% !important;
+    width: 40px !important;
+    height: 40px !important;
+    margin: 0 10px !important;
+    font-size: 16px !important;
+    transition: all 0.3s ease !important;
+}
+
+.owl-nav button:hover {
+    background: #0056b3 !important;
+    transform: scale(1.1) !important;
+}
+
+.owl-nav button.disabled {
+    opacity: 0.5 !important;
+    cursor: not-allowed !important;
+}
+
+/* Owl Carousel Dots */
+.owl-dots {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.owl-dot {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    background: #ddd;
+    border-radius: 50%;
+    margin: 0 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.owl-dot.active,
+.owl-dot:hover {
+    background: #007bff;
+}
+
+/* Ensure carousel items are properly sized */
+.owl-carousel .owl-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* filter button */
+#filter{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 100%;
+    height: 50px;
+    border: none;
+    border-radius: 5px;
+    color: black;
+    font-size: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+#filter-container{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+    color: black;
+    font-size: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    gap: 20px;
+    padding: 20px;
+}
+#filter-btn, #sort-btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    border: none;
+    border-radius: 25px !important;
+    color: white !important;
+    font-size: 16px !important;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    background: linear-gradient(45deg, #007bff, #0056b3) !important;
+    padding: 0.75rem 2rem !important;
+    font-weight: 500 !important;
+}
+
+#filter-btn:hover, #sort-btn:hover {
+    background: linear-gradient(45deg, #0056b3, #004085) !important;
+    transform: translateY(-2px) !important;
+    box-shadow: 0 5px 15px rgba(0, 123, 255, 0.3) !important;
+}
+/* #filter-btn::after, #sort-btn::after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: black;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+#filter-btn:hover::after, #sort-btn:hover::after{
+    width: 100%; 
+} */
+
+/* main product section */
+#product-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    margin: 0;
+    padding: 20px;
+    gap: 30px;
+    justify-content: center;
+    align-items: stretch;
+    margin-top: 50px;
+}
+
+/* Override conflicting product-item styles for card layout */
+.product-item {
+    margin-bottom: 0 !important;
+    width: 100% !important;
+}
+
+.product-item img{
+    width: 100%;
+    height: 250px !important; 
+    object-fit: cover;
+    border-radius: 12px !important;
+    transition: all 0.3s ease-in-out;
+}
