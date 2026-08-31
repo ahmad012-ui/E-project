@@ -1,0 +1,15 @@
+{
+  "name": "nextag",
+  "version": "1.0.0",
+  "description": "NEXTAG - Premium Bags & Accessories E-commerce Website",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"No tests specified\""
+  },
+  "keywords": ["ecommerce", "bags", "accessories"],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@vercel/speed-insights": "^2.0.0"
+  }
+}
