@@ -28,12 +28,10 @@
     if (document.getElementById("theme-toggle")) return;
 
     const container = document.getElementById("search-profile");
-    if (!container) return;
-
     const button = document.createElement("button");
     button.type = "button";
     button.id = "theme-toggle";
-    button.className = "theme-toggle";
+    button.className = "theme-toggle" + (container ? "" : " theme-toggle-floating");
     button.setAttribute("aria-label", "Switch to dark theme");
     button.innerHTML = '<i class="fa-solid fa-moon" aria-hidden="true"></i>';
 
@@ -44,7 +42,7 @@
       applyTheme(next);
     });
 
-    container.appendChild(button);
+    (container || document.body).appendChild(button);
   }
 
   // Apply before the UI is ready so the selected theme is consistent across pages.
