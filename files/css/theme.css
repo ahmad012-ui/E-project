@@ -133,6 +133,13 @@ html[data-theme="dark"] .btn-close {
   outline-offset: 3px;
 }
 
+.theme-toggle-floating {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  z-index: 2000;
+}
+
 .theme-toggle i {
   font-size: 16px;
 }
